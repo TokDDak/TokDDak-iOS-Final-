@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iQF-SS-Pzq" customClass="CityChooseSection" customModule="TikTok" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-Ms-hr8">
+                    <rect key="frame" x="16" y="42.666666666666664" width="105" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="t8e-8U-XCK"/>
+                        <constraint firstAttribute="width" constant="105" id="zvU-ry-w1u"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCL-Iy-HsR">
+                    <rect key="frame" x="16" y="61" width="343" height="1"/>
+                    <color key="backgroundColor" red="0.082352941176470587" green="0.086274509803921567" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="343" id="eve-pB-9EE"/>
+                        <constraint firstAttribute="height" constant="1" id="fpP-Ps-mav"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBc-HJ-79v">
+                    <rect key="frame" x="315" y="31" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="CCY-Ne-kPE"/>
+                        <constraint firstAttribute="height" constant="44" id="bRr-JA-oBV"/>
+                    </constraints>
+                    <state key="normal" image="naviBtnBackB"/>
+                    <state key="selected" image="naviBtnDownB"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="VaB-Ms-hr8" firstAttribute="leading" secondItem="iQF-SS-Pzq" secondAttribute="leading" constant="16" id="7M5-Xc-n5Y"/>
+                <constraint firstItem="BCL-Iy-HsR" firstAttribute="bottom" secondItem="wIZ-ig-zF6" secondAttribute="bottom" id="Kb8-n3-MPM"/>
+                <constraint firstItem="BCL-Iy-HsR" firstAttribute="leading" secondItem="iQF-SS-Pzq" secondAttribute="leading" constant="16" id="NSa-Ug-g5v"/>
+                <constraint firstItem="VaB-Ms-hr8" firstAttribute="centerY" secondItem="wIZ-ig-zF6" secondAttribute="centerY" id="Sqt-ez-SqL"/>
+                <constraint firstAttribute="trailing" secondItem="BCL-Iy-HsR" secondAttribute="trailing" constant="16" id="gYu-hh-HCV"/>
+                <constraint firstItem="wIZ-ig-zF6" firstAttribute="trailing" secondItem="QBc-HJ-79v" secondAttribute="trailing" constant="16" id="kg6-mz-jQW"/>
+                <constraint firstItem="QBc-HJ-79v" firstAttribute="centerY" secondItem="wIZ-ig-zF6" secondAttribute="centerY" id="mbl-mi-IND"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="wIZ-ig-zF6"/>
+            <connections>
+                <outlet property="foldButton" destination="QBc-HJ-79v" id="QK1-ca-Po8"/>
+                <outlet property="titleLabel" destination="VaB-Ms-hr8" id="oEu-ad-DDh"/>
+            </connections>
+            <point key="canvasLocation" x="-106.40000000000001" y="-571.18226600985224"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="naviBtnBackB" width="16" height="16"/>
+        <image name="naviBtnDownB" width="16.5" height="16"/>
+    </resources>
+</document>

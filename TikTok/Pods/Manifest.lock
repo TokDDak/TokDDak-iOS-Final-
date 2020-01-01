@@ -1,0 +1,20 @@
+PODS:
+  - TinyConstraints (4.0.1)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - TinyConstraints
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - TinyConstraints
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 99a817310ceb2ab79164bbd1c344e4e0166951dd
+
+COCOAPODS: 1.8.4
