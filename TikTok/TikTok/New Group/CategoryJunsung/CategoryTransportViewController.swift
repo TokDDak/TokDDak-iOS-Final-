@@ -14,6 +14,7 @@ class CategoryTransportViewController: UIViewController {
     var progressBarOffset : Int = 1
     var pgValue : Int = 0
     
+    //주석
 
     @IBOutlet weak var progressBar: UIProgressView!
 
