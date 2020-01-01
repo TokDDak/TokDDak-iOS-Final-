@@ -35,11 +35,10 @@ class CategoryFoodViewController: UIViewController {
     @IBOutlet weak var totalCountOfFood: UILabel!
     @IBOutlet weak var totalPriceOfFood: UILabel!
     
-    
     var totalPriceFood : [Int : Int] = [0:0, 1:0, 2:0]
     var eachPriceFood : [Int : Int] = [0:21000, 1:21000, 2:21000]
     var totalCountFood : [Int : Int] = [0:0, 1:0, 2:0]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(progressBarOffset)

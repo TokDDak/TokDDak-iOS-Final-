@@ -49,8 +49,7 @@ class CategoryDrinkViewController: UIViewController {
     var totalPriceDrink : [Int : Int] = [0:0, 1:0, 2:0]
     var eachPriceDrink : [Int : Int] = [0:21000, 1:21000, 2:21000]
     var totalCountDrink : [Int : Int] = [0:0, 1:0, 2:0]
-    
-    
+    var masterTotalPrice : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         

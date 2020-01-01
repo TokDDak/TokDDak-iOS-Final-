@@ -14,10 +14,7 @@ class ActivityCellTableViewCell: UITableViewCell {
     @IBOutlet weak var aName: UIButton!
     @IBOutlet weak var aPrice: UILabel!
     @IBOutlet weak var aSelect: UIButton!
-    var cellConfig : [Int:Bool] = [0:false,1:false,2:false,3:false,4:false,5:false,6:false,7:false,8:false,9:false ]
-    
-    
-    
+      
     override func prepareForReuse()
     {
         super.prepareForReuse()

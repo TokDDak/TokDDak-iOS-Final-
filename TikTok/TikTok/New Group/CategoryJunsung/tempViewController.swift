@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class tempViewController: UIViewController {
 
     
@@ -23,9 +26,9 @@ class tempViewController: UIViewController {
     
     @IBOutlet weak var completeBttn: UIButton!
     
-    
-    
     /*처음 default 선택이 6개이므로*/
+    
+    var infoOfDate : [String:String] = ["city" : "null", "fromDate" : "null", "toDate" : "null"] // cityname
     
     var numOfselected : Int = 6 //선택된 카테고리 갯수
     var selectedCategory : [String : Bool] = ["hotel" : true, "restaurant" : true, "drink" : true, "transport" : true, "shopping" : true, "activity" : true] //선택된거 true로 바뀜
@@ -40,11 +43,12 @@ class tempViewController: UIViewController {
         outerView.layer.shadowPath = UIBezierPath(roundedRect: outerView.bounds, cornerRadius: 10).cgPath
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.isNavigationBarHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //인준스토리보드는 네비게이션바 안써서 여기서 히든 풀어줘야함
-        self.navigationController?.isNavigationBarHidden = false
         
         /*여기서 안바꿔주면, 클릭시 바뀌는 이벤트일 때 처음에 else문부터 들어가서, 두번클릭해야 바뀌는거 방지*/
         hotelViewBttn.setImage(UIImage(named: "btnMakeStayMinus"), for: .normal)
@@ -66,8 +70,9 @@ class tempViewController: UIViewController {
             self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
             self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
         
-            /*navaigation 이름변경*/
-//            navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
+           // navaigation 이름변경
+//            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         
              /*navaigation border 삭제*/
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

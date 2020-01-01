@@ -13,7 +13,8 @@ class CategoryTransportViewController: UIViewController {
     var selectedCategoryData : [Int] = []
     var progressBarOffset : Int = 1
     var pgValue : Int = 0
-    
+    var priceOfTransport : Int = 0
+    var masterTotalPrice : Int = 0
     //주석
 
     @IBOutlet weak var progressBar: UIProgressView!

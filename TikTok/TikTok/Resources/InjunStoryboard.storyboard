@@ -880,7 +880,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="ESh-c6-H1K" kind="show" id="BBe-3l-Zu2"/>
+                                    <segue destination="ESh-c6-H1K" kind="show" id="Her-It-1HD"/>
                                 </connections>
                             </button>
                         </subviews>

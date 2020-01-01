@@ -13,14 +13,14 @@ class CategoiryShoppingViewController: UIViewController, UITextFieldDelegate {
     var selectedCategoryData : [Int] = []
     var progressBarOffset : Int = 1
     var pgValue : Int = 0
-
-    
+    var masterTotalPrice : Int = 0
+    var priceOfShopping : Int = 0
 
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var totalPrice: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,8 +77,8 @@ class CategoiryShoppingViewController: UIViewController, UITextFieldDelegate {
     @IBAction func nextCategory(_ sender: Any) {
         hideKeyboard()
         
-        let tmp = Int(textField.text!)
-        totalPrice.text = String(tmp!.commaRepresentation)
+        priceOfShopping = Int(textField.text!)!
+        totalPrice.text = String(priceOfShopping.commaRepresentation)
 
         if selectedCategoryData.count == 0{
             //go to next category flow
