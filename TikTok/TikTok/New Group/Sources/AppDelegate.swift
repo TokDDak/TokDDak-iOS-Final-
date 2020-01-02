@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        APIService.shared.requestTripCreate(cityID: 1, requestModel: dummy) { result in
 //            print(result)
 //        }
+        
         return true
     }
 

@@ -60,7 +60,51 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @IBAction func endCategory(_ sender: Any) {
-
+        
+        var myData = TripCreateRequestModel.init(title: TotalPlanData.shared.travelName,
+                                                 start: TotalPlanData.shared.startDate,
+                                                 end: TotalPlanData.shared.endDate,
+                                                 activityBudget: TotalPlanData.shared.totalCostOfActivity,
+                                                 hotelBudget: TotalPlanData.shared.totalCostOfHotel.reduce(0) { $0 + $1.value },
+                                                 foodBudget: TotalPlanData.shared.totalCostOfFood.reduce(0) { $0 + $1.value },
+                                                 shoppingBudget: totalCostOfShopping,
+                                                 snackBudget: TotalPlanData.shared.totalCostOfDrink.reduce(0) { $0 + $1.value },
+                                                 transportBudget: totalCostOfShopping,
+                                                 userID: 1)
+        
+        
+        APIService.shared.requestTripCreate(cityID: 1, requestModel: myData) { [weak self] result in
+            guard let self = self else {return}
+            switch result {
+            case let .success(success):
+                guard let data = success.data else {return}
+                
+                print("start  : \(data.start)")
+                print("end  : \(data.end)")
+                print("useCost  : \(data.useCost)")
+                print("status  : \(data.status)")
+                print("id  : \(data.id)")
+                print("title  : \(data.title)")
+                print("city  : \(data.city)")
+                print("country  : \(data.country)")
+                print("activityBudget  : \(data.activityBudget)")
+                print("hotelBudget  : \(data.hotelBudget)")
+                print("foodBudget  : \(data.foodBudget)")
+                print("shoppingBudget  : \(data.shoppingBudget)")
+                print("snackBudget  : \(data.snackBudget)")
+                print("transportBudget  : \(data.transportBudget)")
+                print("totalDay  : \(data.totalDay)")
+                print("userID  : \(data.userID)")
+                print("updatedAt  : \(data.updatedAt)")
+                print("createdAt  : \(data.createdAt)")
+                
+                
+            case let .failure(error):
+                print("실패")
+                print(error.localizedDescription)
+            }
+        }
+        //            print(result)
         //이제 다 끝났고, 다른 flow로 넘어가면 됨
     }
     
