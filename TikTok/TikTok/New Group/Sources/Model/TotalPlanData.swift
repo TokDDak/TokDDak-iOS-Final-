@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TotalPlanData {
+class TotalPlanData: CustomStringConvertible {
     
     static let shared = TotalPlanData()
     private init() {}
@@ -17,7 +17,16 @@ class TotalPlanData {
     var endDate: String = ""
     var travelDays: Int = 0
     var cityName: String = ""
+    var travelName: String = ""
     
     
-    
+    var description: String {
+        return """
+        startDate: \(startDate)
+        endDate: \(endDate)
+        travelDays: \(travelDays)
+        cityName: \(cityName)
+        travelName: \(travelName)
+        """
+    }
 }

@@ -317,7 +317,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="rFp-ro-taZ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="rFp-ro-taZ">
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUv-bo-b8Q">
@@ -333,38 +333,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안녕하세요 톡딱님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-eg-juW">
-                                                <rect key="frame" x="32" y="62" width="127" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="떠나기 좋은 날이네요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd6-GL-Ha2">
-                                                <rect key="frame" x="32" y="101" width="249" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-HY-VHc">
-                                                <rect key="frame" x="56" y="155" width="125" height="49"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="132" id="C4O-E5-BkD"/>
-                                                    <constraint firstAttribute="height" constant="49" id="r8B-uJ-zxZ"/>
-                                                </constraints>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-HY-VHc">
+                                                <rect key="frame" x="56.333333333333343" y="228" width="312" height="49"/>
                                                 <state key="normal" title="Button" image="btnLetsgo"/>
                                                 <connections>
                                                     <action selector="touchUpLetsGo:" destination="4Y5-FP-pdp" eventType="touchUpInside" id="hJI-fh-f1h"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bgImgAirplane" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-s0-VJe">
-                                                <rect key="frame" x="53.666666666666664" y="85" width="321.66666666666663" height="325.33333333333331"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="325.32999999999998" id="0ra-XR-8Yx"/>
-                                                    <constraint firstAttribute="width" constant="321.67000000000002" id="6cv-hD-z6F"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인기여행지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqe-1t-naf">
                                                 <rect key="frame" x="32" y="490" width="74" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -411,7 +386,7 @@
                                                 </connections>
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2a-XV-oDm">
-                                                <rect key="frame" x="235" y="381" width="46" height="84"/>
+                                                <rect key="frame" x="235" y="420" width="46" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -477,23 +452,32 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHomeBeforeTextMent" translatesAutoresizingMaskIntoConstraints="NO" id="uOs-k9-sBb">
+                                                <rect key="frame" x="32" y="94" width="498" height="136"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImgAirplane" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-s0-VJe">
+                                                <rect key="frame" x="43" y="210" width="350" height="272"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="K27-VQ-wI3"/>
+                                                    <constraint firstAttribute="height" constant="272" id="ce7-yO-6Il"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.074509803921568626" green="0.54509803921568623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="RSo-eD-ZOJ" firstAttribute="leading" secondItem="lUv-bo-b8Q" secondAttribute="leading" id="AEQ-OK-pKF"/>
-                                            <constraint firstItem="ktM-s0-VJe" firstAttribute="top" secondItem="lUv-bo-b8Q" secondAttribute="top" constant="173" id="JLg-Fa-fVn"/>
                                             <constraint firstAttribute="trailing" secondItem="RSo-eD-ZOJ" secondAttribute="trailing" id="Mhh-ZL-qb4"/>
                                             <constraint firstAttribute="bottom" secondItem="QLz-VL-9kg" secondAttribute="bottom" constant="989" id="Mzo-2b-mHk"/>
-                                            <constraint firstAttribute="trailing" secondItem="zrq-HY-VHc" secondAttribute="trailing" constant="187" id="Unj-HK-rDc"/>
+                                            <constraint firstItem="uOs-k9-sBb" firstAttribute="leading" secondItem="lUv-bo-b8Q" secondAttribute="leading" constant="32" id="Ntt-6K-yjJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ktM-s0-VJe" secondAttribute="trailing" constant="-18" id="Tpg-4A-SqI"/>
                                             <constraint firstAttribute="bottom" secondItem="RSo-eD-ZOJ" secondAttribute="bottom" constant="589" id="Wx8-gS-u6s"/>
                                             <constraint firstItem="zrq-HY-VHc" firstAttribute="top" secondItem="lUv-bo-b8Q" secondAttribute="top" constant="228" id="Yd5-Bd-AGg"/>
-                                            <constraint firstItem="ktM-s0-VJe" firstAttribute="leading" secondItem="lUv-bo-b8Q" secondAttribute="leading" constant="53.666666666666657" id="a3k-Gn-GpD"/>
                                             <constraint firstItem="RSo-eD-ZOJ" firstAttribute="top" secondItem="lUv-bo-b8Q" secondAttribute="top" constant="519" id="c2g-oW-2vd"/>
                                             <constraint firstAttribute="bottom" secondItem="zrq-HY-VHc" secondAttribute="bottom" constant="911" id="hMX-7f-2BO"/>
                                             <constraint firstAttribute="trailing" secondItem="QLz-VL-9kg" secondAttribute="trailing" constant="63" id="hQs-1e-0g2"/>
-                                            <constraint firstItem="zrq-HY-VHc" firstAttribute="leading" secondItem="lUv-bo-b8Q" secondAttribute="leading" constant="56" id="mmO-k7-Gp1"/>
-                                            <constraint firstAttribute="bottom" secondItem="ktM-s0-VJe" secondAttribute="bottom" constant="689.66999999999996" id="nPS-V8-LRW"/>
+                                            <constraint firstItem="uOs-k9-sBb" firstAttribute="top" secondItem="lUv-bo-b8Q" secondAttribute="top" constant="94" id="nCY-dn-klO"/>
                                             <constraint firstItem="QLz-VL-9kg" firstAttribute="leading" secondItem="lUv-bo-b8Q" secondAttribute="leading" constant="56" id="qbw-gX-q3J"/>
+                                            <constraint firstItem="ktM-s0-VJe" firstAttribute="top" secondItem="lUv-bo-b8Q" secondAttribute="top" constant="210" id="sGq-X9-gAK"/>
                                             <constraint firstItem="QLz-VL-9kg" firstAttribute="top" secondItem="lUv-bo-b8Q" secondAttribute="top" constant="178" id="wvp-kt-2K8"/>
                                         </constraints>
                                     </view>
@@ -542,6 +526,7 @@
                         <constraints>
                             <constraint firstItem="hCv-Qb-5Gv" firstAttribute="leading" secondItem="f5P-Dg-OvW" secondAttribute="leading" id="AfZ-yC-0bn"/>
                             <constraint firstItem="rFp-ro-taZ" firstAttribute="top" secondItem="f5P-Dg-OvW" secondAttribute="top" id="IsT-3M-fgD"/>
+                            <constraint firstItem="zrq-HY-VHc" firstAttribute="leading" secondItem="f5P-Dg-OvW" secondAttribute="trailing" multiplier="0.15" id="XwM-DC-ZLC"/>
                             <constraint firstItem="f5P-Dg-OvW" firstAttribute="trailing" secondItem="rFp-ro-taZ" secondAttribute="trailing" id="YiM-ma-aev"/>
                             <constraint firstItem="hCv-Qb-5Gv" firstAttribute="top" secondItem="f5P-Dg-OvW" secondAttribute="top" id="YzO-e2-YhC"/>
                             <constraint firstAttribute="bottom" secondItem="rFp-ro-taZ" secondAttribute="bottom" id="jf9-to-Q0l"/>
@@ -585,6 +570,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="airPlaneImageView" destination="ktM-s0-VJe" id="J2S-Dx-Tu4"/>
+                        <outlet property="letgoButton" destination="zrq-HY-VHc" id="3cE-9L-srh"/>
                         <outlet property="popularCityCollectionView" destination="RSo-eD-ZOJ" id="d69-mW-6oz"/>
                         <outlet property="startScrollView" destination="rFp-ro-taZ" id="srp-OL-qam"/>
                         <outlet property="topView" destination="hCv-Qb-5Gv" id="xlm-iv-tQ3"/>
@@ -862,6 +848,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editTravelName:" destination="u9J-TV-AcE" eventType="editingChanged" id="mNp-ca-0ky"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1h-cP-LqM">
                                 <rect key="frame" x="20" y="44" width="46" height="46"/>
@@ -1277,15 +1266,16 @@
     </scenes>
     <resources>
         <image name="bgImgAirplane" width="418" height="323"/>
-        <image name="btnLetsgo" width="148" height="77"/>
+        <image name="btnLetsgo" width="129" height="48"/>
         <image name="btnRecoBangkok" width="160" height="227"/>
         <image name="btnRecoHonkongMacao" width="160" height="227"/>
         <image name="btnRecoLondon" width="160" height="227"/>
         <image name="btnRecoParis" width="160" height="227"/>
+        <image name="imgHomeBeforeTextMent" width="249" height="68"/>
         <image name="makeBgImgAirplane" width="375" height="310"/>
         <image name="makeEtCalendar" width="327" height="62"/>
         <image name="makeImgCountry3" width="242" height="68"/>
-        <image name="naviBtnBackB" width="36" height="36"/>
+        <image name="naviBtnBackB" width="16" height="16"/>
         <image name="naviBtnClose" width="14" height="14"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="tabBtnBefore" width="77" height="31"/>
