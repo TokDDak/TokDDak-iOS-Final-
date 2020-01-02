@@ -31,7 +31,7 @@ class tempViewController: UIViewController {
     var infoOfDate : [String:String] = ["city" : "null", "fromDate" : "null", "toDate" : "null"] // cityname
     
     var numOfselected : Int = 6 //선택된 카테고리 갯수
-    var selectedCategory : [String : Bool] = ["hotel" : true, "restaurant" : true, "drink" : true, "transport" : true, "shopping" : true, "activity" : true] //선택된거 true로 바뀜
+//    shared.selectedCategory : [String : Bool] = ["hotel" : true, "restaurant" : true, "drink" : true, "transport" : true, "shopping" : true, "activity" : true] //선택된거 true로 바뀜
     var selectedCategoryData : [Int] = [0,1,2,3,4,5] //카테고리 고른거 순서대로 뷰 띄우기 위해사
     // custom view shadow 만들기
     func makeShadow(outerView : UIView){
@@ -84,7 +84,7 @@ class tempViewController: UIViewController {
         if hotelViewBttn.image(for: .normal) == UIImage(named: "btnMakeStayMinus"){
             hotelViewBttn.setImage(UIImage(named: "btnMakeStayPlus"), for: .normal)
             numOfselected = numOfselected - 1
-            selectedCategory["hotel"] = false
+            TotalPlanData.shared.selectedCategory["hotel"] = false
             for (i, v) in selectedCategoryData.enumerated(){
                 if v == 0{
                     selectedCategoryData.remove(at: i)
@@ -95,7 +95,7 @@ class tempViewController: UIViewController {
            
             hotelViewBttn.setImage(UIImage(named: "btnMakeStayMinus"), for: .normal)
             numOfselected = numOfselected + 1
-            selectedCategory["hotel"] = true
+            TotalPlanData.shared.selectedCategory["hotel"] = true
             selectedCategoryData.append(0)
         }
         /*전체 해제시 선택완료 버튼 비활성화*/
@@ -112,7 +112,7 @@ class tempViewController: UIViewController {
         if restaurantViewBttn.image(for: .normal) == UIImage(named: "btnMakeFoodMinus"){
             restaurantViewBttn.setImage(UIImage(named: "btnMakeFoodPlus"), for: .normal)
             numOfselected = numOfselected - 1
-            selectedCategory["restaurant"] = false
+            TotalPlanData.shared.selectedCategory["restaurant"] = false
             for (i, v) in selectedCategoryData.enumerated(){
                 if v == 1{
                     selectedCategoryData.remove(at: i)
@@ -123,7 +123,7 @@ class tempViewController: UIViewController {
         else{
             restaurantViewBttn.setImage(UIImage(named: "btnMakeFoodMinus"), for: .normal)
             numOfselected = numOfselected + 1
-            selectedCategory["restaurant"] = true
+            TotalPlanData.shared.selectedCategory["restaurant"] = true
             selectedCategoryData.append(1)
         }
         /*전체 해제시 선택완료 버튼 비활성화*/
@@ -140,7 +140,7 @@ class tempViewController: UIViewController {
         if drinkViewBttn.image(for: .normal) == UIImage(named: "btnMakeSnacksMinus"){
             drinkViewBttn.setImage(UIImage(named: "btnMakeSnacksPlus"), for: .normal)
             numOfselected = numOfselected - 1
-            selectedCategory["drink"] = false
+            TotalPlanData.shared.selectedCategory["drink"] = false
             for (i, v) in selectedCategoryData.enumerated(){
                 if v == 2{
                     selectedCategoryData.remove(at: i)
@@ -150,7 +150,7 @@ class tempViewController: UIViewController {
         else{
             drinkViewBttn.setImage(UIImage(named: "btnMakeSnacksMinus"), for: .normal)
             numOfselected = numOfselected + 1
-            selectedCategory["drink"] = true
+            TotalPlanData.shared.selectedCategory["drink"] = true
             selectedCategoryData.append(2)
         }
         /*전체 해제시 선택완료 버튼 비활성화*/
@@ -167,7 +167,7 @@ class tempViewController: UIViewController {
         if transportViewBttn.image(for: .normal) == UIImage(named: "btnMakeTrafficMinus"){
             transportViewBttn.setImage(UIImage(named: "btnMakeTrafficPlus"), for: .normal)
             numOfselected = numOfselected - 1
-            selectedCategory["transport"] = false
+            TotalPlanData.shared.selectedCategory["transport"] = false
             for (i, v) in selectedCategoryData.enumerated(){
                 if v == 3{
                     selectedCategoryData.remove(at: i)
@@ -177,7 +177,7 @@ class tempViewController: UIViewController {
         else{
             transportViewBttn.setImage(UIImage(named: "btnMakeTrafficMinus"), for: .normal)
             numOfselected = numOfselected + 1
-            selectedCategory["transport"] = true
+            TotalPlanData.shared.selectedCategory["transport"] = true
             selectedCategoryData.append(3)
         }
         /*전체 해제시 선택완료 버튼 비활성화*/
@@ -193,7 +193,7 @@ class tempViewController: UIViewController {
     @IBAction func pressShoppingViewBttn(_ sender: Any) {
         if shoppingViewBttn.image(for: .normal) == UIImage(named: "btnMakeShoppingMinus"){            shoppingViewBttn.setImage(UIImage(named: "btnMakeShoppingPlus"), for: .normal)
             numOfselected = numOfselected - 1
-            selectedCategory["shopping"] = false
+            TotalPlanData.shared.selectedCategory["shopping"] = false
             for (i, v) in selectedCategoryData.enumerated(){
                 if v == 4{
                     selectedCategoryData.remove(at: i)
@@ -203,7 +203,7 @@ class tempViewController: UIViewController {
         else{
             shoppingViewBttn.setImage(UIImage(named: "btnMakeShoppingMinus"), for: .normal)
             numOfselected = numOfselected + 1
-            selectedCategory["shopping"] = true
+            TotalPlanData.shared.selectedCategory["shopping"] = true
             selectedCategoryData.append(4)
         }
         /*전체 해제시 선택완료 버튼 비활성화*/
@@ -219,7 +219,7 @@ class tempViewController: UIViewController {
     @IBAction func pressActivityViewBttn(_ sender: Any) {
         if activityViewBttn.image(for: .normal) == UIImage(named: "btnMakeActivityMinus"){            activityViewBttn.setImage(UIImage(named: "btnMakeActivityPlus"), for: .normal)
             numOfselected = numOfselected - 1
-            selectedCategory["activity"] = false
+            TotalPlanData.shared.selectedCategory["activity"] = false
             for (i, v) in selectedCategoryData.enumerated(){
                 if v == 5{
                     selectedCategoryData.remove(at: i)
@@ -229,7 +229,7 @@ class tempViewController: UIViewController {
         else{
             activityViewBttn.setImage(UIImage(named: "btnMakeActivityMinus"), for: .normal)
             numOfselected = numOfselected + 1
-            selectedCategory["activity"] = true
+            TotalPlanData.shared.selectedCategory["activity"] = true
             selectedCategoryData.append(5)
         }
         /*전체 해제시 선택완료 버튼 비활성화*/

@@ -24,9 +24,9 @@ class CategoiryShoppingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var completeBttn: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
-      masterTotalPrice -= categoryShoppingPrice
+      masterTotalPrice -= totalCostOfShopping
       totalPrice.text = String(masterTotalPrice.commaRepresentation)
-      categoryShoppingPrice = 0
+      totalCostOfShopping = 0
     }
     
     
@@ -101,7 +101,7 @@ class CategoiryShoppingViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        categoryShoppingPrice = priceOfShopping
+        totalCostOfShopping = priceOfShopping
 
         
         if checkUpDown == 1{

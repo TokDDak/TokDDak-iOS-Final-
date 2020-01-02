@@ -9,9 +9,11 @@
 import UIKit
 
 
-//전역변수 한번만 선언할게,,,
-var categoryTransportPrice : Int = 0
-var categoryShoppingPrice : Int = 0
+
+//교통 가격
+var totalCostOfTransport : Int = 0
+//쇼핑 가격
+var totalCostOfShopping : Int = 0
 
 class CategoryTransportViewController: UIViewController {
     
@@ -32,9 +34,9 @@ class CategoryTransportViewController: UIViewController {
     @IBOutlet weak var totalPrice: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-        masterTotalPrice -= categoryTransportPrice
+        masterTotalPrice -= totalCostOfTransport
         totalPrice.text = String(masterTotalPrice.commaRepresentation)
-        categoryTransportPrice = 0
+        totalCostOfTransport = 0
     }
     
     
@@ -104,7 +106,7 @@ class CategoryTransportViewController: UIViewController {
             return
         }
         
-        categoryTransportPrice = priceOfTransport
+        totalCostOfTransport = priceOfTransport
         
         if checkUpDown == 1{
             let tmp = masterTotalPrice + priceOfTransport

@@ -47,4 +47,21 @@ final class APIService {
             }
         }
     }
+    
+    func requestTripCreate(cityID: Int, requestModel: TripCreateRequestModel, completion: @escaping (Result<TripCreateResponseModel, Error>) -> Void) {
+        provider.request(.tripCreate(cityID: cityID, body: requestModel)) { result in
+            switch result {
+            case let .success(success):
+                let responseData = success.data
+                do {
+                    let decoded = try JSONDecoder().decode(TripCreateResponseModel.self, from: responseData)
+                    completion(.success(decoded))
+                } catch {
+                    completion(.failure(error))
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

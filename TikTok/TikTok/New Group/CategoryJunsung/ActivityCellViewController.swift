@@ -16,7 +16,6 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     var pgValue : Int = 0
     var progressBarOffset : Int = 1
     var basePriceOfActivity = 0
-    var baseCntOfActivity = 0
     
     var responseModel: [ActivityCellModel]? {
         didSet {
@@ -61,13 +60,25 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @IBAction func endCategory(_ sender: Any) {
+        print("startData : \(TotalPlanData.shared.startDate), endDate : \(TotalPlanData.shared.endDate), travelDays : \(TotalPlanData.shared.travelDays), cityName : \(TotalPlanData.shared.cityName)")
+        print("totalCostOfHotel : \(TotalPlanData.shared.totalCostOfHotel)")
+        print("totalDayOfHotel : \(TotalPlanData.shared.totalDayOfHotel)")
+        print("totalCostOfFood : \(TotalPlanData.shared.totalCostOfFood)")
+        print("totalCountOfFood : \(TotalPlanData.shared.totalCountOfFood)")
+        print("totalCostOfDrink : \(TotalPlanData.shared.totalCostOfDrink)")
+         print("totalCountOfDrink : \(TotalPlanData.shared.totalCountOfDrink)")
+         print("totalCostOfActivity : \(TotalPlanData.shared.totalCostOfActivity)")
+         print("totalCountOfActivity : \(TotalPlanData.shared.totalCountOfActivity)")
+   
         
+        print("shopping : \(totalCostOfShopping)")
+        print("transport : \(totalCostOfTransport)")
         //이제 다 끝났고, 다른 flow로 넘어가면 됨
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return price.count
+        //        return price.count
         return responseModel?.count ?? 0
     }
     
@@ -105,8 +116,9 @@ extension ActivityCellViewController: ActivityCellTableViewCellDelegate {
         guard let model = responseModel?[button.tag] else { return }
         if selectedIndex.contains(tag) { // 재사용된 셀이 이미 선택이되서 active된 상태이면, 선택 해제된 셀을 재사용셀로 사용한다.
             button.setImage(UIImage(named: "btnSelect"), for: .normal)
+            TotalPlanData.shared.totalCostOfActivity -= model.cost
             basePriceOfActivity -= model.cost
-            baseCntOfActivity -= 1
+            TotalPlanData.shared.totalCountOfActivity -= 1
             for (i, v) in selectedIndex.enumerated() {
                 if v == tag {
                     selectedIndex.remove(at: i)
@@ -115,10 +127,11 @@ extension ActivityCellViewController: ActivityCellTableViewCellDelegate {
         } else { // 선택
             button.setImage(UIImage(named: "btnSelectActive"), for: .normal)
             selectedIndex.append(tag)
+            TotalPlanData.shared.totalCostOfActivity += model.cost
             basePriceOfActivity += model.cost //선택했을 때 가격 더해주는거
-            baseCntOfActivity += 1 //갯수 더해주는거
+            TotalPlanData.shared.totalCountOfActivity += 1 //갯수 더해주는거
         }
         totalPriceOfActivity.text = String(basePriceOfActivity.commaRepresentation)
-        totalOfActivity.text = String(baseCntOfActivity)
+        totalOfActivity.text = String(TotalPlanData.shared.totalCountOfActivity)
     }
 }
