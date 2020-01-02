@@ -16,6 +16,7 @@ class StartViewController: UIViewController {
     var animationDuration: TimeInterval = 0.6
     let toDelayTime = 1.0
     
+    @IBOutlet weak var letgoButton: UIButton!
     @IBOutlet weak var topView: UIView!
     
     var numberOfCell: Int = 6 // 이미지 배열 개수랑, 같이 숫자 변경
@@ -28,6 +29,14 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
             
         self.topView.backgroundColor = UIColor(red: 19.00/255.0, green: 139.00/255.0, blue: 255.00/255.0, alpha: 1.00)
+        
+        letgoButton.imageView?.contentMode = .scaleAspectFit
+        
+        //refresh control 추가하고 안보이게 아이디어
+        
+        
+        
+        
         //self.view.sendSubviewToBack(self.airPlaneImageView)
         //뷰 맨뒤로
        // self.navigationController?.navigationBar.barTintColor = UIColor(red: 19.00/255.0, green: 139.00/255.0, blue: 255.00/255.0, alpha: 1.00)
@@ -75,23 +84,26 @@ class StartViewController: UIViewController {
     
     @IBAction func touchUpLetsGo(_ sender: UIButton) {
         sender.isEnabled = false
+        
+        let transform = self.airPlaneImageView.transform.translatedBy(x: 235, y: -200) //.scaledBy(x: 0.3, y: 0.3)
         UIView.animate(withDuration: animationDuration,
                        delay: 0,
                        options: [.curveLinear],
                        animations: {
-                    self.airPlaneImageView.alpha = 0
-                    self.airPlaneImageView.transform =
-                        self.airPlaneImageView.transform.translatedBy(x: 100, y: -200)
-        //            self.airPlaneImageView.transform = .identity
+                        self.airPlaneImageView.alpha = 0
+                        self.airPlaneImageView.transform = transform
+                        //                    self.airPlaneImageView.transform = self.airPlaneImageView.transform.translatedBy(x: 100, y: -200)
+                        //                        self.airPlaneImageView.transform = .init(scaleX: 0.1, y: 0.1)
+                        //            self.airPlaneImageView.transform = .identity
         }, completion: { finished in
             sender.isEnabled = true
             if finished {
-                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ChooseTravel") as? ChooseViewController
-                        else {
-                            return
-                    }
-                    //인스턴트 뷰 컨트롤러에 let 안붙이면 에러
-                    self.navigationController?.pushViewController(nextVC, animated: true)
+                guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ChooseTravel") as? ChooseViewController
+                    else {
+                        return
+                }
+                //인스턴트 뷰 컨트롤러에 let 안붙이면 에러
+                self.navigationController?.pushViewController(nextVC, animated: true)
                 self.airPlaneImageView.transform = .identity
                 self.airPlaneImageView.alpha = 1
             }
