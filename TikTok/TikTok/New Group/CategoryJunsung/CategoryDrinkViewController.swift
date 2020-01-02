@@ -29,6 +29,7 @@ class CategoryDrinkViewController: UIViewController {
     @IBOutlet weak var totalPriceOfDrink: UILabel!
     @IBOutlet weak var totalCountOfDrink: UILabel!
     
+    @IBOutlet weak var completeBttn: UIButton!
     
     var selectedCategoryData : [Int] = []
     var progressBarOffset : Int = 1
@@ -49,11 +50,11 @@ class CategoryDrinkViewController: UIViewController {
     var totalPriceDrink : [Int : Int] = [0:0, 1:0, 2:0]
     var eachPriceDrink : [Int : Int] = [0:21000, 1:21000, 2:21000]
     var totalCountDrink : [Int : Int] = [0:0, 1:0, 2:0]
-    
+    var masterTotalPrice : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
         //totalPrice.text = String(totalBase.commaRepresentation2) + " ₩"
         avgPriceOfCafe.text = String(eachPriceDrink[0]!.commaRepresentation) + "원"
         avgPriceOfDesert.text = String(eachPriceDrink[1]!.commaRepresentation) + "원"
@@ -87,6 +88,7 @@ class CategoryDrinkViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -97,6 +99,7 @@ class CategoryDrinkViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -107,6 +110,7 @@ class CategoryDrinkViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.basePriceOfActivity = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -133,9 +137,11 @@ class CategoryDrinkViewController: UIViewController {
             priceOfCafe.text = String(tp.commaRepresentation) //+ "원"
             numOfCafe.text = String(tc)
             priceOfCafe.sizeToFit()
-            print("######## \(returnPrice())")
-            totalPriceOfDrink.text = String(returnPrice().commaRepresentation)
+            
+            masterTotalPrice -= eachPriceDrink[0]!
+            totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfDrink.text = String(returnCount())
+            btthEnable()
             totalPriceOfDrink.sizeToFit()
             totalCountOfDrink.sizeToFit()
         }
@@ -149,8 +155,10 @@ class CategoryDrinkViewController: UIViewController {
         priceOfCafe.text = String(tp.commaRepresentation) //+ "원"
         numOfCafe.text = String(tc)
         priceOfCafe.sizeToFit()
-        totalPriceOfDrink.text = String(returnPrice().commaRepresentation)
+        masterTotalPrice += eachPriceDrink[0]!
+        totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfDrink.text = String(returnCount())
+        btthEnable()
         totalPriceOfDrink.sizeToFit()
         totalCountOfDrink.sizeToFit()
     }
@@ -166,8 +174,11 @@ class CategoryDrinkViewController: UIViewController {
             priceOfDesert.text = String(tp.commaRepresentation) //+ "원"
             numOfDesert.text = String(tc)
             priceOfDesert.sizeToFit()
-            totalPriceOfDrink.text = String(returnPrice().commaRepresentation)
+            
+            masterTotalPrice -= eachPriceDrink[1]!
+            totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfDrink.text = String(returnCount())
+            btthEnable()
             totalPriceOfDrink.sizeToFit()
             totalCountOfDrink.sizeToFit()
         }
@@ -181,8 +192,10 @@ class CategoryDrinkViewController: UIViewController {
         priceOfDesert.text = String(tp.commaRepresentation) //+ "원"
         numOfDesert.text = String(tc)
         priceOfDesert.sizeToFit()
-        totalPriceOfDrink.text = String(returnPrice().commaRepresentation)
+        masterTotalPrice += eachPriceDrink[1]!
+        totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfDrink.text = String(returnCount())
+        btthEnable()
         totalPriceOfDrink.sizeToFit()
         totalCountOfDrink.sizeToFit()
     }
@@ -198,8 +211,10 @@ class CategoryDrinkViewController: UIViewController {
             priceOfPub.text = String(tp.commaRepresentation) //+ "원"
             numOfPub.text = String(tc)
             priceOfPub.sizeToFit()
-            totalPriceOfDrink.text = String(returnPrice().commaRepresentation)
+            masterTotalPrice -= eachPriceDrink[2]!
+            totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfDrink.text = String(returnCount())
+            btthEnable()
             totalPriceOfDrink.sizeToFit()
             totalCountOfDrink.sizeToFit()
         }
@@ -213,8 +228,10 @@ class CategoryDrinkViewController: UIViewController {
         priceOfPub.text = String(tp.commaRepresentation) //+ "원"
         numOfPub.text = String(tc)
         priceOfPub.sizeToFit()
-        totalPriceOfDrink.text = String(returnPrice().commaRepresentation)
+        masterTotalPrice += eachPriceDrink[2]!
+        totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfDrink.text = String(returnCount())
+        btthEnable()
         totalPriceOfDrink.sizeToFit()
         totalCountOfDrink.sizeToFit()
     }
@@ -236,17 +253,14 @@ class CategoryDrinkViewController: UIViewController {
         
     }
     
-    func returnPrice() -> Int{
-        guard let tp = totalPriceDrink[0] else{return -1}
-        guard let tp1 = totalPriceDrink[1] else{return -1}
-        guard let tp2 = totalPriceDrink[2] else{return -1}
-        print(tp)
-        print(tp1)
-        print(tp2)
-        return tp + tp1 + tp2
+    func btthEnable(){
+        if returnCount() > 0{
+            completeBttn.isEnabled = true
+        }
+        else {
+            completeBttn.isEnabled = false
+        }
     }
-    
-    
     
     
     

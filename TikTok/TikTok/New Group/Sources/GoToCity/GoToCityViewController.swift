@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GoToCityViewController: UIViewController {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var RegisterCalendarButton: UIButton!
@@ -17,19 +18,33 @@ class GoToCityViewController: UIViewController {
     
     @IBOutlet weak var travelNameTextField: UITextField!
     
-    
+    var cityName: String = ""
     var arrivedDate: String = ""
     var startDate: String = ""
-    
     var days: Int = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cityNameLabel.text = TravelData.userChooseCity
+        cityName = TravelData.userChooseCity
         self.arrivedDateLabel.text = arrivedDate
         self.startDateLabel.text = startDate
         
+       
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let yourBackImage = UIImage(named: "naviBtnBackB")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+    self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        
         // Do any additional setup after loading the view.
     }
+
     
     @IBAction func touchUpBackButton(_ sender: Any) {
          self.navigationController?.popViewController(animated: true)

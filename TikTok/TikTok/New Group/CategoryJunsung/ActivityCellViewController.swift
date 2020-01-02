@@ -39,6 +39,7 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         myTableview.dataSource = self
         myTableview.delegate = self
+        totalPriceOfActivity.text = String(basePriceOfActivity.commaRepresentation)
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
         // Do any additional setup after loading the view.
     }

@@ -23,11 +23,6 @@ class MainViewController: UIViewController, sendBackDelegate{
     @IBOutlet weak var numOfsleepDay: UILabel!
     
     
-    
-    
-    
-    
-    
     var nowSelectedStatus : Int = 0 //현재 진행중인 카테고리 넘버
     var selectedCategoryData : [Int] = [] //전뷰에서 1개 팝하고 남은 카테고리 순서 가져오기
     var menuSelected : [Int : Int] = [0:0, 1:0, 2:0, 3:0, 4:0]
@@ -92,7 +87,8 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    vc.masterTotalPrice = totalBase
+                self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
                 if nextCategory == 2{
@@ -102,6 +98,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -112,6 +109,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -122,6 +120,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -132,6 +131,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.basePriceOfActivity = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
