@@ -47,9 +47,9 @@ class CategoryDrinkViewController: UIViewController {
     //    var totalCountOfDesert : Int = 0
     //    var totalCountOfPub : Int = 0
     
-    var totalPriceDrink : [Int : Int] = [0:0, 1:0, 2:0]
+//    var totalCostOfDrink : [Int : Int] = [0:0, 1:0, 2:0]
     var eachPriceDrink : [Int : Int] = [0:21000, 1:21000, 2:21000]
-    var totalCountDrink : [Int : Int] = [0:0, 1:0, 2:0]
+//    var totalCountOfDrink : [Int : Int] = [0:0, 1:0, 2:0]
     var masterTotalPrice : Int = 0
     
     override func viewDidLoad() {
@@ -127,12 +127,12 @@ class CategoryDrinkViewController: UIViewController {
     
     @IBAction func cafeMinus(_ sender: Any) {
         
-        if totalCountDrink[0]! > 0{
-            totalCountDrink[0]! -= 1
+        if TotalPlanData.shared.totalCountOfDrink[0]! > 0{
+            TotalPlanData.shared.totalCountOfDrink[0]! -= 1
             guard let ep = eachPriceDrink[0] else{return}
-            guard let tc = totalCountDrink[0] else{return}
-            totalPriceDrink[0] = ep * tc
-            guard let tp = totalPriceDrink[0] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfDrink[0] else{return}
+            TotalPlanData.shared.totalCostOfDrink[0] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfDrink[0] else{return}
             
             priceOfCafe.text = String(tp.commaRepresentation) //+ "원"
             numOfCafe.text = String(tc)
@@ -148,10 +148,10 @@ class CategoryDrinkViewController: UIViewController {
     }
     
     @IBAction func cafePlus(_ sender: Any) {
-        totalCountDrink[0]! += 1
-        totalPriceDrink[0]! = (totalCountDrink[0]! * eachPriceDrink[0]!)
-        guard let tp = totalPriceDrink[0] else{return}
-        guard let tc = totalCountDrink[0] else{return}
+        TotalPlanData.shared.totalCountOfDrink[0]! += 1
+        TotalPlanData.shared.totalCostOfDrink[0]! = (TotalPlanData.shared.totalCountOfDrink[0]! * eachPriceDrink[0]!)
+        guard let tp = TotalPlanData.shared.totalCostOfDrink[0] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfDrink[0] else{return}
         priceOfCafe.text = String(tp.commaRepresentation) //+ "원"
         numOfCafe.text = String(tc)
         priceOfCafe.sizeToFit()
@@ -164,12 +164,12 @@ class CategoryDrinkViewController: UIViewController {
     }
     
     @IBAction func desertMinus(_ sender: Any) {
-        if totalCountDrink[1]! > 0{
-            totalCountDrink[1]! -= 1
+        if TotalPlanData.shared.totalCountOfDrink[1]! > 0{
+            TotalPlanData.shared.totalCountOfDrink[1]! -= 1
             guard let ep = eachPriceDrink[1] else{return}
-            guard let tc = totalCountDrink[1] else{return}
-            totalPriceDrink[1] = ep * tc
-            guard let tp = totalPriceDrink[1] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfDrink[1] else{return}
+            TotalPlanData.shared.totalCostOfDrink[1] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfDrink[1] else{return}
             
             priceOfDesert.text = String(tp.commaRepresentation) //+ "원"
             numOfDesert.text = String(tc)
@@ -185,10 +185,10 @@ class CategoryDrinkViewController: UIViewController {
     }
     
     @IBAction func desertPlus(_ sender: Any) {
-        totalCountDrink[1]! += 1
-        totalPriceDrink[1]! = (totalCountDrink[1]! * eachPriceDrink[1]!)
-        guard let tp = totalPriceDrink[1] else{return}
-        guard let tc = totalCountDrink[1] else{return}
+        TotalPlanData.shared.totalCountOfDrink[1]! += 1
+        TotalPlanData.shared.totalCostOfDrink[1]! = (TotalPlanData.shared.totalCountOfDrink[1]! * eachPriceDrink[1]!)
+        guard let tp = TotalPlanData.shared.totalCostOfDrink[1] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfDrink[1] else{return}
         priceOfDesert.text = String(tp.commaRepresentation) //+ "원"
         numOfDesert.text = String(tc)
         priceOfDesert.sizeToFit()
@@ -201,12 +201,12 @@ class CategoryDrinkViewController: UIViewController {
     }
     
     @IBAction func pubMinus(_ sender: Any) {
-        if totalCountDrink[2]! > 0{
-            totalCountDrink[2]! -= 1
+        if TotalPlanData.shared.totalCountOfDrink[2]! > 0{
+            TotalPlanData.shared.totalCountOfDrink[2]! -= 1
             guard let ep = eachPriceDrink[2] else{return}
-            guard let tc = totalCountDrink[2] else{return}
-            totalPriceDrink[2] = ep * tc
-            guard let tp = totalPriceDrink[2] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfDrink[2] else{return}
+            TotalPlanData.shared.totalCostOfDrink[2] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfDrink[2] else{return}
             
             priceOfPub.text = String(tp.commaRepresentation) //+ "원"
             numOfPub.text = String(tc)
@@ -221,10 +221,10 @@ class CategoryDrinkViewController: UIViewController {
     }
     
     @IBAction func pubPlus(_ sender: Any) {
-        totalCountDrink[2]! += 1
-        totalPriceDrink[2]! = (totalCountDrink[2]! * eachPriceDrink[2]!)
-        guard let tp = totalPriceDrink[2] else{return}
-        guard let tc = totalCountDrink[2] else{return}
+        TotalPlanData.shared.totalCountOfDrink[2]! += 1
+        TotalPlanData.shared.totalCostOfDrink[2]! = (TotalPlanData.shared.totalCountOfDrink[2]! * eachPriceDrink[2]!)
+        guard let tp = TotalPlanData.shared.totalCostOfDrink[2] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfDrink[2] else{return}
         priceOfPub.text = String(tp.commaRepresentation) //+ "원"
         numOfPub.text = String(tc)
         priceOfPub.sizeToFit()
@@ -243,9 +243,9 @@ class CategoryDrinkViewController: UIViewController {
     
     
     func returnCount() -> Int{
-        guard let tc = totalCountDrink[0] else{return -1}
-        guard let tc1 = totalCountDrink[1] else{return -1}
-        guard let tc2 = totalCountDrink[2] else{return -1}
+        guard let tc = TotalPlanData.shared.totalCountOfDrink[0] else{return -1}
+        guard let tc1 = TotalPlanData.shared.totalCountOfDrink[1] else{return -1}
+        guard let tc2 = TotalPlanData.shared.totalCountOfDrink[2] else{return -1}
         print(tc)
         print(tc1)
         print(tc2)

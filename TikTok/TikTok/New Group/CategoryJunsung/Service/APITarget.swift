@@ -11,6 +11,7 @@ import Moya
 enum APITarget: TargetType {
     case medianHotelRead(cityID: Int, subCategory: Int)
     case cityActivity(cityID: Int)
+    case tripCreate(cityID: Int, body: TripCreateRequestModel)
     
     var baseURL: URL {
         return URL(string: "http://13.125.42.117:3000")!
@@ -22,6 +23,8 @@ enum APITarget: TargetType {
             return "/median/\(cityID)/\(subCategory)/hoteliOS/"
         case let .cityActivity(cityID):
             return "/citys/\(cityID)/Activity"
+        case let .tripCreate(cityID, _):
+            return "/trips/\(cityID)"
         }
     }
     
@@ -31,7 +34,11 @@ enum APITarget: TargetType {
             return .get
         case .cityActivity:
             return .get
+        case .tripCreate:
+            return .post
         }
+        // case. sendA:
+        // return .post
     }
     
     var sampleData: Data {
@@ -39,7 +46,15 @@ enum APITarget: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .medianHotelRead:
+            return .requestPlain     
+        case .cityActivity:
+            return .requestPlain
+        case let .tripCreate(cityID, body):
+            let encoded = try! JSONEncoder().encode(body)
+            return .requestCompositeData(bodyData: encoded, urlParameters: ["CityId": cityID])
+        }
     }
     
     var headers: [String : String]? {

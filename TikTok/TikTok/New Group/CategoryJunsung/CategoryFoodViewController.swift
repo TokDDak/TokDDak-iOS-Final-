@@ -36,9 +36,8 @@ class CategoryFoodViewController: UIViewController {
     @IBOutlet weak var totalCountOfFood: UILabel!
     @IBOutlet weak var totalPriceOfFood: UILabel!
     
-    var totalPriceFood : [Int : Int] = [0:0, 1:0, 2:0]
+
     var eachPriceFood : [Int : Int] = [0:21000, 1:21000, 2:21000]
-    var totalCountFood : [Int : Int] = [0:0, 1:0, 2:0]
     var masterTotalPrice : Int = 0
     
     override func viewDidLoad() {
@@ -121,12 +120,12 @@ class CategoryFoodViewController: UIViewController {
     
     @IBAction func cafeMinus(_ sender: Any) {
         
-        if totalCountFood[0]! > 0{
-            totalCountFood[0]! -= 1
+        if TotalPlanData.shared.totalCountOfFood[0]! > 0{
+            TotalPlanData.shared.totalCountOfFood[0]! -= 1
             guard let ep = eachPriceFood[0] else{return}
-            guard let tc = totalCountFood[0] else{return}
-            totalPriceFood[0] = ep * tc
-            guard let tp = totalPriceFood[0] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfFood[0] else{return}
+            TotalPlanData.shared.totalCostOfFood[0] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfFood[0] else{return}
             
             priceOfHigh.text = String(tp.commaRepresentation) //+ "원"
             numOfHigh.text = String(tc)
@@ -142,10 +141,10 @@ class CategoryFoodViewController: UIViewController {
     }
     
     @IBAction func cafePlus(_ sender: Any) {
-        totalCountFood[0]! += 1
-        totalPriceFood[0]! = (totalCountFood[0]! * eachPriceFood[0]!)
-        guard let tp = totalPriceFood[0] else{return}
-        guard let tc = totalCountFood[0] else{return}
+        TotalPlanData.shared.totalCountOfFood[0]! += 1
+        TotalPlanData.shared.totalCostOfFood[0]! = (TotalPlanData.shared.totalCountOfFood[0]! * eachPriceFood[0]!)
+        guard let tp = TotalPlanData.shared.totalCostOfFood[0] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[0] else{return}
         priceOfHigh.text = String(tp.commaRepresentation) //+ "원"
         numOfHigh.text = String(tc)
         priceOfHigh.sizeToFit()
@@ -159,12 +158,12 @@ class CategoryFoodViewController: UIViewController {
     }
     
     @IBAction func desertMinus(_ sender: Any) {
-        if totalCountFood[1]! > 0{
-            totalCountFood[1]! -= 1
+        if TotalPlanData.shared.totalCountOfFood[1]! > 0{
+            TotalPlanData.shared.totalCountOfFood[1]! -= 1
             guard let ep = eachPriceFood[1] else{return}
-            guard let tc = totalCountFood[1] else{return}
-            totalPriceFood[1] = ep * tc
-            guard let tp = totalPriceFood[1] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfFood[1] else{return}
+            TotalPlanData.shared.totalCostOfFood[1] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfFood[1] else{return}
             
             priceOfMiddle.text = String(tp.commaRepresentation) //+ "원"
             numOfMiddle.text = String(tc)
@@ -180,10 +179,10 @@ class CategoryFoodViewController: UIViewController {
     }
     
     @IBAction func desertPlus(_ sender: Any) {
-        totalCountFood[1]! += 1
-        totalPriceFood[1]! = (totalCountFood[1]! * eachPriceFood[1]!)
-        guard let tp = totalPriceFood[1] else{return}
-        guard let tc = totalCountFood[1] else{return}
+        TotalPlanData.shared.totalCountOfFood[1]! += 1
+        TotalPlanData.shared.totalCostOfFood[1]! = (TotalPlanData.shared.totalCountOfFood[1]! * eachPriceFood[1]!)
+        guard let tp = TotalPlanData.shared.totalCostOfFood[1] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[1] else{return}
         priceOfMiddle.text = String(tp.commaRepresentation) //+ "원"
         numOfMiddle.text = String(tc)
         priceOfMiddle.sizeToFit()
@@ -197,12 +196,12 @@ class CategoryFoodViewController: UIViewController {
     }
     
     @IBAction func pubMinus(_ sender: Any) {
-        if totalCountFood[2]! > 0{
-            totalCountFood[2]! -= 1
+        if TotalPlanData.shared.totalCountOfFood[2]! > 0{
+            TotalPlanData.shared.totalCountOfFood[2]! -= 1
             guard let ep = eachPriceFood[2] else{return}
-            guard let tc = totalCountFood[2] else{return}
-            totalPriceFood[2] = ep * tc
-            guard let tp = totalPriceFood[2] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfFood[2] else{return}
+            TotalPlanData.shared.totalCostOfFood[2] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfFood[2] else{return}
             
             priceOfLow.text = String(tp.commaRepresentation) //+ "원"
             numOfLow.text = String(tc)
@@ -218,10 +217,10 @@ class CategoryFoodViewController: UIViewController {
     }
     
     @IBAction func pubPlus(_ sender: Any) {
-        totalCountFood[2]! += 1
-        totalPriceFood[2]! = (totalCountFood[2]! * eachPriceFood[2]!)
-        guard let tp = totalPriceFood[2] else{return}
-        guard let tc = totalCountFood[2] else{return}
+        TotalPlanData.shared.totalCountOfFood[2]! += 1
+        TotalPlanData.shared.totalCostOfFood[2]! = (TotalPlanData.shared.totalCountOfFood[2]! * eachPriceFood[2]!)
+        guard let tp = TotalPlanData.shared.totalCostOfFood[2] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[2] else{return}
         priceOfLow.text = String(tp.commaRepresentation) //+ "원"
         numOfLow.text = String(tc)
         priceOfLow.sizeToFit()
@@ -237,9 +236,9 @@ class CategoryFoodViewController: UIViewController {
     
     
     func returnCount() -> Int{
-        guard let tc = totalCountFood[0] else{return -1}
-        guard let tc1 = totalCountFood[1] else{return -1}
-        guard let tc2 = totalCountFood[2] else{return -1}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[0] else{return -1}
+        guard let tc1 = TotalPlanData.shared.totalCountOfFood[1] else{return -1}
+        guard let tc2 = TotalPlanData.shared.totalCountOfFood[2] else{return -1}
         print(tc)
         print(tc1)
         print(tc2)
