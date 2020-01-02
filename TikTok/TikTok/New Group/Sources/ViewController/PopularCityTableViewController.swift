@@ -53,31 +53,29 @@ class PopularCityTableViewController: UITableViewController , IndicatorInfoProvi
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
 //    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return twoDimensionalArray.count
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("섹션값 \(indexPath.section)")
-               print("로우값 \(indexPath.row)")
+      
         
-           
-               
+    
         TotalPlanData.shared.cityName = twoDimensionalArray[indexPath.row][0]
-               
-               guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GoToVC") as? GoToCityViewController
-                   else {
-                       return
-               }
-               
-               self.navigationController?.pushViewController(nextVC, animated: true)
+        
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GoToVC") as? GoToCityViewController
+            else {
+                return
+        }
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-           guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityCell", for: indexPath) as? PopularCityTableViewCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityCell", for: indexPath) as? PopularCityTableViewCell else{
                return UITableViewCell()
            }
 

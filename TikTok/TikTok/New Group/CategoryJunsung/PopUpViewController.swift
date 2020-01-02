@@ -34,14 +34,14 @@ class PopUpViewController: UIViewController {
     
     var chk : Int = 0
     
-    var hotelNum = 0
+    var subCategory = 0
     var Day = 1
     var totalP = 250000
     
     var sendData = "" // data 전달을 위한 sendData
     weak var delegate: PopUpViewControllerDelegate? // data 전달을 위한 delegate 선언
     var nameOfHotel : String = ""
-    
+
     var model: PopUpModel?
     
     @IBOutlet weak var entireView: UIView!
@@ -88,14 +88,15 @@ class PopUpViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let cityID = 1
-        APIService.shared.requestMedianHotel(cityID: cityID) { [weak self] result in
+       
+        APIService.shared.requestMedianHotel(cityID: cityID, subCategory: subCategory) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(success):
                 guard let data = success.data else { return }
-                let superiorHotel = data.result.filter { $0.category == "최고급호텔" }.first!
-                self.model = superiorHotel
-                self.reloadView(by: superiorHotel)
+                let result = data.result.first!
+                self.model = result
+                self.reloadView(by: result)
             case let .failure(error):
                 print("실패")
                 print(error.localizedDescription)
@@ -120,7 +121,7 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func clickComplete(_ sender: Any) {
-        delegate?.popUpViewController(self, didReceiveData: String(totalP), hotelNumber: hotelNum, day: Day)
+        delegate?.popUpViewController(self, didReceiveData: String(totalP), hotelNumber: subCategory, day: Day)
         dismiss(animated: true, completion: nil)
         //
         // 계산한 전체 총값을 그 전 뷰에서 받는 것

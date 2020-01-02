@@ -9,7 +9,7 @@
 import UIKit
 
 class ActivityCellViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+    
     var numOfcell = 0
     var price = [92000,92000,92000,92000,92000,1111192000,92000,92000,92000,92000, 100000, 10000]
     var name2 = ["디즈니랜드1","디즈니랜드2","디즈니랜드3","디즈니랜드4","디즈니랜드5","디즈니랜드6","디즈니랜드7","디즈니랜드8","디즈니랜드9","디즈니랜드10", "에버랜드", "호우랜드"]
@@ -34,7 +34,7 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var totalPriceOfActivity: UILabel!
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableview.dataSource = self
@@ -44,8 +44,6 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         // Do any additional setup after loading the view.
     }
     
-    
-    
     @IBAction func endCategory(_ sender: Any) {
         
         //이제 다 끝났고, 다른 flow로 넘어가면 됨
@@ -54,13 +52,13 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return price.count
-       }
+    }
     
-
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let mcell : ActivityCellTableViewCell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath) as! ActivityCellTableViewCell
         
-           let mname : String = name2[indexPath.row]
+        let mname : String = name2[indexPath.row]
         let mprice : String = String(price[indexPath.row].commaRepresentation)
         
         //selectedIndex가 row 번호를 가지고 있으면, Active버튼 아니면 Non-active
@@ -75,9 +73,9 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         mcell.aName.tag = indexPath.row
         
         mcell.aSelect.addTarget(self, action: #selector(ActivityCellViewController.oneTapped(_:)), for: .touchUpInside)
-
+        
         mcell.aName.addTarget(self, action: #selector(ActivityCellViewController.seeDeatail(_:)), for: .touchUpInside)
-
+        
         mcell.aImage?.image = UIImage(named: "makeImgDisney")
         mcell.aName.setTitle(mname, for: .normal)
         mcell.aPrice.text = mprice + " 원"
@@ -88,18 +86,18 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         mcell.layer.shadowOffset = CGSize(width: -1, height: 1)
         mcell.layer.borderColor = CGColor.init(srgbRed: 255, green: 255, blue: 255, alpha: 100)
         
-           return mcell
-           
-       }
+        return mcell
+        
+    }
     
     /*table view에 아이템 삭제*/
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete{
-//            price.remove(at: indexPath.row)
-//            name.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .bottom)
-//        }
-//    }
+    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete{
+    //            price.remove(at: indexPath.row)
+    //            name.remove(at: indexPath.row)
+    //            tableView.deleteRows(at: [indexPath], with: .bottom)
+    //        }
+    //    }
     
     @objc func seeDeatail(_ sender: UIButton){
         let vc = storyboard?.instantiateViewController(identifier: "ActivityPopUpViewController") as! ActivityPopUpViewController
@@ -136,5 +134,5 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     func setupCompleteBtn() {
         completeBttn.isEnabled = selectedIndex.count != 0
     }
-
+    
 }

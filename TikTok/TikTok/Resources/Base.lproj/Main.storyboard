@@ -605,27 +605,27 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₩" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0K-WF-R3l">
-                                        <rect key="frame" x="47" y="411" width="250" height="43"/>
+                                        <rect key="frame" x="47" y="421" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYa-sd-m1c">
-                                        <rect key="frame" x="106" y="485" width="49" height="44"/>
+                                        <rect key="frame" x="106" y="495" width="98" height="88"/>
                                         <state key="normal" image="btnLabelMinus"/>
                                         <connections>
                                             <action selector="minusDay:" destination="udp-OH-k7B" eventType="touchUpInside" id="DgF-C5-aaR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP0-DF-Szs">
-                                        <rect key="frame" x="221" y="485" width="49" height="44"/>
+                                        <rect key="frame" x="172" y="495" width="98" height="88"/>
                                         <state key="normal" image="btnLabelPlus"/>
                                         <connections>
                                             <action selector="plusDay:" destination="udp-OH-k7B" eventType="touchUpInside" id="kXM-q6-adu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-cA-VYb">
-                                        <rect key="frame" x="0.0" y="575" width="375" height="92"/>
+                                        <rect key="frame" x="0.0" y="483" width="375" height="184"/>
                                         <state key="normal" image="btnOk">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
@@ -634,10 +634,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-Bj-9ed">
-                                        <rect key="frame" x="26" y="147" width="323" height="217"/>
+                                        <rect key="frame" x="26" y="147" width="323" height="227"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-Zt-HfV">
-                                                <rect key="frame" x="154" y="172" width="148.33333333333337" height="22"/>
+                                                <rect key="frame" x="154" y="172" width="148.33333333333337" height="32"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <state key="normal" image="btnMoreView">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -712,7 +712,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-DA-Qe6">
-                                        <rect key="frame" x="154.66666666666666" y="485" width="66" height="44"/>
+                                        <rect key="frame" x="154.66666666666666" y="495" width="66" height="88"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="8V5-AY-HaB"/>
                                         </constraints>
@@ -1094,7 +1094,7 @@
                                 <rect key="frame" x="0.0" y="145.66666666666666" width="375" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-d4-qlZ">
-                                <rect key="frame" x="0.0" y="719.66666666666663" width="375" height="92.333333333333371"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1116,7 +1116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-G4-jfo">
-                                <rect key="frame" x="16" y="223.66666666666663" width="343" height="146"/>
+                                <rect key="frame" x="16" y="132" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgSnacksCafe" translatesAutoresizingMaskIntoConstraints="NO" id="KeT-Fb-OyD">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1179,13 +1179,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-hy-hjj">
-                                        <rect key="frame" x="248" y="114.00000000000003" width="56" height="21"/>
+                                        <rect key="frame" x="248" y="114" width="56" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X04-DP-8BO">
-                                        <rect key="frame" x="307" y="114.00000000000003" width="15" height="21"/>
+                                        <rect key="frame" x="307" y="114" width="15" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1201,7 +1201,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r7-49-3Qo">
-                                <rect key="frame" x="16" y="384.66666666666669" width="343" height="146.00000000000006"/>
+                                <rect key="frame" x="16" y="293" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgSnacksBakery" translatesAutoresizingMaskIntoConstraints="NO" id="fO1-ll-9dV">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1286,7 +1286,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z2-Ep-Nbf">
-                                <rect key="frame" x="16" y="545.66666666666663" width="343" height="146"/>
+                                <rect key="frame" x="16" y="454" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgSnacksPubnbar" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-Bd-ctP">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1471,7 +1471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-wg-Dev">
-                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1485,7 +1485,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dor-Oc-eq0">
-                                <rect key="frame" x="16" y="224" width="343" height="146"/>
+                                <rect key="frame" x="16" y="132" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgFoodTop" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-Xr-IpR">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1571,7 +1571,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjp-OZ-F3X">
-                                <rect key="frame" x="16" y="385" width="343" height="146"/>
+                                <rect key="frame" x="16" y="293" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgFoodGeneral" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-nT-XxK">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1656,7 +1656,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-sB-dba">
-                                <rect key="frame" x="16" y="546" width="343" height="146"/>
+                                <rect key="frame" x="16" y="454" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgFoodSimple" translatesAutoresizingMaskIntoConstraints="NO" id="dd0-lz-01Z">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>

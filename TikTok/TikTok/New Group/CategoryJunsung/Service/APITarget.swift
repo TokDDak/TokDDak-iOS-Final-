@@ -9,7 +9,8 @@
 import Moya
 
 enum APITarget: TargetType {
-    case medianHotelRead(cityID: Int)
+    case medianHotelRead(cityID: Int, subCategory: Int)
+    case cityActivity(cityID: Int)
     
     var baseURL: URL {
         return URL(string: "http://13.125.42.117:3000")!
@@ -17,14 +18,18 @@ enum APITarget: TargetType {
     
     var path: String {
         switch self {
-        case let .medianHotelRead(cityID):
-            return "/median/\(cityID)/hotel/"
+        case let .medianHotelRead(cityID, subCategory):
+            return "/median/\(cityID)/\(subCategory)/hoteliOS/"
+        case let .cityActivity(cityID):
+            return "/citys/\(cityID)/Activity"
         }
     }
     
     var method: Method {
         switch self {
         case .medianHotelRead:
+            return .get
+        case .cityActivity:
             return .get
         }
     }
@@ -34,16 +39,10 @@ enum APITarget: TargetType {
     }
     
     var task: Task {
-        switch self {
-        case .medianHotelRead:
-            return .requestPlain
-        }
+        return .requestPlain
     }
     
     var headers: [String : String]? {
-        switch self {
-        case .medianHotelRead:
-            return ["Content-Type": "application/json"]
-        }
+        return ["Content-Type": "application/json"]
     }
 }
