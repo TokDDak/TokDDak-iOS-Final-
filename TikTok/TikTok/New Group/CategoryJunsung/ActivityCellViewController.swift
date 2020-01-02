@@ -78,27 +78,9 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
             switch result {
             case let .success(success):
                 guard let data = success.data else {return}
-                
-                print("start  : \(data.start)")
-                print("end  : \(data.end)")
-                print("useCost  : \(data.useCost)")
-                print("status  : \(data.status)")
-                print("id  : \(data.id)")
-                print("title  : \(data.title)")
-                print("city  : \(data.city)")
-                print("country  : \(data.country)")
-                print("activityBudget  : \(data.activityBudget)")
-                print("hotelBudget  : \(data.hotelBudget)")
-                print("foodBudget  : \(data.foodBudget)")
-                print("shoppingBudget  : \(data.shoppingBudget)")
-                print("snackBudget  : \(data.snackBudget)")
-                print("transportBudget  : \(data.transportBudget)")
-                print("totalDay  : \(data.totalDay)")
-                print("userID  : \(data.userID)")
-                print("updatedAt  : \(data.updatedAt)")
-                print("createdAt  : \(data.createdAt)")
-                
-                
+                TotalPlanData.shared.startDate = data.start
+                TotalPlanData.shared.endDate = data.end
+
             case let .failure(error):
                 print("실패")
                 print(error.localizedDescription)
@@ -106,6 +88,13 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         }
         //            print(result)
         //이제 다 끝났고, 다른 flow로 넘어가면 됨
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "totalBudgetViewController") as! totalBudgetViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -26,6 +26,8 @@ class TotalPlanData: CustomStringConvertible {
     // 사용자가 고른 카테고리 true : 고른거 / false : 안고른거
     var selectedCategory : [String : Bool] = ["hotel" : true, "restaurant" : true, "drink" : true, "transport" : true, "shopping" : true, "activity" : true]
     
+    var totalBudget : Int = 0
+    
     
     // 각 호텔당 축적된 가격
     var totalCostOfHotel: [Hotel: Int] = [.high: 0, .middle: 0, .low: 0, .apartment: 0]
