@@ -308,15 +308,15 @@
                                 <rect key="frame" x="0.0" y="156" width="375" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="mycell" rowHeight="72" id="fAf-2h-l8L" customClass="ActivityCellTableViewCell" customModule="TikTok" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="mycell" rowHeight="62" id="fAf-2h-l8L" customClass="ActivityCellTableViewCell" customModule="TikTok" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fAf-2h-l8L" id="cJD-k0-WhF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVL-jt-8nu">
-                                                    <rect key="frame" x="15" y="0.0" width="62" height="62"/>
+                                                    <rect key="frame" x="16" y="0.0" width="62" height="62"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="62" id="MSo-o5-eFo"/>
                                                         <constraint firstAttribute="height" constant="62" id="hLv-VK-RJT"/>
@@ -328,43 +328,40 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYp-Gb-zIr">
-                                                    <rect key="frame" x="90" y="33" width="41.666666666666657" height="16"/>
+                                                    <rect key="frame" x="94" y="35" width="41.666666666666657" height="13.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-Kt-OGH">
-                                                    <rect key="frame" x="90" y="10" width="38" height="18"/>
-                                                    <state key="normal" title="Label">
+                                                    <rect key="frame" x="94" y="1" width="33" height="30"/>
+                                                    <state key="normal" title="label">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DX-OT-KUY">
-                                                    <rect key="frame" x="295" y="13" width="70" height="37"/>
+                                                    <rect key="frame" x="279" y="12.666666666666664" width="70" height="37"/>
                                                     <state key="normal" image="btnSelect"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="PVL-jt-8nu" firstAttribute="top" secondItem="cJD-k0-WhF" secondAttribute="top" id="2mc-I6-dld"/>
-                                                <constraint firstAttribute="bottom" secondItem="mUb-Kt-OGH" secondAttribute="bottom" constant="44" id="6fy-7k-W2Z"/>
-                                                <constraint firstItem="ZYp-Gb-zIr" firstAttribute="leading" secondItem="PVL-jt-8nu" secondAttribute="trailing" constant="13" id="DZ8-MQ-Qzq"/>
-                                                <constraint firstAttribute="bottom" secondItem="PVL-jt-8nu" secondAttribute="bottom" constant="10" id="ES1-PE-bcw"/>
-                                                <constraint firstItem="PVL-jt-8nu" firstAttribute="leading" secondItem="cJD-k0-WhF" secondAttribute="leading" constant="15" id="K0a-ok-aJe"/>
-                                                <constraint firstItem="mUb-Kt-OGH" firstAttribute="top" secondItem="cJD-k0-WhF" secondAttribute="top" constant="10" id="Q4e-L5-e6k"/>
-                                                <constraint firstAttribute="trailing" secondItem="9DX-OT-KUY" secondAttribute="trailing" constant="10" id="SHY-fP-wgJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="9DX-OT-KUY" secondAttribute="bottom" constant="22" id="TLi-h2-Ffz"/>
-                                                <constraint firstItem="mUb-Kt-OGH" firstAttribute="leading" secondItem="PVL-jt-8nu" secondAttribute="trailing" constant="13" id="TOF-8G-qbp"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mUb-Kt-OGH" secondAttribute="trailing" constant="247" id="fBk-yA-qUJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZYp-Gb-zIr" secondAttribute="bottom" constant="23" id="hkr-CF-vwO"/>
-                                                <constraint firstItem="9DX-OT-KUY" firstAttribute="top" secondItem="cJD-k0-WhF" secondAttribute="top" constant="13" id="jAd-Gy-J2Y"/>
-                                                <constraint firstItem="ZYp-Gb-zIr" firstAttribute="top" secondItem="cJD-k0-WhF" secondAttribute="top" constant="33" id="zdh-4H-TKO"/>
+                                                <constraint firstItem="ZYp-Gb-zIr" firstAttribute="leading" secondItem="PVL-jt-8nu" secondAttribute="trailing" constant="16" id="DZ8-MQ-Qzq"/>
+                                                <constraint firstAttribute="bottom" secondItem="PVL-jt-8nu" secondAttribute="bottom" id="ES1-PE-bcw"/>
+                                                <constraint firstItem="PVL-jt-8nu" firstAttribute="leading" secondItem="cJD-k0-WhF" secondAttribute="leading" constant="16" id="K0a-ok-aJe"/>
+                                                <constraint firstAttribute="trailing" secondItem="9DX-OT-KUY" secondAttribute="trailing" constant="26" id="SHY-fP-wgJ"/>
+                                                <constraint firstItem="9DX-OT-KUY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mUb-Kt-OGH" secondAttribute="trailing" constant="16" id="Sl1-bq-AvQ"/>
+                                                <constraint firstItem="ZYp-Gb-zIr" firstAttribute="top" secondItem="cJD-k0-WhF" secondAttribute="centerY" constant="4" id="T5H-bf-1NC"/>
+                                                <constraint firstItem="mUb-Kt-OGH" firstAttribute="leading" secondItem="PVL-jt-8nu" secondAttribute="trailing" constant="16" id="TOF-8G-qbp"/>
+                                                <constraint firstItem="9DX-OT-KUY" firstAttribute="centerY" secondItem="cJD-k0-WhF" secondAttribute="centerY" id="nbC-w2-MOv"/>
+                                                <constraint firstItem="mUb-Kt-OGH" firstAttribute="bottom" secondItem="cJD-k0-WhF" secondAttribute="centerY" id="xIa-Bm-lPs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="aImage" destination="PVL-jt-8nu" id="mz2-SX-6jj"/>
-                                            <outlet property="aName" destination="mUb-Kt-OGH" id="Gy1-0B-Whq"/>
-                                            <outlet property="aPrice" destination="ZYp-Gb-zIr" id="1Fb-u9-tVM"/>
-                                            <outlet property="aSelect" destination="9DX-OT-KUY" id="8lt-oe-ufG"/>
+                                            <outlet property="activityImageView" destination="PVL-jt-8nu" id="mz2-SX-6jj"/>
+                                            <outlet property="nameButton" destination="mUb-Kt-OGH" id="Gy1-0B-Whq"/>
+                                            <outlet property="priceLabel" destination="ZYp-Gb-zIr" id="1Fb-u9-tVM"/>
+                                            <outlet property="selectButton" destination="9DX-OT-KUY" id="8lt-oe-ufG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

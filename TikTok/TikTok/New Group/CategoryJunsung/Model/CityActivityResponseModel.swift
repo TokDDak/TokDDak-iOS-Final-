@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias CityActivityResponseModel = BaseResponseModel<_CityActivityResponseModel>
+typealias CityActivityResponseModel = BaseResponseModel<[_CityActivityResponseModel]>
 
 struct _CityActivityResponseModel: Decodable {
     let id: Int
