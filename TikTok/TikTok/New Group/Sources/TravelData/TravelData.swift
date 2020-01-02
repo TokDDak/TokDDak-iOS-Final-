@@ -8,10 +8,11 @@
 
 import Foundation
 
-class TravelData {
+final class TravelData {
+    //static let shared = TravelData()
+//    private init() {}
     
-    static var userChooseCity:String = ""
-  
+    static var userChooseCity: String = ""
 }
 
 
