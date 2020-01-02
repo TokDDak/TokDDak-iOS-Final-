@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0C0C7123BE0E3800FDC036 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7023BE0E3800FDC036 /* APITarget.swift */; };
+		0D0C0C7323BE0F9500FDC036 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7223BE0F9500FDC036 /* APIService.swift */; };
+		0D0C0C7623BE107200FDC036 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */; };
+		0D0C0C7823BE10B700FDC036 /* MedianHotelResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */; };
 		0D6D70C923B317F100923D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D70C823B317F100923D4E /* AppDelegate.swift */; };
 		0D6D70CB23B317F100923D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D70CA23B317F100923D4E /* SceneDelegate.swift */; };
 		0D6D70D023B317F100923D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6D70CE23B317F100923D4E /* Main.storyboard */; };
@@ -43,7 +47,7 @@
 		55C76EDB23BD05C500D8B822 /* ActivityCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ECE23BD05C400D8B822 /* ActivityCellViewController.swift */; };
 		55C76EDC23BD05C500D8B822 /* ActivityCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ECF23BD05C400D8B822 /* ActivityCellTableViewCell.swift */; };
 		55C76EDD23BD05C500D8B822 /* CategoryFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED023BD05C500D8B822 /* CategoryFoodViewController.swift */; };
-		55C76EDE23BD05C500D8B822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED123BD05C500D8B822 /* ViewController.swift */; };
+		55C76EDE23BD05C500D8B822 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED123BD05C500D8B822 /* PopUpViewController.swift */; };
 		55C76EDF23BD05C500D8B822 /* tempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED223BD05C500D8B822 /* tempViewController.swift */; };
 		55C76EE023BD05C500D8B822 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED323BD05C500D8B822 /* CollectionViewController.swift */; };
 		55C76EE123BD05C500D8B822 /* preTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED423BD05C500D8B822 /* preTempViewController.swift */; };
@@ -52,7 +56,6 @@
 		55C76EE423BD05C500D8B822 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED723BD05C500D8B822 /* MainViewController.swift */; };
 		55F9CC7D23B3208A00E15332 /* InjunStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */; };
 		55F9CC7F23B3258100E15332 /* InjunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC7E23B3258100E15332 /* InjunViewController.swift */; };
-		55F9CC8123B327A800E15332 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC8023B327A800E15332 /* PopUpViewController.swift */; };
 		55F9CC8323B354EC00E15332 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC8223B354EC00E15332 /* StartViewController.swift */; };
 		649FDCBF7EB88ED17CDAF6E7 /* Pods_TikTokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F1614F9987F37216217908 /* Pods_TikTokTests.framework */; };
 		85D4B8ECE7648A39654FB942 /* Pods_TikTok_TikTokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C6030FDD984AAF09D5316 /* Pods_TikTok_TikTokUITests.framework */; };
@@ -78,6 +81,10 @@
 
 /* Begin PBXFileReference section */
 		0AD2887974FB2E37C9B34A4E /* Pods-TikTok-TikTokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok-TikTokUITests.debug.xcconfig"; path = "Target Support Files/Pods-TikTok-TikTokUITests/Pods-TikTok-TikTokUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D0C0C7023BE0E3800FDC036 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		0D0C0C7223BE0F9500FDC036 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
+		0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianHotelResponseModel.swift; sourceTree = "<group>"; };
 		0D6D70C523B317F100923D4E /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6D70C823B317F100923D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D6D70CA23B317F100923D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +128,7 @@
 		55C76ECE23BD05C400D8B822 /* ActivityCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCellViewController.swift; sourceTree = "<group>"; };
 		55C76ECF23BD05C400D8B822 /* ActivityCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCellTableViewCell.swift; sourceTree = "<group>"; };
 		55C76ED023BD05C500D8B822 /* CategoryFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFoodViewController.swift; sourceTree = "<group>"; };
-		55C76ED123BD05C500D8B822 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55C76ED123BD05C500D8B822 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		55C76ED223BD05C500D8B822 /* tempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tempViewController.swift; sourceTree = "<group>"; };
 		55C76ED323BD05C500D8B822 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		55C76ED423BD05C500D8B822 /* preTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preTempViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +137,6 @@
 		55C76ED723BD05C500D8B822 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InjunStoryboard.storyboard; sourceTree = "<group>"; };
 		55F9CC7E23B3258100E15332 /* InjunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjunViewController.swift; sourceTree = "<group>"; };
-		55F9CC8023B327A800E15332 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		55F9CC8223B354EC00E15332 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		5CCD1E5BBBC3289880191A9F /* Pods-TikTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.debug.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.debug.xcconfig"; sourceTree = "<group>"; };
 		62F1614F9987F37216217908 /* Pods_TikTokTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +173,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0C0C6F23BE0DE500FDC036 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0D0C0C7023BE0E3800FDC036 /* APITarget.swift */,
+				0D0C0C7223BE0F9500FDC036 /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0D0C0C7423BE106A00FDC036 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */,
+				0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0D6D70BC23B317F100923D4E = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +256,6 @@
 		555041FE23B61C8300ADCECB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				55F9CC8023B327A800E15332 /* PopUpViewController.swift */,
 				55F9CC7E23B3258100E15332 /* InjunViewController.swift */,
 				5550420223B6480300ADCECB /* TravelingViewController.swift */,
 				55836D7A23BB2CA1006AC948 /* PopularCityTableViewCell.swift */,
@@ -305,6 +328,8 @@
 		55C76ECA23BD059000D8B822 /* CategoryJunsung */ = {
 			isa = PBXGroup;
 			children = (
+				0D0C0C7423BE106A00FDC036 /* Model */,
+				0D0C0C6F23BE0DE500FDC036 /* Service */,
 				55C76ECF23BD05C400D8B822 /* ActivityCellTableViewCell.swift */,
 				55C76ECE23BD05C400D8B822 /* ActivityCellViewController.swift */,
 				55C76ECD23BD05C400D8B822 /* ActivityPopUpViewController.swift */,
@@ -317,7 +342,7 @@
 				55C76ED723BD05C500D8B822 /* MainViewController.swift */,
 				55C76ED423BD05C500D8B822 /* preTempViewController.swift */,
 				55C76ED223BD05C500D8B822 /* tempViewController.swift */,
-				55C76ED123BD05C500D8B822 /* ViewController.swift */,
+				55C76ED123BD05C500D8B822 /* PopUpViewController.swift */,
 			);
 			path = CategoryJunsung;
 			sourceTree = "<group>";
@@ -606,11 +631,13 @@
 			files = (
 				5550420B23B75E9E00ADCECB /* ExpandableNames.swift in Sources */,
 				55491B2223B888FC00469709 /* TravelData.swift in Sources */,
-				55F9CC8123B327A800E15332 /* PopUpViewController.swift in Sources */,
 				55836D7723B9F6CA006AC948 /* PlanItem.swift in Sources */,
+				0D0C0C7123BE0E3800FDC036 /* APITarget.swift in Sources */,
+				0D0C0C7623BE107200FDC036 /* BaseResponseModel.swift in Sources */,
 				5550420723B73EF200ADCECB /* ChildViewController.swift in Sources */,
 				55491B2423B89B0100469709 /* GoToCityViewController.swift in Sources */,
 				55836D7B23BB2CA2006AC948 /* PopularCityTableViewCell.swift in Sources */,
+				0D0C0C7823BE10B700FDC036 /* MedianHotelResponseModel.swift in Sources */,
 				55836D7923B9F8D9006AC948 /* PlanViewController.swift in Sources */,
 				55C76EDA23BD05C500D8B822 /* ActivityPopUpViewController.swift in Sources */,
 				55C76EE323BD05C500D8B822 /* CollectionViewCell.swift in Sources */,
@@ -625,12 +652,13 @@
 				0D6D70CB23B317F100923D4E /* SceneDelegate.swift in Sources */,
 				5550420923B74B9500ADCECB /* CityChooseTableViewController.swift in Sources */,
 				55F9CC7F23B3258100E15332 /* InjunViewController.swift in Sources */,
+				0D0C0C7323BE0F9500FDC036 /* APIService.swift in Sources */,
 				55836D4D23B9D3D3006AC948 /* NSObject+.swift in Sources */,
 				55C76EC423BC89AC00D8B822 /* PlanDataModel.swift in Sources */,
 				5550420D23B76D4700ADCECB /* CityChooseTableViewCell.swift in Sources */,
 				55491B2723B8A79000469709 /* RegisterCalendarViewController.swift in Sources */,
 				55C76EC023BC7B5C00D8B822 /* RegisterPlanViewController.swift in Sources */,
-				55C76EDE23BD05C500D8B822 /* ViewController.swift in Sources */,
+				55C76EDE23BD05C500D8B822 /* PopUpViewController.swift in Sources */,
 				55C76EC223BC82F100D8B822 /* registerPlanTableViewCell.swift in Sources */,
 				5550420123B62AE600ADCECB /* ChooseViewController.swift in Sources */,
 				55C76EE023BD05C500D8B822 /* CollectionViewController.swift in Sources */,
