@@ -60,19 +60,7 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @IBAction func endCategory(_ sender: Any) {
-        print("startData : \(TotalPlanData.shared.startDate), endDate : \(TotalPlanData.shared.endDate), travelDays : \(TotalPlanData.shared.travelDays), cityName : \(TotalPlanData.shared.cityName)")
-        print("totalCostOfHotel : \(TotalPlanData.shared.totalCostOfHotel)")
-        print("totalDayOfHotel : \(TotalPlanData.shared.totalDayOfHotel)")
-        print("totalCostOfFood : \(TotalPlanData.shared.totalCostOfFood)")
-        print("totalCountOfFood : \(TotalPlanData.shared.totalCountOfFood)")
-        print("totalCostOfDrink : \(TotalPlanData.shared.totalCostOfDrink)")
-         print("totalCountOfDrink : \(TotalPlanData.shared.totalCountOfDrink)")
-         print("totalCostOfActivity : \(TotalPlanData.shared.totalCostOfActivity)")
-         print("totalCountOfActivity : \(TotalPlanData.shared.totalCountOfActivity)")
-   
-        
-        print("shopping : \(totalCostOfShopping)")
-        print("transport : \(totalCostOfTransport)")
+    
         //이제 다 끝났고, 다른 flow로 넘어가면 됨
         
     }

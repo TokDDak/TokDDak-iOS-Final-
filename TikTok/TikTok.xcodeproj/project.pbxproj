@@ -59,6 +59,7 @@
 		55C76EE923BDF47500D8B822 /* TotalPlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76EE823BDF47500D8B822 /* TotalPlanData.swift */; };
 		55C99DF923BE320C008A5C98 /* CityActivityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C99DF823BE320C008A5C98 /* CityActivityResponseModel.swift */; };
 		55C99DFB23BE3450008A5C98 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C99DFA23BE3450008A5C98 /* ImageFetcher.swift */; };
+		55C99DFD23BE74B0008A5C98 /* DayPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C99DFC23BE74B0008A5C98 /* DayPlanModel.swift */; };
 		55F9CC7D23B3208A00E15332 /* InjunStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */; };
 		55F9CC7F23B3258100E15332 /* InjunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC7E23B3258100E15332 /* InjunViewController.swift */; };
 		55F9CC8323B354EC00E15332 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC8223B354EC00E15332 /* StartViewController.swift */; };
@@ -145,6 +146,7 @@
 		55C76EE823BDF47500D8B822 /* TotalPlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPlanData.swift; sourceTree = "<group>"; };
 		55C99DF823BE320C008A5C98 /* CityActivityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityActivityResponseModel.swift; sourceTree = "<group>"; };
 		55C99DFA23BE3450008A5C98 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		55C99DFC23BE74B0008A5C98 /* DayPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPlanModel.swift; sourceTree = "<group>"; };
 		55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InjunStoryboard.storyboard; sourceTree = "<group>"; };
 		55F9CC7E23B3258100E15332 /* InjunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjunViewController.swift; sourceTree = "<group>"; };
 		55F9CC8223B354EC00E15332 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			children = (
 				55C76EE623BDEABF00D8B822 /* PlanModel.swift */,
 				55C76EE823BDF47500D8B822 /* TotalPlanData.swift */,
+				55C99DFC23BE74B0008A5C98 /* DayPlanModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				5550420B23B75E9E00ADCECB /* ExpandableNames.swift in Sources */,
 				55491B2223B888FC00469709 /* TravelData.swift in Sources */,
 				55C99DF923BE320C008A5C98 /* CityActivityResponseModel.swift in Sources */,
+				55C99DFD23BE74B0008A5C98 /* DayPlanModel.swift in Sources */,
 				55836D7723B9F6CA006AC948 /* PlanItem.swift in Sources */,
 				0D0C0C7123BE0E3800FDC036 /* APITarget.swift in Sources */,
 				0D0C0C7623BE107200FDC036 /* BaseResponseModel.swift in Sources */,
