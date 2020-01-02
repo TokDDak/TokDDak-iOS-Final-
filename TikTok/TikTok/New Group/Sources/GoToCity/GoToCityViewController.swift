@@ -61,6 +61,11 @@ class GoToCityViewController: UIViewController {
     }
     
     
+    @IBAction func editTravelName(_ sender: UITextField) {
+        TotalPlanData.shared.travelName = travelNameTextField.text ?? ""
+    }
+    
+    
     
     
 }
@@ -90,6 +95,8 @@ extension GoToCityViewController: RegisterCalendarViewDelegate {
         TotalPlanData.shared.endDate = arrivedDate
         
         
+        
+        print(TotalPlanData.shared)
         
     }
 }

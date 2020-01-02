@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TotalPlanData {
+class TotalPlanData: CustomStringConvertible {
     
     static let shared = TotalPlanData()
     private init() {}
@@ -50,7 +50,16 @@ class TotalPlanData {
     var totalCostOfActivity : Int = 0
     //액티비티 총 갯수
     var totalCountOfActivity : Int = 0
+    var travelName: String = ""
     
     
-    
+    var description: String {
+        return """
+        startDate: \(startDate)
+        endDate: \(endDate)
+        travelDays: \(travelDays)
+        cityName: \(cityName)
+        travelName: \(travelName)
+        """
+    }
 }

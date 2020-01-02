@@ -2,13 +2,13 @@
   "images" : [
     {
       "scale" : "1x",
-      "filename" : "btnLetsgo.png",
+      "filename" : "btnCircle.png",
       "idiom" : "universal"
     },
     {
       "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "btnLetsgo@2x.png"
+      "filename" : "btnCircle@2x.png"
     },
     {
       "idiom" : "universal",
