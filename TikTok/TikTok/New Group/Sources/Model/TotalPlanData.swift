@@ -11,7 +11,7 @@ import Foundation
 class TotalPlanData {
     
     static let shared = TotalPlanData()
-    private init(){}
+    private init() {}
     
     var startDate: String = ""
     var endDate: String = ""
