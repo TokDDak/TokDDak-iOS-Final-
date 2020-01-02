@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum Hotel: Int {
+    case high = 5
+    case middle = 4
+    case low = 3
+    case apartment = 2
+}
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var totalPrice: UILabel!
@@ -27,8 +34,8 @@ class MainViewController: UIViewController {
     var selectedCategoryData : [Int] = [] //전뷰에서 1개 팝하고 남은 카테고리 순서 가져오기
     var menuSelected : [Int : Int] = [0:0, 1:0, 2:0, 3:0]
     //딕셔너리 이용해서 [카테고리넘버 : 0(선택안됨), 1(선택됨)
-    var basePriceOfeachHotel : [Int : Int] = [0:0, 1:0, 2:0, 3:0] //호텔 가격
-    var baseDayOfeachHotel : [Int : Int] = [0:0, 1:0, 2:0, 3:0] //호텔 박수
+    var basePriceOfEachHotel: [Hotel: Int] = [.high: 0, .middle: 0, .low: 0, .apartment: 0] // 호텔 가격
+    var baseDayOfEachHotel: [Hotel: Int] = [.high: 0, .middle: 0, .low: 0, .apartment: 0] // 호텔 박수
     var totalBase = 0 //금액을 더할 때 기존 돈
     var totalBaseOfDay = 0 // 박 수 계산용 임시 변수
     var pgValue: Int = 0 //프로그레스바 단계, 즉 고른 카테고리 수
@@ -54,7 +61,7 @@ class MainViewController: UIViewController {
     
     @IBAction func nextCategory(_ sender: Any) {
         
-        for (i, v) in baseDayOfeachHotel{
+        for (i, v) in baseDayOfEachHotel{
             print("i : \(i), v : \(v)")
         }
         
@@ -125,11 +132,11 @@ class MainViewController: UIViewController {
     
     @IBAction func highHotelClick(_ sender: Any) {
         nowSelectedStatus = 0
-        if menuSelected[0] == 0{
+        if menuSelected[0] == 0 {
             menuSelected[0] = 1
             highHotel.setImage(UIImage(named: "makeBtnStayTopActive"), for: .normal)
             completeBttn.isEnabled = true
-            print("Day 0 :  \(baseDayOfeachHotel[0]!)")
+//            print("Day 0 :  \(baseDayOfEachHotel[0]!)")
 //            totalBaseOfDay = totalBaseOfDay + baseDayOfeachHotel[0]!
             numOfsleepDay.text = String(totalBaseOfDay)
             goToPopUpViewController()
@@ -138,15 +145,13 @@ class MainViewController: UIViewController {
             print("menuSelected[0] == 1")
             menuSelected[0] = 0
             highHotel.setImage(UIImage(named: "makeBtnStayTop"), for: .normal)
-            totalBase = totalBase - basePriceOfeachHotel[0]!
-            totalBaseOfDay = totalBaseOfDay - baseDayOfeachHotel[0]!
+            totalBase = totalBase - basePriceOfEachHotel[.high]!
+            totalBaseOfDay = totalBaseOfDay - baseDayOfEachHotel[.high]!
             numOfsleepDay.text = String(totalBaseOfDay)
             totalPrice.text = String(totalBase.commaRepresentation2)
-            basePriceOfeachHotel[0] = 0
-            baseDayOfeachHotel[0]! = 0
+            basePriceOfEachHotel[.high] = 0
+            baseDayOfEachHotel[.high]! = 0
             completeBttn.isEnabled = (totalBase == 0) ? false : true
-            print("Day 0 :  \(baseDayOfeachHotel[0]!)")
-
         }
     }
     
@@ -159,22 +164,19 @@ class MainViewController: UIViewController {
             completeBttn.isEnabled = true
 //            totalBaseOfDay = totalBaseOfDay + baseDayOfeachHotel[1]!
             numOfsleepDay.text = String(totalBaseOfDay)
-            print("Day 1 :  \(baseDayOfeachHotel[1]!)")
             goToPopUpViewController()
         }
         else{
             print("menuSelected[0] == 1")
-            print("Day 1 :  \(baseDayOfeachHotel[1]!)")
             menuSelected[1] = 0
             middleHotel.setImage(UIImage(named: "makeBtnStayHigh"), for: .normal)
-            totalBase = totalBase - basePriceOfeachHotel[1]!
-            totalBaseOfDay = totalBaseOfDay - baseDayOfeachHotel[1]!
+            totalBase = totalBase - basePriceOfEachHotel[.middle]!
+            totalBaseOfDay = totalBaseOfDay - baseDayOfEachHotel[.middle]!
             numOfsleepDay.text = String(totalBaseOfDay)
             totalPrice.text = String(totalBase.commaRepresentation2)
-            basePriceOfeachHotel[1] = 0
-            baseDayOfeachHotel[1]! = 0
+            basePriceOfEachHotel[.middle] = 0
+            baseDayOfEachHotel[.middle]! = 0
             completeBttn.isEnabled = (totalBase == 0) ? false : true
-            print("Day 1 :  \(baseDayOfeachHotel[1]!)")
         }
     }
     
@@ -186,21 +188,19 @@ class MainViewController: UIViewController {
             completeBttn.isEnabled = true
 //            totalBaseOfDay = totalBaseOfDay + baseDayOfeachHotel[2]!
             numOfsleepDay.text = String(totalBaseOfDay)
-            print("Day 2 :  \(baseDayOfeachHotel[2]!)")
             goToPopUpViewController()
         }
         else{
             print("menuSelected[0] == 1")
             menuSelected[2] = 0
             lowHotel.setImage(UIImage(named: "makeBtnStayGeneral"), for: .normal)
-            totalBase = totalBase - basePriceOfeachHotel[2]!
-            totalBaseOfDay = totalBaseOfDay - baseDayOfeachHotel[2]!
+            totalBase = totalBase - basePriceOfEachHotel[.low]!
+            totalBaseOfDay = totalBaseOfDay - baseDayOfEachHotel[.low]!
             numOfsleepDay.text = String(totalBaseOfDay)
             totalPrice.text = String(totalBase.commaRepresentation2)
-            basePriceOfeachHotel[2] = 0
-            baseDayOfeachHotel[2]! = 0
+            basePriceOfEachHotel[.low] = 0
+            baseDayOfEachHotel[.low] = 0
             completeBttn.isEnabled = (totalBase == 0) ? false : true
-            print("Day 2 :  \(baseDayOfeachHotel[2]!)")
         }
     }
     
@@ -212,21 +212,19 @@ class MainViewController: UIViewController {
             completeBttn.isEnabled = true
 //            totalBaseOfDay = totalBaseOfDay + baseDayOfeachHotel[3]!
             numOfsleepDay.text = String(totalBaseOfDay)
-            print("Day 3 :  \(baseDayOfeachHotel[3]!)")
             goToPopUpViewController()
         }
         else{
             print("menuSelected[0] == 1")
             menuSelected[3] = 0
             apartment.setImage(UIImage(named: "makeBtnStayCheap"), for: .normal)
-            totalBase = totalBase - basePriceOfeachHotel[3]!
-            totalBaseOfDay = totalBaseOfDay - baseDayOfeachHotel[3]!
+            totalBase = totalBase - basePriceOfEachHotel[.apartment]!
+            totalBaseOfDay = totalBaseOfDay - baseDayOfEachHotel[.apartment]!
             numOfsleepDay.text = String(totalBaseOfDay)
             totalPrice.text = String(totalBase.commaRepresentation2)
-            basePriceOfeachHotel[3] = 0
-            baseDayOfeachHotel[3]! = 0
+            basePriceOfEachHotel[.apartment] = 0
+            baseDayOfEachHotel[.apartment] = 0
             completeBttn.isEnabled = (totalBase == 0) ? false : true
-            print("Day 3 :  \(baseDayOfeachHotel[3]!)")
         }
     }
     
@@ -264,25 +262,22 @@ class MainViewController: UIViewController {
         let secondVC = storyboard?.instantiateViewController(withIdentifier: "PopupViewController") as! PopUpViewController
         secondVC.delegate = self
         if nowSelectedStatus == 0{
-            secondVC.hotelNum = 0 
+            secondVC.subCategory = 5
             secondVC.nameOfHotel = "최고급호텔"
         }
         if nowSelectedStatus == 1{
-            secondVC.hotelNum = 1
+            secondVC.subCategory = 4
             secondVC.nameOfHotel = "고급호텔"
         }
         if nowSelectedStatus == 2{
-            secondVC.hotelNum = 2
+            secondVC.subCategory = 3
             secondVC.nameOfHotel = "일반호텔"
         }
         if nowSelectedStatus == 3{
-            secondVC.hotelNum = 3
-            secondVC.nameOfHotel = "아파트"
+            secondVC.subCategory = 2
+            secondVC.nameOfHotel = "저가호텔"
         }
-        if nowSelectedStatus == 4{
-            secondVC.hotelNum = 4
-            secondVC.nameOfHotel = "호스텔"
-        }
+      
         present(secondVC, animated: true)
     }
     
@@ -303,13 +298,15 @@ extension MainViewController: PopUpViewControllerDelegate {
     func popUpViewController(_ viewController: PopUpViewController, didReceiveData data: String, hotelNumber: Int, day: Int) {
         guard let getInt = Int(data) else {return}
         print("getInt = \(getInt)")
-        basePriceOfeachHotel[hotelNumber] = basePriceOfeachHotel[hotelNumber]! + getInt
-        totalBase = totalBase + basePriceOfeachHotel[hotelNumber]!
+        print(basePriceOfEachHotel, hotelNumber)
+        let hotel = Hotel(rawValue: hotelNumber) ?? .high
+        basePriceOfEachHotel[hotel] = basePriceOfEachHotel[hotel]! + getInt
+        totalBase = totalBase + basePriceOfEachHotel[hotel]!
         totalPrice.text = String(totalBase.commaRepresentation2)
-        baseDayOfeachHotel[hotelNumber]! = day
-        totalBaseOfDay = totalBaseOfDay + baseDayOfeachHotel[hotelNumber]!
+        baseDayOfEachHotel[hotel] = day
+        totalBaseOfDay = totalBaseOfDay + baseDayOfEachHotel[hotel]!
         numOfsleepDay.text = String(totalBaseOfDay)
-        for (i, v) in basePriceOfeachHotel{
+        for (i, v) in basePriceOfEachHotel{
             print("hotel \(i) = price \(v)")
         }
     }

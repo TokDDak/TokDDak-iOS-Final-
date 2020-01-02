@@ -30,8 +30,8 @@ class GoToCityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.cityNameLabel.text = TravelData.userChooseCity
-        cityName = TravelData.userChooseCity
+        self.cityNameLabel.text = TotalPlanData.shared.cityName
+        
         self.arrivedDateLabel.text = arrivedDate
         self.startDateLabel.text = startDate
         
@@ -68,6 +68,9 @@ class GoToCityViewController: UIViewController {
 extension GoToCityViewController: RegisterCalendarViewDelegate {
     func didSetDays(_ days: Int) {
         self.days = days
+        
+        TotalPlanData.shared.travelDays = days + 1
+        
         print("저 데이터 왔어유 \(days)")
     }
     
@@ -82,5 +85,11 @@ extension GoToCityViewController: RegisterCalendarViewDelegate {
         self.arrivedDateLabel.text = arrivedDate
         //arrivedDate
         self.startDateLabel.text = startDate
+        
+        TotalPlanData.shared.startDate = startDate
+        TotalPlanData.shared.endDate = arrivedDate
+        
+        
+        
     }
 }
