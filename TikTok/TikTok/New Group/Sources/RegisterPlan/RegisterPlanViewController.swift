@@ -8,6 +8,18 @@
 
 import UIKit
 
+
+struct DayPlanData {
+      var day: Int = 0
+      var array2: [(Int, Int)] = []
+      var dayCost: Int = 0
+    struct plan {
+        var category: Int
+        var categoryNumber: Int
+        var cost: Int
+    }
+  }
+
 class RegisterPlanViewController: UIViewController {
     
     @IBOutlet weak var topView: UIView!
@@ -35,20 +47,24 @@ class RegisterPlanViewController: UIViewController {
     var imageDataArray: [UIImage] = [UIImage(named: "icStay")!, UIImage(named: "icFood")!, UIImage(named: "icSnacks")!, UIImage(named: "icActivity")!]
     
     var planArray: [String]?
-    var stayArray = ["최고급호텔", "고급호텔", "일반호텔"]
+    var stayArray = ["최고급호텔", "고급호텔", "일반호텔","아파트"]
     var foodArray = ["고급음식점", "일반음식점", "간편식"]
     var snacksArray = ["카페", "디저트", "펍바"]
     var activityArray = ["서핑","배타기","퐁피두센터","개선문","비비빔"]
+    
     var checkCategory: Int = 0
     
     var array: [(Int, Int)] = []
     
     
-    struct DayPlanData {
-        var day: Int = 0
-        var array2: [(Int, Int)] = []
-        var cost: Int = 0
-    }
+    var testData: [DayPlanData] = []
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -65,6 +81,9 @@ class RegisterPlanViewController: UIViewController {
         self.categoryItemCollectionView.delegate = self
         
         registerPlanTableView.separatorStyle = .none
+        
+        
+        
         
         
         // Do any additional setup after loading the view.
