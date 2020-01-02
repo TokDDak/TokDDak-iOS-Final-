@@ -34,7 +34,7 @@ class RegisterCalendarViewController: UIViewController {
     }
     
     @IBAction func touchUpClosedButton(_ sender: Any) {
-     
+        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -46,7 +46,7 @@ class RegisterCalendarViewController: UIViewController {
         
         
         
-    
+        
         startLabel.text = startDate
         
     }
@@ -54,7 +54,7 @@ class RegisterCalendarViewController: UIViewController {
     @IBAction func changedArrivedDatePicker(_ sender: Any) {
         
         dateformatter.dateStyle = .short
-            dateformatter.dateFormat = "yyyy.MM.dd"
+        dateformatter.dateFormat = "yyyy.MM.dd"
         arrivedDate = dateformatter.string(from: arrivedDatePicker.date)
         print(arrivedDate)
         
@@ -86,6 +86,7 @@ class RegisterCalendarViewController: UIViewController {
         //days에 플러스 써서 더해버리면, 데이트피커 돌릴때마다 더 해짐 뷰 뒤로갈때 +1 해주면됨 !!
         print("\(days+1) 기간.")
         self.days = days
+        
     }
     
     @IBAction func touchUpComplete(_ sender: Any) {

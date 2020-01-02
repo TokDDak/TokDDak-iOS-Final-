@@ -16,5 +16,8 @@ class categoryItemCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         //itemLabel.sizeToFit()
+        self.contentView.layer.cornerRadius = 18
     }
+    
+    
 }

@@ -10,15 +10,15 @@ import UIKit
 
 
 struct DayPlanData {
-      var day: Int = 0
-      var array2: [(Int, Int)] = []
-      var dayCost: Int = 0
+    var day: Int = 0
+    var array2: [(Int, Int)] = []
+    var dayCost: Int = 0
     struct plan {
         var category: Int
         var categoryNumber: Int
         var cost: Int
     }
-  }
+}
 
 class RegisterPlanViewController: UIViewController {
     
@@ -27,6 +27,7 @@ class RegisterPlanViewController: UIViewController {
     @IBOutlet weak var buttonBarView: UIView!
     @IBOutlet weak var categoryItemCollectionView: UICollectionView!
     
+    @IBOutlet weak var buttonBarViewBottomConstraint: NSLayoutConstraint!
     
     //    var twoDataArray = [
     //         PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
@@ -59,7 +60,7 @@ class RegisterPlanViewController: UIViewController {
     
     var testData: [DayPlanData] = []
     
-    
+    var checkUpDown: Bool = true
     
     
     
@@ -82,9 +83,10 @@ class RegisterPlanViewController: UIViewController {
         
         registerPlanTableView.separatorStyle = .none
         
-        
-        
-        
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = .init(width: 30, height: 36)
+        layout.scrollDirection = .horizontal
+        categoryItemCollectionView.collectionViewLayout = layout
         
         // Do any additional setup after loading the view.
     }
@@ -135,8 +137,30 @@ class RegisterPlanViewController: UIViewController {
         }
     }
     
+    @IBAction func touchUpDownButton(_ sender: Any) {
+        
+        
+        if checkUpDown {
+            buttonBarViewBottomConstraint.constant += buttonBarView.bounds.height - 68
+            
+        } else {
+            buttonBarViewBottomConstraint.constant -= buttonBarView.bounds.height - 68
+            
+            
+            
+        }
+        UIView
+            .animate(withDuration: 0.5,
+                     delay: 0,
+                     usingSpringWithDamping: 0.88,
+                     initialSpringVelocity: 1,
+                     options: .curveEaseInOut,
+                     animations: {
+                        self.view.layoutIfNeeded()
+            },
+                     completion: { _ in self.checkUpDown.toggle() })
+    }
 }
-
 
 extension RegisterPlanViewController: UITableViewDelegate{
     
