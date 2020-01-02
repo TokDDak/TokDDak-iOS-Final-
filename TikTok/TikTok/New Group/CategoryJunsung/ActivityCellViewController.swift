@@ -60,6 +60,7 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @IBAction func endCategory(_ sender: Any) {
+
         //이제 다 끝났고, 다른 flow로 넘어가면 됨
     }
     

@@ -62,6 +62,8 @@ class RegisterPlanViewController: UIViewController {
     
     var checkUpDown: Bool = true
     
+    var dayData: [DayPlanModel] = []
+    
     
     
     
@@ -88,6 +90,10 @@ class RegisterPlanViewController: UIViewController {
         layout.scrollDirection = .horizontal
         categoryItemCollectionView.collectionViewLayout = layout
         
+        
+    
+        dayData.append(DayPlanModel(day: 1, cost: 123, category: "asdf", content: "asdf", TripId: 1))
+        print(dayData[0])
         // Do any additional setup after loading the view.
     }
     
