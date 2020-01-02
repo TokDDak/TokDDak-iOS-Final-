@@ -87,7 +87,8 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    vc.masterTotalPrice = totalBase
+                self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
                 if nextCategory == 2{
@@ -97,6 +98,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -107,6 +109,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -117,6 +120,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -127,6 +131,7 @@ class MainViewController: UIViewController, sendBackDelegate{
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.basePriceOfActivity = totalBase
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }

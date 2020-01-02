@@ -806,7 +806,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-Vc-SVs">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-Vc-SVs">
                                 <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
@@ -840,6 +840,9 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="checkInt:" destination="X26-9W-irZ" eventType="editingChanged" id="OYN-Lk-v3D"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v52-FU-arR">
                                 <rect key="frame" x="30" y="661" width="315" height="2"/>
@@ -902,6 +905,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BzR-xF-txO"/>
                     <connections>
+                        <outlet property="completeBttn" destination="KfO-Vc-SVs" id="7u0-e5-ICi"/>
                         <outlet property="progressBar" destination="idr-j1-8VR" id="mYm-be-ILg"/>
                         <outlet property="textField" destination="fj7-x3-3Lt" id="Q3E-dG-yxl"/>
                         <outlet property="totalPrice" destination="RD3-h3-amg" id="CJv-Bq-iPF"/>
@@ -928,7 +932,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itt-GB-v53">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itt-GB-v53">
                                 <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -975,6 +979,9 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="checkInt:" destination="6WE-fy-6hG" eventType="editingChanged" id="qZC-vz-CvI"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZg-6z-3FG">
                                 <rect key="frame" x="24" y="109" width="22" height="20"/>
@@ -1014,6 +1021,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9at-wO-HQx"/>
                     <connections>
+                        <outlet property="completeBttn" destination="itt-GB-v53" id="9eZ-AC-xRV"/>
                         <outlet property="progressBar" destination="CUo-nF-zBd" id="xdQ-Hj-vzx"/>
                         <outlet property="textField" destination="4JL-31-QTA" id="hV9-sK-tsw"/>
                         <outlet property="totalPrice" destination="jme-Rf-01Z" id="hLm-H9-Nxg"/>
@@ -1034,7 +1042,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="d7P-Xm-9Mu">
                                 <rect key="frame" x="0.0" y="145.66666666666666" width="375" height="2"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-d4-qlZ">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-d4-qlZ">
                                 <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
@@ -1335,9 +1343,9 @@
                         <constraints>
                             <constraint firstItem="5MV-G4-jfo" firstAttribute="top" relation="lessThanOrEqual" secondItem="d7P-Xm-9Mu" secondAttribute="bottom" constant="76" id="5PH-y9-BKb"/>
                             <constraint firstItem="1Z2-Ep-Nbf" firstAttribute="top" secondItem="6r7-49-3Qo" secondAttribute="bottom" constant="15" id="6Hv-Sa-LML"/>
-                            <constraint firstItem="M5F-Hg-XXY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wKs-nB-9cZ" secondAttribute="trailing" constant="10" id="8fj-3m-epD"/>
+                            <constraint firstItem="M5F-Hg-XXY" firstAttribute="leading" secondItem="wKs-nB-9cZ" secondAttribute="trailing" constant="10" id="8fj-3m-epD"/>
                             <constraint firstItem="ahV-sI-D5r" firstAttribute="trailing" secondItem="1Z2-Ep-Nbf" secondAttribute="trailing" constant="16" id="9uD-e2-R5N"/>
-                            <constraint firstItem="ahV-sI-D5r" firstAttribute="trailing" secondItem="M5F-Hg-XXY" secondAttribute="trailing" constant="187" id="GZ0-mD-jLt"/>
+                            <constraint firstItem="ahV-sI-D5r" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="M5F-Hg-XXY" secondAttribute="trailing" constant="187" id="GZ0-mD-jLt"/>
                             <constraint firstAttribute="trailing" secondItem="d7P-Xm-9Mu" secondAttribute="trailing" id="Gmr-Ok-tuy"/>
                             <constraint firstItem="wKs-nB-9cZ" firstAttribute="leading" secondItem="ahV-sI-D5r" secondAttribute="leading" constant="24" id="QC3-cP-HqX"/>
                             <constraint firstItem="a5f-6B-NOw" firstAttribute="top" secondItem="wKs-nB-9cZ" secondAttribute="bottom" constant="8" id="R33-aQ-80f"/>
@@ -1368,6 +1376,7 @@
                         <outlet property="avgPriceOfPub" destination="nMV-hU-059" id="I2w-fH-ExT"/>
                         <outlet property="cafeMinusBttn" destination="Y6U-Fb-iGd" id="vtc-f1-ybc"/>
                         <outlet property="cafePlusBttn" destination="KZK-YV-Pfo" id="IYo-4T-FdO"/>
+                        <outlet property="completeBttn" destination="ZfS-d4-qlZ" id="j7g-ZF-dXn"/>
                         <outlet property="desertMinusBttn" destination="xIG-aT-BbE" id="U4N-xC-CtM"/>
                         <outlet property="desertPlusBttn" destination="TTR-gU-agn" id="TRE-4f-3O8"/>
                         <outlet property="numOfCafe" destination="TLM-Cm-MGP" id="V0L-pu-tfz"/>
@@ -1410,7 +1419,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-wg-Dev">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-wg-Dev">
                                 <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
@@ -1725,7 +1734,7 @@
                             <constraint firstItem="X9l-T6-IWj" firstAttribute="leading" secondItem="kYj-2c-C4V" secondAttribute="leading" constant="24" id="jGN-II-OCw"/>
                             <constraint firstItem="X9l-T6-IWj" firstAttribute="top" secondItem="kYj-2c-C4V" secondAttribute="top" constant="20" id="lEl-zg-dAB"/>
                             <constraint firstItem="rTn-9S-p9J" firstAttribute="leading" secondItem="X9l-T6-IWj" secondAttribute="trailing" constant="10" id="o9k-Qi-RCp"/>
-                            <constraint firstItem="kYj-2c-C4V" firstAttribute="trailing" secondItem="rTn-9S-p9J" secondAttribute="trailing" constant="274" id="tWj-AF-VOZ"/>
+                            <constraint firstItem="kYj-2c-C4V" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="rTn-9S-p9J" secondAttribute="trailing" constant="274" id="tWj-AF-VOZ"/>
                             <constraint firstItem="by9-8A-4sn" firstAttribute="leading" secondItem="zxR-OV-Ypp" secondAttribute="trailing" constant="8" id="yDa-3u-7me"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kYj-2c-C4V"/>
@@ -1735,6 +1744,7 @@
                         <outlet property="avgPriceOfHigh" destination="LYg-Rg-NTx" id="sjv-V2-zSZ"/>
                         <outlet property="avgPriceOfLow" destination="aFh-5Z-O0d" id="Kc5-xF-kgZ"/>
                         <outlet property="avgPriceOfMiddle" destination="O8q-B0-M6i" id="qXN-o8-NkT"/>
+                        <outlet property="completeBttn" destination="qCu-wg-Dev" id="eMl-D6-2ns"/>
                         <outlet property="highMinusBttn" destination="UDF-Tg-aof" id="5o1-Yg-EAp"/>
                         <outlet property="highPlusBttn" destination="tPV-PG-b7S" id="Bxu-Cl-w4s"/>
                         <outlet property="lowMinusBttn" destination="xT1-6L-3Rd" id="6by-xQ-ag1"/>

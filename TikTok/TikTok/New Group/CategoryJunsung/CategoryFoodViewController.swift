@@ -31,6 +31,7 @@ class CategoryFoodViewController: UIViewController {
     @IBOutlet weak var avgPriceOfHigh: UILabel!
     @IBOutlet weak var avgPriceOfMiddle: UILabel!
     @IBOutlet weak var avgPriceOfLow: UILabel!
+    @IBOutlet weak var completeBttn: UIButton!
     
     @IBOutlet weak var totalCountOfFood: UILabel!
     @IBOutlet weak var totalPriceOfFood: UILabel!
@@ -38,9 +39,11 @@ class CategoryFoodViewController: UIViewController {
     var totalPriceFood : [Int : Int] = [0:0, 1:0, 2:0]
     var eachPriceFood : [Int : Int] = [0:21000, 1:21000, 2:21000]
     var totalCountFood : [Int : Int] = [0:0, 1:0, 2:0]
+    var masterTotalPrice : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         print(progressBarOffset)
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
         let yourBackImage = UIImage(named: "naviBtnBackB")
@@ -68,6 +71,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -78,6 +82,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -88,6 +93,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -98,6 +104,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.basePriceOfActivity = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -124,10 +131,13 @@ class CategoryFoodViewController: UIViewController {
             priceOfHigh.text = String(tp.commaRepresentation) //+ "원"
             numOfHigh.text = String(tc)
             priceOfHigh.sizeToFit()
-            totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+            //
+            masterTotalPrice -= eachPriceFood[0]!
+            totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfFood.text = String(returnCount())
             totalPriceOfFood.sizeToFit()
             totalCountOfFood.sizeToFit()
+            btthEnable()
         }
     }
     
@@ -139,10 +149,13 @@ class CategoryFoodViewController: UIViewController {
         priceOfHigh.text = String(tp.commaRepresentation) //+ "원"
         numOfHigh.text = String(tc)
         priceOfHigh.sizeToFit()
-        totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+        //
+        masterTotalPrice += eachPriceFood[0]!
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfFood.text = String(returnCount())
         totalPriceOfFood.sizeToFit()
         totalCountOfFood.sizeToFit()
+        btthEnable()
     }
     
     @IBAction func desertMinus(_ sender: Any) {
@@ -156,10 +169,13 @@ class CategoryFoodViewController: UIViewController {
             priceOfMiddle.text = String(tp.commaRepresentation) //+ "원"
             numOfMiddle.text = String(tc)
             priceOfMiddle.sizeToFit()
-            totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+            //
+            masterTotalPrice -= eachPriceFood[1]!
+            totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfFood.text = String(returnCount())
             totalPriceOfFood.sizeToFit()
             totalCountOfFood.sizeToFit()
+            btthEnable()
         }
     }
     
@@ -171,10 +187,13 @@ class CategoryFoodViewController: UIViewController {
         priceOfMiddle.text = String(tp.commaRepresentation) //+ "원"
         numOfMiddle.text = String(tc)
         priceOfMiddle.sizeToFit()
-        totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+        //
+        masterTotalPrice += eachPriceFood[1]!
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfFood.text = String(returnCount())
         totalPriceOfFood.sizeToFit()
         totalCountOfFood.sizeToFit()
+        btthEnable()
     }
     
     @IBAction func pubMinus(_ sender: Any) {
@@ -188,10 +207,13 @@ class CategoryFoodViewController: UIViewController {
             priceOfLow.text = String(tp.commaRepresentation) //+ "원"
             numOfLow.text = String(tc)
             priceOfLow.sizeToFit()
-            totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+            //
+            masterTotalPrice -= eachPriceFood[2]!
+            totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfFood.text = String(returnCount())
             totalPriceOfFood.sizeToFit()
             totalCountOfFood.sizeToFit()
+            btthEnable()
         }
     }
     
@@ -203,10 +225,13 @@ class CategoryFoodViewController: UIViewController {
         priceOfLow.text = String(tp.commaRepresentation) //+ "원"
         numOfLow.text = String(tc)
         priceOfLow.sizeToFit()
-        totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+        //
+        masterTotalPrice += eachPriceFood[2]!
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfFood.text = String(returnCount())
         totalPriceOfFood.sizeToFit()
         totalCountOfFood.sizeToFit()
+        btthEnable()
     }
     
     
@@ -221,17 +246,16 @@ class CategoryFoodViewController: UIViewController {
         return tc + tc1 + tc2
         
     }
+
     
-    func returnPrice() -> Int{
-        guard let tp = totalPriceFood[0] else{return -1}
-        guard let tp1 = totalPriceFood[1] else{return -1}
-        guard let tp2 = totalPriceFood[2] else{return -1}
-        print(tp)
-        print(tp1)
-        print(tp2)
-        return tp + tp1 + tp2
+    func btthEnable(){
+        if returnCount() > 0{
+            completeBttn.isEnabled = true
+        }
+        else{
+            completeBttn.isEnabled = false
+        }
     }
-    
     
     
 }
