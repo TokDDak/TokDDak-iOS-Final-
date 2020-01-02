@@ -62,7 +62,7 @@ struct TripCreateRequestModel: Encodable {
     let shoppingBudget: Int
     let snackBudget: Int
     let transportBudget: Int
-    let userID: String
+    let userID: Int
     
     enum CodingKeys: String, CodingKey {
         case title
