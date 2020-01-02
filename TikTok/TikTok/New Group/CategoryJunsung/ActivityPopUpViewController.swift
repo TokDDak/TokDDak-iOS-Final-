@@ -23,6 +23,8 @@ class ActivityPopUpViewController: UIViewController {
     var priceOfActivity : Int = 0
     var nameOfActivity : String = ""
     var detailOfActivity : String = ""
+    var mrtURL: URL?
+    var klURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +44,16 @@ class ActivityPopUpViewController: UIViewController {
     }
     
     @IBAction func returnBack(_ sender: Any) {
-        
         dismiss(animated: true, completion: nil)
     }
-    @IBAction func goToMRT(_ sender: Any) {
-        if let url = URL(string: "http://naver.com") {
+    
+    @IBAction func goToMRT(_ sender: UIButton) {
+        if let url = mrtURL {
             UIApplication.shared.open(url, options: [:])
         }
     }
-    @IBAction func goToKlook(_ sender: Any) {
-        if let url = URL(string: "http://naver.com") {
+    @IBAction func goToKlook(_ sender: UIButton) {
+        if let url = klURL {
             UIApplication.shared.open(url, options: [:])
         }
     }
