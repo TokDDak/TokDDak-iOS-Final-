@@ -50,6 +50,8 @@
 		55C76EE223BD05C500D8B822 /* CategoiryShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED523BD05C500D8B822 /* CategoiryShoppingViewController.swift */; };
 		55C76EE323BD05C500D8B822 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED623BD05C500D8B822 /* CollectionViewCell.swift */; };
 		55C76EE423BD05C500D8B822 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76ED723BD05C500D8B822 /* MainViewController.swift */; };
+		55C76EE723BDEABF00D8B822 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76EE623BDEABF00D8B822 /* PlanModel.swift */; };
+		55C76EE923BDF47500D8B822 /* TotalPlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C76EE823BDF47500D8B822 /* TotalPlanData.swift */; };
 		55F9CC7D23B3208A00E15332 /* InjunStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */; };
 		55F9CC7F23B3258100E15332 /* InjunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC7E23B3258100E15332 /* InjunViewController.swift */; };
 		55F9CC8123B327A800E15332 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC8023B327A800E15332 /* PopUpViewController.swift */; };
@@ -128,6 +130,8 @@
 		55C76ED523BD05C500D8B822 /* CategoiryShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoiryShoppingViewController.swift; sourceTree = "<group>"; };
 		55C76ED623BD05C500D8B822 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55C76ED723BD05C500D8B822 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55C76EE623BDEABF00D8B822 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		55C76EE823BDF47500D8B822 /* TotalPlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPlanData.swift; sourceTree = "<group>"; };
 		55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InjunStoryboard.storyboard; sourceTree = "<group>"; };
 		55F9CC7E23B3258100E15332 /* InjunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjunViewController.swift; sourceTree = "<group>"; };
 		55F9CC8023B327A800E15332 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +326,15 @@
 			path = CategoryJunsung;
 			sourceTree = "<group>";
 		};
+		55C76EE523BDEAAE00D8B822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C76EE623BDEABF00D8B822 /* PlanModel.swift */,
+				55C76EE823BDF47500D8B822 /* TotalPlanData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		55F9CC7A23B3205900E15332 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +350,7 @@
 		55F9CC7B23B3206A00E15332 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				55C76EE523BDEAAE00D8B822 /* Model */,
 				55C76EBE23BC7AC100D8B822 /* RegisterPlan */,
 				55836D7523B9F6A6006AC948 /* Common */,
 				55836D7023B9F531006AC948 /* View */,
@@ -631,6 +645,8 @@
 				55491B2723B8A79000469709 /* RegisterCalendarViewController.swift in Sources */,
 				55C76EC023BC7B5C00D8B822 /* RegisterPlanViewController.swift in Sources */,
 				55C76EDE23BD05C500D8B822 /* ViewController.swift in Sources */,
+				55C76EE923BDF47500D8B822 /* TotalPlanData.swift in Sources */,
+				55C76EE723BDEABF00D8B822 /* PlanModel.swift in Sources */,
 				55C76EC223BC82F100D8B822 /* registerPlanTableViewCell.swift in Sources */,
 				5550420123B62AE600ADCECB /* ChooseViewController.swift in Sources */,
 				55C76EE023BD05C500D8B822 /* CollectionViewController.swift in Sources */,
