@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PopUpViewController.swift
 //  popUpDelegate
 //
 //  Created by 김준성 on 2019/12/25.
@@ -8,26 +8,29 @@
 
 import UIKit
 
-protocol sendBackDelegate {
-    func dataReceived(data: String, hotelNum: Int, day: Int)
+import Alamofire
+
+typealias PopUpModel = _MedianHotelResponseModel.Result
+
+protocol PopUpViewControllerDelegate: class {
+    func popUpViewController(_ viewController: PopUpViewController, didReceiveData data: String, hotelNumber: Int, day: Int)
 }
 
-
-
-class ViewController: UIViewController {
+class PopUpViewController: UIViewController {
     @IBOutlet weak var myView: UIView!
-    @IBOutlet weak var UpView: UIView!
-    @IBOutlet weak var sleepDay: UILabel!
-    @IBOutlet weak var totalPrice: UILabel!
-    @IBOutlet weak var avgPriceLabel: UILabel!
+    @IBOutlet weak var upView: UIView!
     
+    @IBOutlet weak var hotelNameLabel: UILabel!
+    @IBOutlet weak var averagePriceLabel: UILabel!
+    @IBOutlet weak var sleepDayLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
-    @IBOutlet weak var firstInfoName: UILabel!
-    @IBOutlet weak var secondInfoName: UILabel!
-    @IBOutlet weak var thirdInfoName: UILabel!
-    @IBOutlet weak var firstInfoPrice: UILabel!
-    @IBOutlet weak var secondInfoPrice: UILabel!
-    @IBOutlet weak var thirdInfoPrice: UILabel!
+    @IBOutlet weak var firstInfoNameLabel: UILabel!
+    @IBOutlet weak var secondInfoNameLabel: UILabel!
+    @IBOutlet weak var thirdInfoNameLabel: UILabel!
+    @IBOutlet weak var firstInfoPriceLabel: UILabel!
+    @IBOutlet weak var secondInfoPriceLabel: UILabel!
+    @IBOutlet weak var thirdInfoPriceLabel: UILabel!
     
     var chk : Int = 0
     
@@ -36,22 +39,23 @@ class ViewController: UIViewController {
     var avgPrice = 250000
     var totalP = 250000
     var sendData = "" // data 전달을 위한 sendData
-    var delegate : sendBackDelegate? // data 전달을 위한 delegate 선언
+    weak var delegate: PopUpViewControllerDelegate? // data 전달을 위한 delegate 선언
     var nameOfHotel : String = ""
+    
+    var hotelURL: URL?
+    
     @IBOutlet weak var entireView: UIView!
     @IBOutlet weak var middleView: UIView!
-    @IBOutlet weak var hotelName: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hotelName.text = nameOfHotel
+        hotelNameLabel.text = nameOfHotel
         
         //전체 뷰 radius
         self.entireView.round(corners: [.bottomLeft, .bottomRight, .topLeft, .topRight], cornerRadius: 15)
         // Do any additional setup after loading the view.
-        sleepDay.text = "1 박"
-        avgPriceLabel.text = "1박 평균 가격은 \(avgPrice) 원입니다."
+        sleepDayLabel.text = "1 박"
+        averagePriceLabel.text = "1박 평균 가격은 \(avgPrice) 원입니다."
         
         _ = UIFont(name:"Apple SD Gothic Neo" , size: 19)
 
@@ -60,10 +64,10 @@ class ViewController: UIViewController {
 
         //위에서 만든 attributedStr에 addAttribute메소드를 통해 Attribute를 적용. kCTFontAttributeName은 value로 폰트크기와 폰트를 받을 수 있음.
 
-        let attributedString = NSMutableAttributedString(string: avgPriceLabel.text!)
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: (avgPriceLabel.text! as NSString).range(of:"Zedd"))
+        let attributedString = NSMutableAttributedString(string: averagePriceLabel.text!)
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: (averagePriceLabel.text! as NSString).range(of:"Zedd"))
 
-            avgPriceLabel.attributedText = attributedString
+            averagePriceLabel.attributedText = attributedString
 
         //view part view radius
         //self.completeView.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 15)
@@ -81,16 +85,42 @@ class ViewController: UIViewController {
                self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
-    @IBAction func seeSafari(_ sender: Any) {
-        if let url = URL(string: "http://naver.com") {
-            UIApplication.shared.open(url, options: [:])
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let cityID = 1
+        APIService.shared.requestMedianHotel(cityID: cityID) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case let .success(success):
+                guard let data = success.data else { return }
+                let superiorHotel = data.result.filter { $0.category == "최고급호텔" }.first!
+                self.hotelURL = superiorHotel.url
+                self.reloadView(by: superiorHotel)
+            case let .failure(error):
+                print("실패")
+                print(error.localizedDescription)
+            }
         }
     }
     
+    func reloadView(by model: PopUpModel) {
+        firstInfoNameLabel.text = model.info[0].name
+        firstInfoPriceLabel.text = "\(model.info[0].cost) 원"
+        secondInfoNameLabel.text = model.info[1].name
+        secondInfoPriceLabel.text = "\(model.info[1].cost) 원"
+        thirdInfoNameLabel.text = model.info[2].name
+        thirdInfoPriceLabel.text = "\(model.info[2].cost) 원"
+        
+        
+    }
     
+    @IBAction func safariButtonDidTap(_ sender: UIButton) {
+        guard let hotelURL = hotelURL else { return }
+        UIApplication.shared.open(hotelURL, options: [:])
+    }
     
     @IBAction func clickComplete(_ sender: Any) {
-        delegate?.dataReceived(data: String(totalP), hotelNum: hotelNum, day: Day)
+        delegate?.popUpViewController(self, didReceiveData: String(totalP), hotelNumber: hotelNum, day: Day)
         dismiss(animated: true, completion: nil)
 //
        // 계산한 전체 총값을 그 전 뷰에서 받는 것
@@ -103,23 +133,23 @@ class ViewController: UIViewController {
         }
         else{
             Day = Day - 1
-            sleepDay.text = "\(Day)"
+            sleepDayLabel.text = "\(Day)"
             // 자릿수 표현 삽입
             totalP = Day * avgPrice
-            totalPrice.text = String((Day * avgPrice).commaRepresentation) + " ₩"
-            sleepDay.sizeToFit()
-            avgPriceLabel.sizeToFit()
-            totalPrice.sizeToFit()
+            totalPriceLabel.text = String((Day * avgPrice).commaRepresentation) + " ₩"
+            sleepDayLabel.sizeToFit()
+            averagePriceLabel.sizeToFit()
+            totalPriceLabel.sizeToFit()
         }
     }
     @IBAction func plusDay(_ sender: Any) {
             Day = Day + 1
-            sleepDay.text = "\(Day)"
+            sleepDayLabel.text = "\(Day)"
             totalP = Day * avgPrice
-            totalPrice.text = String((Day * avgPrice).commaRepresentation) + " ₩"
-            sleepDay.sizeToFit()
-            avgPriceLabel.sizeToFit()
-            totalPrice.sizeToFit()
+            totalPriceLabel.text = String((Day * avgPrice).commaRepresentation) + " ₩"
+            sleepDayLabel.sizeToFit()
+            averagePriceLabel.sizeToFit()
+            totalPriceLabel.sizeToFit()
     }
     
 }
