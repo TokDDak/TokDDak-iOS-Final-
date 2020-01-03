@@ -10,15 +10,15 @@ import UIKit
 
 
 struct DayPlanData {
+    
     var day: Int = 0
-    var array2: [(Int, Int)] = []
+    var array2: [(Int, Int)]
     var dayCost: Int = 0
-    struct plan {
-        var category: Int
-        var categoryNumber: Int
-        var cost: Int
-    }
+   
 }
+
+var cntDay: Int = 1
+//데이 카운트
 
 class RegisterPlanViewController: UIViewController {
     
@@ -29,29 +29,38 @@ class RegisterPlanViewController: UIViewController {
     
     @IBOutlet weak var buttonBarViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var dayViewLabel: UILabel!
     
     
     var imageDataArray: [UIImage] = [UIImage(named: "icStay")!, UIImage(named: "icFood")!, UIImage(named: "icSnacks")!, UIImage(named: "icActivity")!]
     
     var planArray: [String]?
-    var stayArray = ["최고급호텔", "고급호텔", "일반호텔", "아파트"]
-    var foodArray = ["고급음식점", "일반음식점", "간편식"]
-    var snacksArray = ["카페", "디저트", "펍바"]
+    var stayArray = ["아파트", "일반호텔", "고급호텔", "최고급호텔"]
+    var foodArray = ["간편식", "일반음식점", "고급음식점"]
+    var snacksArray = ["펍바", "디저트", "카페"]
     var activityArray = ["서핑","배타기"]
     
     var checkCategory: Int = 0
     
     var array: [(Int, Int)] = []
     
+    var arrayNew: [(Int,Int,Int,Int)] = []
+    
     
     var testData: [DayPlanData] = []
     
     var checkUpDown: Bool = true
     
-    var dayData: [DayPlanModel] = []
+    //var invidDayData: [DayPlanData] = []
+    var dataSet = [DayPlanData]()
+    
+    
     
        
-    
+    //---------------------딕셔너리 배열화 ----------
+    var foodCntValue : [Int] = [0,0,0]
+       //간편(0) 일발(1) 고급(2)
+    var foodCostValue : [Int] = [0,0,0]
     
     
     
@@ -59,6 +68,16 @@ class RegisterPlanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var test : [Int] = []
+        test.append(0)
+        
+        print("테스트: \(test) ")
+      
+        for i in 0...(TotalPlanData.shared.travelDays-1) {
+            dataSet.append(DayPlanData(day: i, array2: [], dayCost: 0))
+        }
+        print(dataSet)
         
         self.buttonBarView.backgroundColor = UIColor(patternImage: UIImage(named: "imgRound")!)
         
@@ -76,9 +95,8 @@ class RegisterPlanViewController: UIViewController {
         
         
         
-        dayData.append(DayPlanModel(day: 1, cost: 123, category: "asdf", content: "asdf", TripId: 1))
         
-        setData()
+        // setData()
         
         print(TotalPlanData.shared.totalCountOfFood)
         // Do any additional setup after loading the view.
@@ -108,43 +126,17 @@ class RegisterPlanViewController: UIViewController {
         
         if TotalPlanData.shared.selectedCategory["restaurant"] == true{
             
-            //var totalCntIdx : [Int] = []
-            var totalCntValue : [Int] = []
-               //간편(0) 일발(1) 고급(2)
-            var totalCostValue : [Int] = []
-       
-            for i in 0...3{
-                totalCntValue[i] = TotalPlanData.shared.totalCountOfFood[i]!
-                totalCostValue[i] =
-                    TotalPlanData.shared.totalCostOfFood[i]!
+            for (key, value) in TotalPlanData.shared.totalCountOfFood{
+                foodCntValue[key] = value
             }
             // 간편, 일반, 고급에 대한 갯수 배열 순서대로
             
-            for (i, v) in totalCntValue.enumerated(){
-                if v == 0{
+            for (i, v) in foodCntValue.enumerated(){
+                if v == 0 {
                     foodArray.remove(at: i)
                 }
             }
             
-            
-            
-  
-            
-            
-            
-            
-            for (key, value) in TotalPlanData.shared.totalCountOfFood /*.sorted(by: { $0.key < $1.key }) */{
-                if value == 0  {
-                    switch key { // index 에러 있음
-                    case 0: if foodArray.contains("고급음식점"){ foodArray.remove(at: 0) }
-                    case 1: if foodArray.contains("일반음식점"){ foodArray.remove(at: 1) }
-                    case 2: if foodArray.contains("간편식"){ foodArray.remove(at: 2) }
-                    default:
-                        foodArray.append("")
-                    }
-                }
-                
-            }
         } else {
             foodArray = [""]
         }
@@ -197,6 +189,7 @@ class RegisterPlanViewController: UIViewController {
         categoryItemCollectionView.reloadData()
     }
     @IBAction func touchUpSnacks(_ sender: Any) {
+         print("세번째 카테고리 호출")
         checkCategory = 2
         categoryItemCollectionView.reloadData()
     }
@@ -206,8 +199,33 @@ class RegisterPlanViewController: UIViewController {
         categoryItemCollectionView.reloadData()
     }
     
+    
+    @IBAction func touchUpPlusDay(_ sender: Any) {
+        cntDay += 1
+        self.dayViewLabel.text = "Day \(cntDay)"
+        
+        dataSet[cntDay-1].day = cntDay
+        self.registerPlanTableView.reloadData()
+        
+        
+        
+    }
+    
+   
+    @IBAction func touchMinusDay(_ sender: Any) {
+       if( cntDay > 0 ){
+            cntDay -= 1
+        }
+        self.dayViewLabel.text = "Day \(cntDay)"
+        
+        dataSet[cntDay-1].day = cntDay
+        self.registerPlanTableView.reloadData()
+        
+    }
+    
     func insertPlanTableView() {
-        let indexPath = IndexPath(row: array.count-1, section: 0)
+        
+        let indexPath = IndexPath(row: dataSet[cntDay-1].array2.count-1, section: 0)
         //마지막 데이터 indexPath를 추가하기 위한 코드 , 데이터3개면 카운트3 but indexPath는 0,1,2 순이므로
         //또한 맨처음엔 데이터가 없기때문에 indexPath가 없어서 이 코드가 필요
         registerPlanTableView.beginUpdates()
@@ -216,18 +234,14 @@ class RegisterPlanViewController: UIViewController {
     }
     // array를 먼저 추가하고 dummyAction으로 데이터 삽입.
     
-    @IBAction func dummyDataAction(_ sender: Any) {
-        
-        self.array.append((checkCategory, 1))
-        
-    }
+  
     
     
     // table view에 아이템 삭제
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             
-            array.remove(at: indexPath.row)
+            dataSet[cntDay-1].array2.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .bottom)
             print(array)
         }
@@ -265,32 +279,38 @@ extension RegisterPlanViewController: UITableViewDelegate{
 extension RegisterPlanViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+      //  return array.count 원래 1차원 배열 카운트
+        print("dataSet 출력 \(dataSet[cntDay-1].array2.count)")
+        return dataSet[cntDay-1].array2.count
+      
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+        print("함수 cellForRowAt 호출")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterPlanCell", for: indexPath) as? registerPlanTableViewCell else{
             return UITableViewCell()
         }
         
         
-        if( checkCategory == 0){
+        
+        if( dataSet[cntDay-1].array2[indexPath.row].0 == 0){
             cell.categoryIconImageView.image = imageDataArray[0]
-            cell.categoryLabel.text = stayArray[array[indexPath.row].1]
+            cell.categoryLabel.text = stayArray[dataSet[cntDay-1].array2[indexPath.row].1]
         }
-        if( checkCategory == 1){
+        if( dataSet[cntDay-1].array2[indexPath.row].0 == 1){
             cell.categoryIconImageView.image = imageDataArray[1]
-            cell.categoryLabel.text = foodArray[array[indexPath.row].1]
+            cell.categoryLabel.text = foodArray[dataSet[cntDay-1].array2[indexPath.row].1]
             
         }
-        if( checkCategory == 2){
+        if( dataSet[cntDay-1].array2[indexPath.row].0 == 2){
             cell.categoryIconImageView.image = imageDataArray[2]
-            cell.categoryLabel.text = snacksArray[array[indexPath.row].1]
+            cell.categoryLabel.text = snacksArray[dataSet[cntDay-1].array2[indexPath.row].1]
         }
-        if( checkCategory == 3){
+        if( dataSet[cntDay-1].array2[indexPath.row].0 == 3){
             cell.categoryIconImageView.image = imageDataArray[3]
-            cell.categoryLabel.text = activityArray[array[indexPath.row].1]
+            cell.categoryLabel.text = activityArray[dataSet[cntDay-1].array2[indexPath.row].1]
         }
         
         return cell
@@ -323,6 +343,9 @@ extension RegisterPlanViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryItemCell", for: indexPath) as? categoryItemCollectionViewCell else { return UICollectionViewCell() }
+        
+        
+        
         if(checkCategory == 0){
             cell.itemLabel.text = stayArray[indexPath.row]
         }
@@ -353,14 +376,26 @@ extension RegisterPlanViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(indexPath)
-        print(checkCategory)
+       
+      //  print(checkCategory)
+        
+        //self.invidDayData[cntDay].append(cntDay,(checkCategory,indexPath.row),0)
+//        invidDayData[].day = cntDay
+//        invidDayData[].array2.append((checkCategory, indexPath.row))
+//        invidDayData[].dayCost = 0
+        
+        //self.arrayNew.append((cntDay-1,checkCategory,indexPath.row,15000))
+       
+        dataSet[cntDay-1].array2.append((checkCategory, indexPath.row))
+        print("data Set\(dataSet[cntDay-1])")
         
         
-        self.array.append((checkCategory, indexPath.row))
-        print(array[0].1)
+//        self.array.append((checkCategory, indexPath.row))
+//        print(array[0].1)
         
-        self.insertPlanTableView()
+         self.insertPlanTableView()
+        
+        
         
         
     }

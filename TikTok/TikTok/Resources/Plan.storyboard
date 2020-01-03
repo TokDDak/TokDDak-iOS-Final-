@@ -293,7 +293,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="btnArrowLeft"/>
                                                 <connections>
-                                                    <action selector="dummyDataAction:" destination="rHY-e8-YX8" eventType="touchUpInside" id="Ik0-pd-cTR"/>
+                                                    <action selector="touchMinusDay:" destination="rHY-e8-YX8" eventType="touchUpInside" id="us3-c0-OGL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -345,8 +345,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-82-XLJ">
-                                <rect key="frame" x="167" y="245" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-82-XLJ">
+                                <rect key="frame" x="167" y="245" width="60" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -356,6 +356,9 @@
                                 <rect key="frame" x="328" y="244" width="16" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btnArrowRight"/>
+                                <connections>
+                                    <action selector="touchUpPlusDay:" destination="rHY-e8-YX8" eventType="touchUpInside" id="2xy-WB-ONc"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-9H-Jqn">
                                 <rect key="frame" x="-9" y="567" width="393" height="245"/>
@@ -490,6 +493,7 @@
                         <outlet property="buttonBarView" destination="6a8-9H-Jqn" id="P9I-wi-ji5"/>
                         <outlet property="buttonBarViewBottomConstraint" destination="M5K-uY-4J8" id="Y0E-N5-vYG"/>
                         <outlet property="categoryItemCollectionView" destination="KNJ-uA-Os6" id="ggN-WS-Urg"/>
+                        <outlet property="dayViewLabel" destination="rxb-82-XLJ" id="zpS-kY-lFd"/>
                         <outlet property="registerPlanTableView" destination="9ie-TN-tD6" id="gNU-6k-lwQ"/>
                         <outlet property="topView" destination="DeS-JW-Aid" id="1Dj-l4-J5g"/>
                     </connections>
