@@ -13,18 +13,18 @@ class PopularCityTableViewController: UITableViewController , IndicatorInfoProvi
     
     var childNumber: String = ""
     var twoDimensionalArray = [
-        ([ "seoul" , "makeBtnPopularSeoul"]),
-        (["Newyork", "makeBtnPopularNewyork"]),
-        (["HongKong", "makeBtnPopularHongkong"]),
-        (["Macao", "makeBtnPopularMacao"]),
-        (["Vladivostok", "makeBtnPopularVladivostok"]),
-        (["London", "makeBtnPopularLondon"]),
-        (["Paris", "makeBtnPopularParis"]),
-        (["Cebu", "makeBtnPopularCebu"]),
-        (["Taipei", "makeBtnPopularTaipei"]),
-        (["Zurich", "makeBtnPopularZurich"]),
-        (["Boracay", "makeBtnPopularBoracay"]),
-        (["Danang", "makeBtnPopularDanang"])
+        ([ "서울" , "makeBtnPopularSeoul"]),
+        (["뉴욕", "makeBtnPopularNewyork"]),
+        (["홍콩", "makeBtnPopularHongkong"]),
+        (["마카오", "makeBtnPopularMacao"]),
+        (["블라디보스톡", "makeBtnPopularVladivostok"]),
+        (["런던", "makeBtnPopularLondon"]),
+        (["파리", "makeBtnPopularParis"]),
+        (["세부", "makeBtnPopularCebu"]),
+        (["대만", "makeBtnPopularTaipei"]),
+        (["취리히", "makeBtnPopularZurich"]),
+        (["보라카이", "makeBtnPopularBoracay"]),
+        (["다낭", "makeBtnPopularDanang"])
         
     ]
     
