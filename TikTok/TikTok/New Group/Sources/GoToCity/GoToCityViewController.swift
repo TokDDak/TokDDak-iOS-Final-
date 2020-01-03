@@ -9,7 +9,7 @@
 import UIKit
 
 
-class GoToCityViewController: UIViewController {
+class GoToCityViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var RegisterCalendarButton: UIButton!
     
@@ -22,7 +22,7 @@ class GoToCityViewController: UIViewController {
     var arrivedDate: String = ""
     var startDate: String = ""
     var days: Int = 0
-    
+  
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.isNavigationBarHidden = true
     }
@@ -35,12 +35,21 @@ class GoToCityViewController: UIViewController {
         self.arrivedDateLabel.text = arrivedDate
         self.startDateLabel.text = startDate
         
-       
+        
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let yourBackImage = UIImage(named: "naviBtnBackB")
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
-    self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        
+        let tapGesture: UITapGestureRecognizer =
+            UITapGestureRecognizer()
+        tapGesture.delegate = self
+        
+        self.view.addGestureRecognizer(tapGesture)
+        //키보드 내리기위해 TapGestureRecognizer
+        
+        
         
         // Do any additional setup after loading the view.
     }
@@ -65,6 +74,10 @@ class GoToCityViewController: UIViewController {
         TotalPlanData.shared.travelName = travelNameTextField.text ?? ""
     }
     
+  func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+      self.view.endEditing(true)
+      return true
+  }
     
     
     
@@ -100,3 +113,17 @@ extension GoToCityViewController: RegisterCalendarViewDelegate {
         
     }
 }
+//
+//extension GoToCityViewController {
+//    func dismissKey()
+//    {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(GoToCityViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+//    }
+//    @objc func dismissKeyboard()
+//    {
+//        view.endEditing(true)
+//    }
+//}
+
