@@ -88,8 +88,10 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
             switch result {
             case let .success(success):
                 guard let data = success.data else {return}
+    
                 TotalPlanData.shared.startDate = data.start
                 TotalPlanData.shared.endDate = data.end
+                
 
             case let .failure(error):
                 print("실패")
