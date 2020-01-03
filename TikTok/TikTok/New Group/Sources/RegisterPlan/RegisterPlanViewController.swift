@@ -29,20 +29,6 @@ class RegisterPlanViewController: UIViewController {
     
     @IBOutlet weak var buttonBarViewBottomConstraint: NSLayoutConstraint!
     
-    //    var twoDataArray = [
-    //         PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //         PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //         PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //         PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //         PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //        PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //        PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""]),
-    //        PlanDataModel(day: 1, category: 0 , datas:  [ "", "", "", "" , "", ""])
-    //
-    //
-    //       ]
-    
-    // var twoData: Int = [][]
     
     
     var imageDataArray: [UIImage] = [UIImage(named: "icStay")!, UIImage(named: "icFood")!, UIImage(named: "icSnacks")!, UIImage(named: "icActivity")!]
@@ -121,6 +107,32 @@ class RegisterPlanViewController: UIViewController {
         }
         
         if TotalPlanData.shared.selectedCategory["restaurant"] == true{
+            
+            //var totalCntIdx : [Int] = []
+            var totalCntValue : [Int] = []
+               //간편(0) 일발(1) 고급(2)
+            var totalCostValue : [Int] = []
+       
+            for i in 0...3{
+                totalCntValue[i] = TotalPlanData.shared.totalCountOfFood[i]!
+                totalCostValue[i] =
+                    TotalPlanData.shared.totalCostOfFood[i]!
+            }
+            // 간편, 일반, 고급에 대한 갯수 배열 순서대로
+            
+            for (i, v) in totalCntValue.enumerated(){
+                if v == 0{
+                    foodArray.remove(at: i)
+                }
+            }
+            
+            
+            
+  
+            
+            
+            
+            
             for (key, value) in TotalPlanData.shared.totalCountOfFood /*.sorted(by: { $0.key < $1.key }) */{
                 if value == 0  {
                     switch key { // index 에러 있음
@@ -290,6 +302,9 @@ extension RegisterPlanViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(checkCategory == 0){
+            if stayArray.count == 0{
+                return 0
+            }
             return stayArray.count
         }
         if(checkCategory == 1){
