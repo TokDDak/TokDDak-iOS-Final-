@@ -344,7 +344,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-HY-VHc">
-                                                <rect key="frame" x="56.333333333333343" y="228" width="129" height="49"/>
+                                                <rect key="frame" x="56.333333333333343" y="228" width="258" height="49"/>
                                                 <state key="normal" image="btnLetsgo"/>
                                                 <connections>
                                                     <action selector="touchUpLetsGo:" destination="4Y5-FP-pdp" eventType="touchUpInside" id="hJI-fh-f1h"/>
@@ -466,7 +466,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHomeBeforeTextMent" translatesAutoresizingMaskIntoConstraints="NO" id="uOs-k9-sBb">
-                                                <rect key="frame" x="32" y="94" width="249.00000000000006" height="68"/>
+                                                <rect key="frame" x="32" y="94" width="498" height="136"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImgAirplane" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-s0-VJe">
                                                 <rect key="frame" x="43" y="210" width="350" height="272"/>
@@ -605,7 +605,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-SJ-Zwu">
-                                        <rect key="frame" x="98" y="53" width="77" height="31"/>
+                                        <rect key="frame" x="21" y="53" width="154" height="62"/>
                                         <state key="normal" image="tabBtnBefore">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -634,7 +634,7 @@
                                         </state>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAllMoney" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-qq-xeg">
-                                        <rect key="frame" x="32" y="131" width="58" height="17"/>
+                                        <rect key="frame" x="32" y="131" width="116" height="34"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4D-Dd-PWL">
                                         <rect key="frame" x="34" y="231" width="110" height="22"/>
@@ -645,7 +645,7 @@
                                         <state key="normal" image="btnMoreMoneyHistory"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCloud" translatesAutoresizingMaskIntoConstraints="NO" id="E1U-sB-BbQ">
-                                        <rect key="frame" x="0.0" y="186" width="375" height="230"/>
+                                        <rect key="frame" x="-375" y="186" width="750" height="460"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345678" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Wz-uJQ">
                                         <rect key="frame" x="101" y="131" width="100" height="17"/>
@@ -658,7 +658,7 @@
                                         <rect key="frame" x="12" y="290" width="351" height="490"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-T0-2Qx">
-                                                <rect key="frame" x="243" y="386" width="68" height="68"/>
+                                                <rect key="frame" x="175" y="318" width="136" height="136"/>
                                                 <state key="normal" image="floatingBtnInputMoney"/>
                                             </button>
                                         </subviews>

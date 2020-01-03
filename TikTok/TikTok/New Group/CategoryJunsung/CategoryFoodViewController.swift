@@ -91,17 +91,20 @@ class CategoryFoodViewController: UIViewController {
         if index == 2{
             avgPriceOfHigh.text = "\(model.cost.commaRepresentation)원"//String(model.cost.commaRepresentation) + "원"
             eachPriceFood[0] = model.cost
+            TotalPlanData.shared.invidCostOfFood[2] = model.cost
             //avgPriceOfHigh.sizeToFit()
         }
         if index == 1{
             avgPriceOfMiddle.text = String(model.cost.commaRepresentation) + "원"
             eachPriceFood[1] = model.cost
             //avgPriceOfHigh.sizeToFit()
+            TotalPlanData.shared.invidCostOfFood[1] = model.cost
         }
         if index == 0{
             avgPriceOfLow.text = String(model.cost.commaRepresentation) + "원"
             eachPriceFood[2] = model.cost
             //avgPriceOfHigh.sizeToFit()
+            TotalPlanData.shared.invidCostOfFood[0] = model.cost
         }
      
     }

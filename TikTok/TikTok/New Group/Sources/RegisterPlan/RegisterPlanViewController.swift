@@ -14,7 +14,6 @@ struct DayPlanData {
     var day: Int = 0
     var array2: [(Int, Int)]
     var dayCost: Int = 0
-   
 }
 
 var cntDay: Int = 1
@@ -31,14 +30,16 @@ class RegisterPlanViewController: UIViewController {
     
     @IBOutlet weak var dayViewLabel: UILabel!
     
+    @IBOutlet weak var dayPriceLabel: UILabel!
+    
     
     var imageDataArray: [UIImage] = [UIImage(named: "icStay")!, UIImage(named: "icFood")!, UIImage(named: "icSnacks")!, UIImage(named: "icActivity")!]
     
     var planArray: [String]?
-    var stayArray = ["아파트", "일반호텔", "고급호텔", "최고급호텔"]
+    var stayArray = ["저가호텔", "일반호텔", "고급호텔", "최고급호텔"]
     var foodArray = ["간편식", "일반음식점", "고급음식점"]
-    var snacksArray = ["펍바", "디저트", "카페"]
-    var activityArray = ["서핑","배타기"]
+    var snacksArray = ["카페", "디저트", "펍"]
+    var activityArray = [""]
     
     var checkCategory: Int = 0
     
@@ -96,7 +97,7 @@ class RegisterPlanViewController: UIViewController {
         
         
         
-        // setData()
+         setData()
         
         print(TotalPlanData.shared.totalCountOfFood)
         // Do any additional setup after loading the view.
@@ -105,76 +106,76 @@ class RegisterPlanViewController: UIViewController {
     func setData() {
         
         //let selectedHotels = TotalPlanData.shared.totalDayOfHotel.filter { $0.value != 0 }.map { $0.key.name }
-        if TotalPlanData.shared.selectedCategory["hotel"] == true{
-            for (key, value) in TotalPlanData.shared.totalDayOfHotel.sorted(by: { $0.key < $1.key }) {
-                
-                if value == 0  {
-                    switch key {
-                    case .high: if stayArray.contains("최고급호텔") { stayArray.remove(at: 0) }
-                    case .middle: if stayArray.contains("고급호텔") { stayArray.remove(at: 1) }
-                    case .low: if stayArray.contains("일반호텔") { stayArray.remove(at: 2) }
-                    case .apartment: if stayArray.contains("아파트") { stayArray.remove(at: 3) }
-                    default:
-                        stayArray.append("")
-                    }
-                }
-                
-            }
-        } else {
-            stayArray = [""]
-        }
-        
-        if TotalPlanData.shared.selectedCategory["restaurant"] == true{
-            
-
-            for (key, value) in TotalPlanData.shared.totalCountOfFood{
-                foodCntValue[key] = value
-            }
-
-            //var totalCntIdx : [Int] = []
-            var totalCntValue : [Int] = []
-               //간편(0) 일발(1) 고급(2)
-            var totalCostValue : [Int] = []
-       
-
-            // 간편, 일반, 고급에 대한 갯수 배열 순서대로
-            
-            for (i, v) in foodCntValue.enumerated(){
-                if v == 0 {
-                    foodArray.remove(at: i)
-                }
-                
-            }
-            
-        } else {
-            foodArray = [""]
-        }
-        
-        if TotalPlanData.shared.selectedCategory["drink"] == true {
-            for (key, value) in TotalPlanData.shared.totalCountOfDrink.sorted(by: { $0.key < $1.key }) {
-                if value == 0  {
-                    switch key {
-                    case 0: if snacksArray.contains("카페"){ snacksArray.remove(at: 0) }
-                    case 1: if snacksArray.contains("디저트"){ snacksArray.remove(at: 1) }
-                    case 2: if snacksArray.contains("펍바"){ snacksArray.remove(at: 2) }
-                    default:
-                        snacksArray.append("")
-                    }
-                }
-                
-            }
-            
-        }else {
-            snacksArray = [""]
-        }
+//        if TotalPlanData.shared.selectedCategory["hotel"] == true{
+//            for (key, value) in TotalPlanData.shared.totalDayOfHotel.sorted(by: { $0.key < $1.key }) {
+//
+//                if value == 0  {
+//                    switch key {
+//                    case .high: if stayArray.contains("최고급호텔") { stayArray.remove(at: 0) }
+//                    case .middle: if stayArray.contains("고급호텔") { stayArray.remove(at: 1) }
+//                    case .low: if stayArray.contains("일반호텔") { stayArray.remove(at: 2) }
+//                    case .apartment: if stayArray.contains("아파트") { stayArray.remove(at: 3) }
+//                    default:
+//                        stayArray.append("")
+//                    }
+//                }
+//
+//            }
+//        } else {
+//            stayArray = [""]
+//        }
+//
+//        if TotalPlanData.shared.selectedCategory["restaurant"] == true{
+//
+//
+//            for (key, value) in TotalPlanData.shared.totalCountOfFood{
+//                foodCntValue[key] = value
+//            }
+//
+//            //var totalCntIdx : [Int] = []
+//            var totalCntValue : [Int] = []
+//               //간편(0) 일발(1) 고급(2)
+//            var totalCostValue : [Int] = []
+//
+//
+//            // 간편, 일반, 고급에 대한 갯수 배열 순서대로
+//
+//            for (i, v) in foodCntValue.enumerated(){
+//                if v == 0 {
+//                    foodArray.remove(at: i)
+//                }
+//
+//            }
+//
+//        } else {
+//            foodArray = [""]
+//        }
+//
+//        if TotalPlanData.shared.selectedCategory["drink"] == true {
+//            for (key, value) in TotalPlanData.shared.totalCountOfDrink.sorted(by: { $0.key < $1.key }) {
+//                if value == 0  {
+//                    switch key {
+//                    case 0: if snacksArray.contains("카페"){ snacksArray.remove(at: 0) }
+//                    case 1: if snacksArray.contains("디저트"){ snacksArray.remove(at: 1) }
+//                    case 2: if snacksArray.contains("펍바"){ snacksArray.remove(at: 2) }
+//                    default:
+//                        snacksArray.append("")
+//                    }
+//                }
+//
+//            }
+//
+//        }else {
+//            snacksArray = [""]
+//        }
         
         
         for (key, value) in TotalPlanData.shared.activityNamePrice {
             activityArray.append(key)
             // price는 array키로
+            // ""들어간건 배열 갯수 카운트해서 2개이상이면 index 0 을 삭제시키면 됨
         }
         
-        print("setData 끝부분 호출")
         
     }
     
@@ -216,6 +217,7 @@ class RegisterPlanViewController: UIViewController {
         dataSet[cntDay-1].day = cntDay
         self.registerPlanTableView.reloadData()
         
+        self.dayPriceLabel.text = "\(dataSet[cntDay-1].dayCost)"
         
         
     }
@@ -230,6 +232,7 @@ class RegisterPlanViewController: UIViewController {
         dataSet[cntDay-1].day = cntDay
         self.registerPlanTableView.reloadData()
         
+         self.dayPriceLabel.text = "\(dataSet[cntDay-1].dayCost)"
     }
     
     func insertPlanTableView() {
@@ -250,9 +253,44 @@ class RegisterPlanViewController: UIViewController {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             
-            dataSet[cntDay-1].array2.remove(at: indexPath.row)
+            var thisCount:Int = dataSet[cntDay-1].array2.count-1
+            
+            
+            
+            var findString: String = ""
+            
+           if dataSet[cntDay-1].array2.count > 0 {
+            if( dataSet[cntDay-1].array2[thisCount].0 == 0){
+              
+                findString = stayArray[dataSet[cntDay-1].array2[thisCount].1]
+                
+                dataSet[cntDay-1].dayCost -= TotalPlanData.shared.invidCostOfHotel[findString]!
+            }
+            if( dataSet[cntDay-1].array2[thisCount].0 == 1){
+                
+                dataSet[cntDay-1].dayCost -= TotalPlanData.shared.invidCostOfFood[dataSet[cntDay-1].array2[thisCount].1]!
+            }
+            if( dataSet[cntDay-1].array2[thisCount].0 == 2){
+             
+                dataSet[cntDay-1].dayCost -= TotalPlanData.shared.invidCostOfDrink[dataSet[cntDay-1].array2[thisCount].1]!
+            }
+            if( dataSet[cntDay-1].array2[thisCount].0 == 3){
+              
+                findString = activityArray[dataSet[cntDay-1].array2[thisCount].1]
+                
+                
+                dataSet[cntDay-1].dayCost -= TotalPlanData.shared.activityNamePrice[findString]!
+                
+            }
+            }
+            
+            
+             dataSet[cntDay-1].array2.remove(at: thisCount)
+             dayPriceLabel.text = "\(dataSet[cntDay-1].dayCost)"
+            
             tableView.deleteRows(at: [indexPath], with: .bottom)
-            print(array)
+            
+            
         }
     }
     
@@ -307,20 +345,36 @@ extension RegisterPlanViewController: UITableViewDataSource{
         if( dataSet[cntDay-1].array2[indexPath.row].0 == 0){
             cell.categoryIconImageView.image = imageDataArray[0]
             cell.categoryLabel.text = stayArray[dataSet[cntDay-1].array2[indexPath.row].1]
+            
+          //  dataSet[cntDay-1].dayCost += TotalPlanData.shared.invidCostOfHotel[cell.categoryLabel.text!]!
         }
         if( dataSet[cntDay-1].array2[indexPath.row].0 == 1){
             cell.categoryIconImageView.image = imageDataArray[1]
             cell.categoryLabel.text = foodArray[dataSet[cntDay-1].array2[indexPath.row].1]
             
+           // dataSet[cntDay-1].dayCost += TotalPlanData.shared.invidCostOfFood[dataSet[cntDay-1].array2[indexPath.row].1]!
         }
         if( dataSet[cntDay-1].array2[indexPath.row].0 == 2){
             cell.categoryIconImageView.image = imageDataArray[2]
             cell.categoryLabel.text = snacksArray[dataSet[cntDay-1].array2[indexPath.row].1]
+            
+         //   dataSet[cntDay-1].dayCost += TotalPlanData.shared.invidCostOfDrink[dataSet[cntDay-1].array2[indexPath.row].1]!
         }
         if( dataSet[cntDay-1].array2[indexPath.row].0 == 3){
             cell.categoryIconImageView.image = imageDataArray[3]
             cell.categoryLabel.text = activityArray[dataSet[cntDay-1].array2[indexPath.row].1]
+            
+            
+           // dataSet[cntDay-1].dayCost += TotalPlanData.shared.activityNamePrice[cell.categoryLabel.text!]!
+           
+           
+            
         }
+        
+        
+       //  dayPriceLabel.text = "\(dataSet[cntDay-1].dayCost)"
+        
+        
         
         return cell
         
@@ -399,10 +453,50 @@ extension RegisterPlanViewController: UICollectionViewDelegate {
         print("data Set\(dataSet[cntDay-1])")
         
         
-//        self.array.append((checkCategory, indexPath.row))
-//        print(array[0].1)
         
-         self.insertPlanTableView()
+//        for (key, value) in TotalPlanData.shared.totalCountOfFood{
+//
+//        }
+        
+        
+        //        self.array.append((checkCategory, indexPath.row))
+        //        print(array[0].1)
+        var findString: String = ""
+        print("array2: \(dataSet[cntDay-1].array2)")
+        print("collectionview indexPath.row \(indexPath.row)")
+        
+        var thisCount:Int = dataSet[cntDay-1].array2.count-1
+        
+        if dataSet[cntDay-1].array2.count > 0 {
+        if( dataSet[cntDay-1].array2[thisCount].0 == 0){
+          
+            findString = stayArray[dataSet[cntDay-1].array2[thisCount].1]
+            
+            dataSet[cntDay-1].dayCost += TotalPlanData.shared.invidCostOfHotel[findString]!
+        }
+        if( dataSet[cntDay-1].array2[thisCount].0 == 1){
+            
+            dataSet[cntDay-1].dayCost += TotalPlanData.shared.invidCostOfFood[dataSet[cntDay-1].array2[thisCount].1]!
+        }
+        if( dataSet[cntDay-1].array2[thisCount].0 == 2){
+         
+            dataSet[cntDay-1].dayCost += TotalPlanData.shared.invidCostOfDrink[dataSet[cntDay-1].array2[thisCount].1]!
+        }
+        if( dataSet[cntDay-1].array2[thisCount].0 == 3){
+          
+            findString = activityArray[dataSet[cntDay-1].array2[thisCount].1]
+            
+            
+            dataSet[cntDay-1].dayCost += TotalPlanData.shared.activityNamePrice[findString]!
+            
+        }
+        }
+        
+        
+        dayPriceLabel.text = "\(dataSet[cntDay-1].dayCost)"
+        
+        
+        self.insertPlanTableView()
         
         
         

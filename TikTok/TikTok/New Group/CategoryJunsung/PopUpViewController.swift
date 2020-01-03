@@ -107,6 +107,21 @@ class PopUpViewController: UIViewController {
     }
     
     func reloadView(by model: PopUpModel) {
+        
+        if model.category == "최고급호텔"{
+            TotalPlanData.shared.invidCostOfHotel["최고급호텔"] = model.cost
+        }
+        if model.category == "고급호텔"{
+            TotalPlanData.shared.invidCostOfHotel["고급호텔"] = model.cost
+        }
+        if model.category == "일반호텔"{
+            TotalPlanData.shared.invidCostOfHotel["일반호텔"] = model.cost
+        }
+        if model.category == "저가호텔"{
+            TotalPlanData.shared.invidCostOfHotel["저가호텔"] = model.cost
+        }
+        
+        
         firstInfoNameLabel.text = model.info[0].name
         firstInfoPriceLabel.text = "\(model.info[0].cost.commaRepresentation) 원"
         secondInfoNameLabel.text = model.info[1].name
