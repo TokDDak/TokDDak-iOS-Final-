@@ -108,6 +108,7 @@ class PopUpViewController: UIViewController {
     
     func reloadView(by model: PopUpModel) {
         
+
         if model.category == "최고급호텔"{
             TotalPlanData.shared.invidCostOfHotel["최고급호텔"] = model.cost
         }
@@ -121,6 +122,7 @@ class PopUpViewController: UIViewController {
             TotalPlanData.shared.invidCostOfHotel["저가호텔"] = model.cost
         }
         
+
         
         firstInfoNameLabel.text = model.info[0].name
         firstInfoPriceLabel.text = "\(model.info[0].cost.commaRepresentation) 원"
@@ -130,6 +132,7 @@ class PopUpViewController: UIViewController {
         thirdInfoPriceLabel.text = "\(model.info[2].cost.commaRepresentation ) 원"
         
         averagePriceLabel.text = "1박 평균 가격은 \(model.cost.commaRepresentation)원 입니다."
+        totalPriceLabel.text = "\(model.cost.commaRepresentation) 원"
         let attributedStr = NSMutableAttributedString(string: averagePriceLabel.text!)
         attributedStr.addAttribute(.foregroundColor, value: UIColor.blue, range: (averagePriceLabel.text! as NSString).range(of: "\(model.cost.commaRepresentation)원"))
         averagePriceLabel.attributedText = attributedStr

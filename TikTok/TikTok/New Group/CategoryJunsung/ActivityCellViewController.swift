@@ -43,7 +43,7 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         totalPriceOfActivity.text = basePriceOfActivity.commaRepresentation
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
         
-        let yourBackImage = UIImage(named: "naviBtnBackB")
+        let yourBackImage = UIImage(named: "naviBtnBackBlack")
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
         /*navaigation 이름 변경*/
@@ -88,8 +88,10 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
             switch result {
             case let .success(success):
                 guard let data = success.data else {return}
+    
                 TotalPlanData.shared.startDate = data.start
                 TotalPlanData.shared.endDate = data.end
+                
 
             case let .failure(error):
                 print("실패")

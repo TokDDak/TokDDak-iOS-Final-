@@ -54,7 +54,7 @@ class CategoryFoodViewController: UIViewController {
         totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         print(progressBarOffset)
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
-        let yourBackImage = UIImage(named: "naviBtnBackB")
+        let yourBackImage = UIImage(named: "naviBtnBackBlack")
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
         /*navaigation 이름 변경*/

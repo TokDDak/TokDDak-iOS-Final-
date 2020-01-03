@@ -52,8 +52,17 @@ class totalBudgetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let yourBackImage = UIImage(named: "naviBtnBackBlack")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        /*navaigation 이름 변경*/
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        (costOfHotel.textColor, hotelLabel.textColor, wonOfHotel.textColor) = hotelCost == 0 ? (UIColor.gray, UIColor.gray,UIColor.gray) : (UIColor.black, UIColor.black,UIColor.black)
+        /*navaigation border 삭제*/
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        (costOfHotel.textColor, hotelLabel.textColor, wonOfHotel.textColor) = hotelCost == 0 ? (UIColor.gray, UIColor.gray,UIColor.gray) : (UIColor.black, UIColor.black, UIColor.black)
         (costOfFood.textColor, foodLabel.textColor, wonOfFood.textColor) = foodCost == 0 ? (UIColor.gray, UIColor.gray,UIColor.gray) : (UIColor.black, UIColor.black,UIColor.black)
          (costOfDrink.textColor, drinkLabel.textColor, wonOfDrink.textColor) = drinkCost == 0 ? (UIColor.gray, UIColor.gray,UIColor.gray) : (UIColor.black, UIColor.black,UIColor.black)
          (costOfTransport.textColor, transportLabel.textColor, wonOfTransport.textColor) = totalCostOfTransport == 0 ? (UIColor.gray, UIColor.gray,UIColor.gray) : (UIColor.black, UIColor.black,UIColor.black)

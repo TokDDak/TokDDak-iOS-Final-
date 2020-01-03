@@ -309,15 +309,41 @@
             </objects>
             <point key="canvasLocation" x="-199" y="-580"/>
         </scene>
-        <!--CalculateHistoryViewController-->
+        <!--HongkongMagazineViewController-->
+        <scene sceneID="JTY-hG-YKT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Magazine" referencedIdentifier="HongkongMagazineViewController" id="wKc-Jw-f1W" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pUy-nG-2FB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJG-XN-cHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1562" y="967"/>
+        </scene>
+        <!--LondonMagazineViewController-->
+        <scene sceneID="GWA-cq-6sW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Magazine" referencedIdentifier="LondonMagazineViewController" id="MgL-5I-Ws1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8h-oA-MpU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1182" y="935"/>
+        </scene>
+        <!--BangkokMagazineViewController-->
+        <scene sceneID="pgn-1k-iWK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Magazine" referencedIdentifier="BangkokMagazineViewController" id="7SC-wK-Aen" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yi-zs-tQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1176" y="967"/>
+        </scene>
+        <!--ParisMagazineViewController-->
         <scene sceneID="UFl-K2-x3g">
             <objects>
-                <viewControllerPlaceholder storyboardName="CalculateHistory" referencedIdentifier="CalculateHistoryViewController" id="LcS-hz-TnS" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Magazine" referencedIdentifier="ParisMagazineViewController" id="LcS-hz-TnS" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gPg-Ro-n6C"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rga-lF-HHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-705" y="385"/>
+            <point key="canvasLocation" x="-1563" y="935"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="N9t-cl-T3A">
@@ -416,7 +442,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="btnRecoParis"/>
                                                         <connections>
-                                                            <segue destination="LcS-hz-TnS" kind="show" id="QzE-9y-Uw8"/>
+                                                            <segue destination="LcS-hz-TnS" kind="presentation" id="QzE-9y-Uw8"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpV-ED-X47">
@@ -424,18 +450,27 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="btnRecoHonkongMacao"/>
+                                                        <connections>
+                                                            <segue destination="wKc-Jw-f1W" kind="presentation" id="cVj-fx-PZX"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-Vr-pZT">
                                                         <rect key="frame" x="196" y="252" width="160" height="227"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="btnRecoBangkok"/>
+                                                        <connections>
+                                                            <segue destination="7SC-wK-Aen" kind="presentation" id="Tah-vp-ze7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7l-GI-MXL">
                                                         <rect key="frame" x="196" y="17" width="160" height="227"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="btnRecoLondon"/>
+                                                        <connections>
+                                                            <segue destination="MgL-5I-Ws1" kind="presentation" id="jbK-LG-VTT"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1371,7 +1406,7 @@
         <image name="makeBgImgAirplane" width="375" height="310"/>
         <image name="makeEtCalendar" width="327" height="62"/>
         <image name="makeImgCountry3" width="242" height="68"/>
-        <image name="naviBtnBackB" width="16" height="16"/>
+        <image name="naviBtnBackB" width="36" height="36"/>
         <image name="naviBtnClose" width="14" height="14"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="tabBtnBefore" width="77" height="31"/>

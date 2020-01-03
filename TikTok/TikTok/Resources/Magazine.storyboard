@@ -10,30 +10,264 @@
         <!--Magazine View Controller-->
         <scene sceneID="TAC-1F-dSg">
             <objects>
-                <viewController storyboardIdentifier="MagazineViewController" id="9ae-R4-rKQ" customClass="MagazineViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HongkongMagazineViewController" id="9ae-R4-rKQ" customClass="MagazineViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Io-Md-sTz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="5461"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5H-b3-n3d">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="5461"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-lq-qnK">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="10206"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnFinish" translatesAutoresizingMaskIntoConstraints="NO" id="IAj-jX-euU">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine1" translatesAutoresizingMaskIntoConstraints="NO" id="IAj-jX-euU">
+                                                <rect key="frame" x="22" y="522" width="331" height="1854"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 - 피크트램 왕복&amp;스카이 테라스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-vD-7JE">
+                                                <rect key="frame" x="24" y="2386" width="259" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine2" translatesAutoresizingMaskIntoConstraints="NO" id="GFH-gp-vpE">
+                                                <rect key="frame" x="24" y="2423" width="327" height="614"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine3" translatesAutoresizingMaskIntoConstraints="NO" id="mtz-ad-Qbl">
+                                                <rect key="frame" x="22" y="3098" width="331" height="953"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="트립어드바이저 – 디 어퍼 하우스 호텔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-Fw-Ke2">
+                                                <rect key="frame" x="24" y="3058" width="208" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립-홍콩 디즈니 랜드 입장권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjs-iz-Q5V">
+                                                <rect key="frame" x="24" y="4061" width="220" height="16"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1300" id="VXZ-7J-Uwn"/>
+                                                    <constraint firstAttribute="height" constant="16" id="1zb-p2-dnf"/>
+                                                    <constraint firstAttribute="width" constant="220" id="OJm-4P-3CV"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine4" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-gT-7MY">
+                                                <rect key="frame" x="24" y="4109" width="327" height="718"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 아쿠아루나 심포니오브라이트 크루즈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM6-8L-d0S">
+                                                <rect key="frame" x="24" y="4837" width="300" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine5" translatesAutoresizingMaskIntoConstraints="NO" id="0X4-eG-rMe">
+                                                <rect key="frame" x="22" y="4877" width="331" height="1057"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 터보젯 페리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oT-1J-Bic">
+                                                <rect key="frame" x="24" y="5944" width="157" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="157" id="kpr-hy-ald"/>
+                                                    <constraint firstAttribute="height" constant="16" id="oGO-cc-VQX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 코타이젯 페리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7q-R7-f2n">
+                                                <rect key="frame" x="24" y="5970" width="169" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="169" id="6Ok-2S-CO3"/>
+                                                    <constraint firstAttribute="height" constant="16" id="OcL-EG-Net"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine6" translatesAutoresizingMaskIntoConstraints="NO" id="lZ3-tX-grh">
+                                                <rect key="frame" x="24" y="6018" width="327" height="666"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 골든릴 관람차" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHx-yQ-KTI">
+                                                <rect key="frame" x="24" y="6694" width="169" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="eWw-ne-Hq4"/>
+                                                    <constraint firstAttribute="width" constant="169" id="h7w-ea-Qsh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine7" translatesAutoresizingMaskIntoConstraints="NO" id="Ec5-2t-Qr3">
+                                                <rect key="frame" x="24" y="6742" width="327" height="564"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 마카오타워 입장권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iE-Td-Lhc">
+                                                <rect key="frame" x="24" y="7316" width="188" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="NLh-AU-BYP"/>
+                                                    <constraint firstAttribute="width" constant="188" id="kE1-MK-uTf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine8" translatesAutoresizingMaskIntoConstraints="NO" id="e8r-Mj-7H8">
+                                                <rect key="frame" x="24" y="7342" width="327" height="288"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 마카오타워 번지점프" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeD-MT-kdL">
+                                                <rect key="frame" x="24" y="7666" width="200" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="4Fg-BV-pzZ"/>
+                                                    <constraint firstAttribute="height" constant="16" id="vjp-Q6-Ukp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 스카이 워크 X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lT4-pi-fub">
+                                                <rect key="frame" x="24" y="7640" width="169" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="Gdk-wd-0ba"/>
+                                                    <constraint firstAttribute="width" constant="169" id="qod-rS-Ejz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마카오타워 디너 뷔페" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQR-3w-mwX">
+                                                <rect key="frame" x="24" y="7714" width="133" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="133" id="Ehs-al-Zoa"/>
+                                                    <constraint firstAttribute="height" constant="17" id="pES-Tn-Oss"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine9" translatesAutoresizingMaskIntoConstraints="NO" id="Lcl-rz-yoQ">
+                                                <rect key="frame" x="24" y="7741" width="327" height="708"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 마카오타워 디너 뷔페" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioR-6e-ThP">
+                                                <rect key="frame" x="27" y="8459" width="204" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="4jy-Tv-NGG"/>
+                                                    <constraint firstAttribute="width" constant="204" id="npo-GC-l28"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine10" translatesAutoresizingMaskIntoConstraints="NO" id="gQw-6t-Oc0">
+                                                <rect key="frame" x="22" y="8499" width="331" height="903"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립-베네시안 곤돌라" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1S-Id-OMz">
+                                                <rect key="frame" x="24" y="9412" width="169" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="mgQ-0N-l7Q"/>
+                                                    <constraint firstAttribute="width" constant="169" id="zFu-D9-J46"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHonkongMagazine11" translatesAutoresizingMaskIntoConstraints="NO" id="H06-W0-3dr">
+                                                <rect key="frame" x="24" y="9460" width="327" height="664"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립-하우스 오브 댄싱 워터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqs-fa-3Sz">
+                                                <rect key="frame" x="24" y="10134" width="207" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="207" id="Qkf-UI-Ojv"/>
+                                                    <constraint firstAttribute="height" constant="16" id="jSg-a9-sab"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMagazineMacao" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-Kp-CVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="IAj-jX-euU" firstAttribute="top" secondItem="6Wk-lq-qnK" secondAttribute="top" id="8Bx-1L-EL8"/>
-                                            <constraint firstItem="IAj-jX-euU" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" id="8fr-Nu-Wks"/>
-                                            <constraint firstAttribute="trailing" secondItem="IAj-jX-euU" secondAttribute="trailing" id="K1p-F9-Q5K"/>
-                                            <constraint firstAttribute="bottom" secondItem="IAj-jX-euU" secondAttribute="bottom" id="b9o-Pp-J5Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="8oT-1J-Bic" secondAttribute="trailing" constant="194" id="0D5-na-V0o"/>
+                                            <constraint firstAttribute="trailing" secondItem="lOB-Fw-Ke2" secondAttribute="trailing" constant="143" id="0Zr-gk-vDF"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sqs-fa-3Sz" secondAttribute="bottom" constant="56" id="0lx-aD-zjg"/>
+                                            <constraint firstItem="SBz-vD-7JE" firstAttribute="top" secondItem="IAj-jX-euU" secondAttribute="bottom" constant="10" id="1tN-Re-912"/>
+                                            <constraint firstAttribute="trailing" secondItem="ioR-6e-ThP" secondAttribute="trailing" constant="144" id="1uP-Tl-PQk"/>
+                                            <constraint firstItem="Kjs-iz-Q5V" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="2s9-BA-Pdc"/>
+                                            <constraint firstAttribute="trailing" secondItem="0iE-Td-Lhc" secondAttribute="trailing" constant="163" id="3Hg-Fd-4PO"/>
+                                            <constraint firstItem="DHx-yQ-KTI" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="3VR-ud-wLU"/>
+                                            <constraint firstAttribute="trailing" secondItem="lT4-pi-fub" secondAttribute="trailing" constant="182" id="40J-9C-6no"/>
+                                            <constraint firstItem="IAj-jX-euU" firstAttribute="centerX" secondItem="6Wk-lq-qnK" secondAttribute="centerX" id="4jE-A1-h4V"/>
+                                            <constraint firstItem="0iE-Td-Lhc" firstAttribute="top" secondItem="Ec5-2t-Qr3" secondAttribute="bottom" constant="10" id="5b4-pg-0ph"/>
+                                            <constraint firstItem="DHx-yQ-KTI" firstAttribute="top" secondItem="lZ3-tX-grh" secondAttribute="bottom" constant="10" id="5ir-lv-MGr"/>
+                                            <constraint firstAttribute="trailing" secondItem="DHx-yQ-KTI" secondAttribute="trailing" constant="182" id="7op-AL-TqA"/>
+                                            <constraint firstAttribute="trailing" secondItem="SBz-vD-7JE" secondAttribute="trailing" constant="92" id="8aZ-U5-XxZ"/>
+                                            <constraint firstItem="Lcl-rz-yoQ" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="8xc-XB-sbp"/>
+                                            <constraint firstItem="lZ3-tX-grh" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="9AI-0I-tIa"/>
+                                            <constraint firstAttribute="trailing" secondItem="VL7-Kp-CVG" secondAttribute="trailing" id="DU5-ZN-evN"/>
+                                            <constraint firstAttribute="trailing" secondItem="mtz-ad-Qbl" secondAttribute="trailing" constant="22" id="Dte-W4-qb3"/>
+                                            <constraint firstAttribute="trailing" secondItem="J1S-Id-OMz" secondAttribute="trailing" constant="182" id="FBk-ee-s43"/>
+                                            <constraint firstItem="ioR-6e-ThP" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="27" id="FOv-7F-rEk"/>
+                                            <constraint firstItem="gQw-6t-Oc0" firstAttribute="top" secondItem="ioR-6e-ThP" secondAttribute="bottom" constant="24" id="FYa-VD-9Ml"/>
+                                            <constraint firstItem="RM6-8L-d0S" firstAttribute="top" secondItem="jd0-gT-7MY" secondAttribute="bottom" constant="10" id="FkR-x3-VeB"/>
+                                            <constraint firstItem="Ec5-2t-Qr3" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="Glt-Ts-Kqu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lcl-rz-yoQ" secondAttribute="trailing" constant="24" id="HKK-R1-27A"/>
+                                            <constraint firstItem="Sqs-fa-3Sz" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="HOs-ay-WSz"/>
+                                            <constraint firstAttribute="trailing" secondItem="RM6-8L-d0S" secondAttribute="trailing" constant="51" id="Ies-D7-r0L"/>
+                                            <constraint firstItem="0X4-eG-rMe" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="22" id="JZb-b0-bCo"/>
+                                            <constraint firstItem="H06-W0-3dr" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="Jbb-Us-frM"/>
+                                            <constraint firstItem="tQR-3w-mwX" firstAttribute="top" secondItem="jeD-MT-kdL" secondAttribute="bottom" constant="32" id="Jql-FS-K3g"/>
+                                            <constraint firstAttribute="trailing" secondItem="tQR-3w-mwX" secondAttribute="trailing" constant="218" id="JtC-sb-RrI"/>
+                                            <constraint firstItem="VL7-Kp-CVG" firstAttribute="top" secondItem="6Wk-lq-qnK" secondAttribute="top" id="LUc-Qv-RaX"/>
+                                            <constraint firstItem="Kjs-iz-Q5V" firstAttribute="top" secondItem="mtz-ad-Qbl" secondAttribute="bottom" constant="10" id="Lny-fe-o2f"/>
+                                            <constraint firstItem="e8r-Mj-7H8" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="SCs-nP-jzm"/>
+                                            <constraint firstItem="ioR-6e-ThP" firstAttribute="top" secondItem="Lcl-rz-yoQ" secondAttribute="bottom" constant="10" id="SS8-po-cZg"/>
+                                            <constraint firstItem="lT4-pi-fub" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="Scx-xq-QtO"/>
+                                            <constraint firstAttribute="trailing" secondItem="jeD-MT-kdL" secondAttribute="trailing" constant="151" id="Ss6-ET-eGG"/>
+                                            <constraint firstItem="Lcl-rz-yoQ" firstAttribute="top" secondItem="tQR-3w-mwX" secondAttribute="bottom" constant="10" id="UNj-PV-A2P"/>
+                                            <constraint firstItem="Sqs-fa-3Sz" firstAttribute="top" secondItem="H06-W0-3dr" secondAttribute="bottom" constant="10" id="VZ5-hs-Xg5"/>
+                                            <constraint firstItem="0X4-eG-rMe" firstAttribute="top" secondItem="RM6-8L-d0S" secondAttribute="bottom" constant="23" id="VdG-Pw-Jpz"/>
+                                            <constraint firstItem="jd0-gT-7MY" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="Vg8-8O-hhw"/>
+                                            <constraint firstAttribute="trailing" secondItem="jd0-gT-7MY" secondAttribute="trailing" constant="24" id="VgP-pB-YP6"/>
+                                            <constraint firstItem="jeD-MT-kdL" firstAttribute="top" secondItem="lT4-pi-fub" secondAttribute="bottom" constant="10" id="X7f-Ue-CXF"/>
+                                            <constraint firstItem="IAj-jX-euU" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="22" id="XNv-4Y-xgI"/>
+                                            <constraint firstItem="lT4-pi-fub" firstAttribute="top" secondItem="e8r-Mj-7H8" secondAttribute="bottom" constant="10" id="Yay-89-ETZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sqs-fa-3Sz" secondAttribute="trailing" constant="144" id="aKF-kA-aZ4"/>
+                                            <constraint firstItem="mtz-ad-Qbl" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="22" id="ayv-kb-UIO"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ec5-2t-Qr3" secondAttribute="trailing" constant="24" id="b23-jh-t9O"/>
+                                            <constraint firstItem="IAj-jX-euU" firstAttribute="top" secondItem="VL7-Kp-CVG" secondAttribute="bottom" constant="24" id="bhi-oe-UpK"/>
+                                            <constraint firstItem="B7q-R7-f2n" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="cfL-tQ-Mcn"/>
+                                            <constraint firstAttribute="trailing" secondItem="IAj-jX-euU" secondAttribute="trailing" constant="22" id="cqp-6J-rxe"/>
+                                            <constraint firstItem="GFH-gp-vpE" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="d4t-fn-bLC"/>
+                                            <constraint firstItem="jeD-MT-kdL" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="ddm-78-leR"/>
+                                            <constraint firstAttribute="trailing" secondItem="lZ3-tX-grh" secondAttribute="trailing" constant="24" id="dhP-Ho-gVT"/>
+                                            <constraint firstItem="mtz-ad-Qbl" firstAttribute="top" secondItem="lOB-Fw-Ke2" secondAttribute="bottom" constant="23" id="eEn-4O-rtD"/>
+                                            <constraint firstItem="RM6-8L-d0S" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="edH-PY-Hds"/>
+                                            <constraint firstItem="SBz-vD-7JE" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="gzV-Vx-0U8"/>
+                                            <constraint firstAttribute="trailing" secondItem="H06-W0-3dr" secondAttribute="trailing" constant="24" id="h52-DP-rkw"/>
+                                            <constraint firstItem="GFH-gp-vpE" firstAttribute="top" secondItem="SBz-vD-7JE" secondAttribute="bottom" constant="20" id="kZy-UU-4Ha"/>
+                                            <constraint firstItem="gQw-6t-Oc0" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="22" id="kfG-VM-WOA"/>
+                                            <constraint firstItem="0iE-Td-Lhc" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="lIm-Qi-TkM"/>
+                                            <constraint firstItem="e8r-Mj-7H8" firstAttribute="top" secondItem="0iE-Td-Lhc" secondAttribute="bottom" constant="10" id="lxU-mN-hoG"/>
+                                            <constraint firstItem="B7q-R7-f2n" firstAttribute="top" secondItem="8oT-1J-Bic" secondAttribute="bottom" constant="10" id="oa2-ZL-s0w"/>
+                                            <constraint firstAttribute="trailing" secondItem="e8r-Mj-7H8" secondAttribute="trailing" constant="24" id="orb-gS-gj2"/>
+                                            <constraint firstItem="J1S-Id-OMz" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="osE-hk-uSR"/>
+                                            <constraint firstItem="H06-W0-3dr" firstAttribute="top" secondItem="J1S-Id-OMz" secondAttribute="bottom" constant="32" id="pQ3-eT-StS"/>
+                                            <constraint firstItem="8oT-1J-Bic" firstAttribute="top" secondItem="0X4-eG-rMe" secondAttribute="bottom" constant="10" id="peF-6k-is9"/>
+                                            <constraint firstItem="8oT-1J-Bic" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="qFC-ow-AIr"/>
+                                            <constraint firstItem="Ec5-2t-Qr3" firstAttribute="top" secondItem="DHx-yQ-KTI" secondAttribute="bottom" constant="32" id="qUf-tA-1J1"/>
+                                            <constraint firstItem="VL7-Kp-CVG" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" id="rJM-wt-shr"/>
+                                            <constraint firstItem="lOB-Fw-Ke2" firstAttribute="top" secondItem="GFH-gp-vpE" secondAttribute="bottom" constant="21" id="rJS-no-1YS"/>
+                                            <constraint firstAttribute="trailing" secondItem="B7q-R7-f2n" secondAttribute="trailing" constant="182" id="tjD-dc-o9S"/>
+                                            <constraint firstItem="tQR-3w-mwX" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="tod-Ri-j7O"/>
+                                            <constraint firstItem="lOB-Fw-Ke2" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" constant="24" id="trl-uI-e4S"/>
+                                            <constraint firstAttribute="trailing" secondItem="0X4-eG-rMe" secondAttribute="trailing" constant="22" id="vhp-nz-P1X"/>
+                                            <constraint firstAttribute="trailing" secondItem="gQw-6t-Oc0" secondAttribute="trailing" constant="22" id="vpM-fV-iLI"/>
+                                            <constraint firstItem="lZ3-tX-grh" firstAttribute="top" secondItem="B7q-R7-f2n" secondAttribute="bottom" constant="32" id="w8L-Y6-hvB"/>
+                                            <constraint firstItem="J1S-Id-OMz" firstAttribute="top" secondItem="gQw-6t-Oc0" secondAttribute="bottom" constant="10" id="xG3-xf-8kz"/>
+                                            <constraint firstAttribute="trailing" secondItem="GFH-gp-vpE" secondAttribute="trailing" constant="24" id="xwx-au-IQN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kjs-iz-Q5V" secondAttribute="trailing" constant="131" id="zDL-Xh-0ku"/>
+                                            <constraint firstItem="jd0-gT-7MY" firstAttribute="top" secondItem="Kjs-iz-Q5V" secondAttribute="bottom" constant="32" id="zIu-Iv-XJx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -57,14 +291,526 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mcn-G6-fDi"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1300"/>
+                    <size key="freeformSize" width="375" height="5461"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nte-v6-iEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1281.8840579710145" y="-355.58035714285711"/>
+            <point key="canvasLocation" x="-1281.8840579710145" y="-355.91517857142856"/>
+        </scene>
+        <!--Magazine View Controller-->
+        <scene sceneID="1Gi-P8-Cp1">
+            <objects>
+                <viewController storyboardIdentifier="ParisMagazineViewController" id="uN0-hT-axU" customClass="MagazineViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PU8-HF-JVt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="5130"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8v-4x-wqT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="5130"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vo-ej-6NX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="9591"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMagazineParis" translatesAutoresizingMaskIntoConstraints="NO" id="gcV-9U-w33">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine1" translatesAutoresizingMaskIntoConstraints="NO" id="9z0-Ie-39E">
+                                                <rect key="frame" x="22" y="522" width="331" height="1368"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 - 뮤지엄 패스 48시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-NP-Wcd">
+                                                <rect key="frame" x="24" y="1900" width="203" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="FEi-Vz-JYe"/>
+                                                    <constraint firstAttribute="width" constant="203" id="chO-VO-af4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine2" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-5l-Gqv">
+                                                <rect key="frame" x="22" y="1940" width="331" height="717"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 루브르 박물관 패스트 트랙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwa-yh-6wY">
+                                                <rect key="frame" x="24" y="2667" width="232" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 루브르 가이드 투어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4O-5V-jft">
+                                                <rect key="frame" x="22" y="2693" width="203" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="203" id="SHu-dx-QOg"/>
+                                                    <constraint firstAttribute="height" constant="16" id="l7k-bB-zB4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine3" translatesAutoresizingMaskIntoConstraints="NO" id="Ro8-We-yUB">
+                                                <rect key="frame" x="24" y="2741" width="327" height="662"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 퐁피두 센터 skip the line 티켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-bW-wGX">
+                                                <rect key="frame" x="24" y="3413" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="dBW-7K-dX3"/>
+                                                    <constraint firstAttribute="height" constant="16" id="j3D-rg-rth"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine4" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-Nt-ULy">
+                                                <rect key="frame" x="24" y="3461" width="327" height="720"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼 트립 – 개선문 전망대 우선 입장권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-bn-JdQ">
+                                                <rect key="frame" x="24" y="4191" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="aDL-5q-WeD"/>
+                                                    <constraint firstAttribute="height" constant="16" id="dfo-aB-iIh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine5" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-o2-8fW">
+                                                <rect key="frame" x="24" y="4239" width="327" height="672"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼 트립 – 개선문 전망대 우선 입장권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugu-Ez-ciZ">
+                                                <rect key="frame" x="24" y="4921" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="5sa-EK-Mdq"/>
+                                                    <constraint firstAttribute="width" constant="268" id="gfQ-Mh-0xW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine6" translatesAutoresizingMaskIntoConstraints="NO" id="Cl9-0E-ead">
+                                                <rect key="frame" x="24" y="4969" width="327" height="672"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립-오르세 &amp;오랑주리 미술관 우선 입장권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKs-I5-cor">
+                                                <rect key="frame" x="24" y="5651" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="JVb-EZ-One"/>
+                                                    <constraint firstAttribute="width" constant="291" id="q5g-Qq-6vb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine7" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-cE-Yyc">
+                                                <rect key="frame" x="22" y="5691" width="331" height="955"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 1dat 2park 입장권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-JV-HcJ">
+                                                <rect key="frame" x="24" y="6656" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="291" id="IE8-An-fiS"/>
+                                                    <constraint firstAttribute="height" constant="16" id="v3c-cx-hcY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 1day 2park 입장권 + 왕복셔틀버스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRT-LT-aQn">
+                                                <rect key="frame" x="24" y="6682" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="291" id="huR-fg-SM0"/>
+                                                    <constraint firstAttribute="height" constant="16" id="xhU-uf-znq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine8" translatesAutoresizingMaskIntoConstraints="NO" id="hk1-0D-eC2">
+                                                <rect key="frame" x="22" y="6722" width="331" height="1015"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 몽생미셸 투어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D9-GJ-rOx">
+                                                <rect key="frame" x="24" y="7747" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="4C0-iV-FY7"/>
+                                                    <constraint firstAttribute="width" constant="291" id="rrO-EY-HZz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine9" translatesAutoresizingMaskIntoConstraints="NO" id="FSb-VF-dtS">
+                                                <rect key="frame" x="22" y="7787" width="331" height="913"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 에펠탑 스냅사진 투어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrM-n1-MIK">
+                                                <rect key="frame" x="24" y="8710" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="291" id="RW0-Ts-n5M"/>
+                                                    <constraint firstAttribute="height" constant="16" id="uWJ-d1-lIX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgParisMagazine10" translatesAutoresizingMaskIntoConstraints="NO" id="SpM-L1-2Xz">
+                                                <rect key="frame" x="24" y="8758" width="327" height="726"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립-바토 파리지앵 탑승권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXd-AE-FOw">
+                                                <rect key="frame" x="24" y="9494" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="291" id="q9g-85-Pok"/>
+                                                    <constraint firstAttribute="height" constant="16" id="xsK-7J-oAQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립-바토 파리지앵 디너 크루즈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOg-Rc-WzB">
+                                                <rect key="frame" x="24" y="9520" width="291" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="1JB-XV-5bZ"/>
+                                                    <constraint firstAttribute="width" constant="291" id="zp5-r8-ozB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jRT-LT-aQn" secondAttribute="trailing" constant="60" id="1MK-ts-Cvl"/>
+                                            <constraint firstAttribute="trailing" secondItem="rrM-n1-MIK" secondAttribute="trailing" constant="60" id="2Os-5G-xxL"/>
+                                            <constraint firstItem="Cl9-0E-ead" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="2vc-ek-L3g"/>
+                                            <constraint firstAttribute="trailing" secondItem="uk9-5l-Gqv" secondAttribute="trailing" constant="22" id="396-AP-bw6"/>
+                                            <constraint firstItem="FSb-VF-dtS" firstAttribute="top" secondItem="1D9-GJ-rOx" secondAttribute="bottom" constant="24" id="4dK-aW-zfI"/>
+                                            <constraint firstItem="uk9-5l-Gqv" firstAttribute="top" secondItem="9fe-NP-Wcd" secondAttribute="bottom" constant="24" id="5jA-El-3gi"/>
+                                            <constraint firstItem="9fe-NP-Wcd" firstAttribute="top" secondItem="9z0-Ie-39E" secondAttribute="bottom" constant="10" id="5x3-Ah-LUw"/>
+                                            <constraint firstAttribute="bottom" secondItem="jOg-Rc-WzB" secondAttribute="bottom" constant="55" id="9u0-e5-Y6V"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Pl-bn-JdQ" secondAttribute="trailing" constant="83" id="AgT-g2-gZd"/>
+                                            <constraint firstItem="hk1-0D-eC2" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="22" id="Aiw-Q3-bZr"/>
+                                            <constraint firstItem="gcV-9U-w33" firstAttribute="top" secondItem="1vo-ej-6NX" secondAttribute="top" id="AtT-ZB-2GI"/>
+                                            <constraint firstItem="FSb-VF-dtS" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="22" id="BWU-83-hqg"/>
+                                            <constraint firstItem="p4O-5V-jft" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="22" id="C0r-bF-yCX"/>
+                                            <constraint firstAttribute="trailing" secondItem="IHa-bW-wGX" secondAttribute="trailing" constant="83" id="CAR-Jz-RRO"/>
+                                            <constraint firstItem="hk1-0D-eC2" firstAttribute="top" secondItem="jRT-LT-aQn" secondAttribute="bottom" constant="24" id="CbZ-if-Osa"/>
+                                            <constraint firstItem="cXd-AE-FOw" firstAttribute="top" secondItem="SpM-L1-2Xz" secondAttribute="bottom" constant="10" id="Cjz-kg-rl6"/>
+                                            <constraint firstItem="jOg-Rc-WzB" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="DLQ-4c-0EK"/>
+                                            <constraint firstAttribute="trailing" secondItem="gcV-9U-w33" secondAttribute="trailing" id="EBt-8V-JRh"/>
+                                            <constraint firstItem="Ro8-We-yUB" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="H2K-5c-3hx"/>
+                                            <constraint firstItem="SpM-L1-2Xz" firstAttribute="top" secondItem="rrM-n1-MIK" secondAttribute="bottom" constant="32" id="HgH-ft-HmI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mpw-o2-8fW" secondAttribute="trailing" constant="24" id="Ihz-96-4Dm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ro8-We-yUB" secondAttribute="trailing" constant="24" id="JfL-Rp-oGS"/>
+                                            <constraint firstItem="AEg-cE-Yyc" firstAttribute="top" secondItem="ZKs-I5-cor" secondAttribute="bottom" constant="24" id="Keq-CI-vkN"/>
+                                            <constraint firstItem="Mpw-o2-8fW" firstAttribute="top" secondItem="8Pl-bn-JdQ" secondAttribute="bottom" constant="32" id="N1R-oy-A83"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ugu-Ez-ciZ" secondAttribute="trailing" constant="83" id="N8h-Gj-fMj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cl9-0E-ead" secondAttribute="trailing" constant="24" id="Qep-k1-Ygh"/>
+                                            <constraint firstItem="jRT-LT-aQn" firstAttribute="top" secondItem="zWF-JV-HcJ" secondAttribute="bottom" constant="10" id="Spe-cD-Btx"/>
+                                            <constraint firstAttribute="trailing" secondItem="jOg-Rc-WzB" secondAttribute="trailing" constant="60" id="UJ9-t1-PDC"/>
+                                            <constraint firstAttribute="trailing" secondItem="8b1-Nt-ULy" secondAttribute="trailing" constant="24" id="UtT-wH-5YP"/>
+                                            <constraint firstItem="p4O-5V-jft" firstAttribute="top" secondItem="Fwa-yh-6wY" secondAttribute="bottom" constant="9" id="VQ2-i4-K0e"/>
+                                            <constraint firstItem="jRT-LT-aQn" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="W9H-XI-fzp"/>
+                                            <constraint firstItem="rrM-n1-MIK" firstAttribute="top" secondItem="FSb-VF-dtS" secondAttribute="bottom" constant="10" id="Wbm-JB-uxt"/>
+                                            <constraint firstItem="ZKs-I5-cor" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="ZDO-pK-6yz"/>
+                                            <constraint firstItem="Cl9-0E-ead" firstAttribute="top" secondItem="Ugu-Ez-ciZ" secondAttribute="bottom" constant="32" id="ZYa-aT-g6u"/>
+                                            <constraint firstItem="IHa-bW-wGX" firstAttribute="top" secondItem="Ro8-We-yUB" secondAttribute="bottom" constant="10" id="avt-ad-Eqg"/>
+                                            <constraint firstItem="Fwa-yh-6wY" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="brv-8k-NLf"/>
+                                            <constraint firstItem="SpM-L1-2Xz" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="c1H-JV-Zbk"/>
+                                            <constraint firstAttribute="trailing" secondItem="AEg-cE-Yyc" secondAttribute="trailing" constant="22" id="d5G-Sj-qEA"/>
+                                            <constraint firstAttribute="trailing" secondItem="1D9-GJ-rOx" secondAttribute="trailing" constant="60" id="eTk-fy-9K9"/>
+                                            <constraint firstItem="IHa-bW-wGX" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="ews-fp-1bo"/>
+                                            <constraint firstItem="Mpw-o2-8fW" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="fSy-uU-kX2"/>
+                                            <constraint firstItem="1D9-GJ-rOx" firstAttribute="top" secondItem="hk1-0D-eC2" secondAttribute="bottom" constant="10" id="fn9-aW-dm6"/>
+                                            <constraint firstItem="8b1-Nt-ULy" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="fuq-qD-wCk"/>
+                                            <constraint firstAttribute="trailing" secondItem="cXd-AE-FOw" secondAttribute="trailing" constant="60" id="hM0-CI-dTh"/>
+                                            <constraint firstItem="gcV-9U-w33" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" id="hRA-uz-7Lp"/>
+                                            <constraint firstItem="8Pl-bn-JdQ" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="hat-wz-YyZ"/>
+                                            <constraint firstItem="AEg-cE-Yyc" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="22" id="i7u-MW-utw"/>
+                                            <constraint firstItem="rrM-n1-MIK" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="ixl-DO-zJs"/>
+                                            <constraint firstItem="Ugu-Ez-ciZ" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="jrC-pg-ahe"/>
+                                            <constraint firstAttribute="trailing" secondItem="9z0-Ie-39E" secondAttribute="trailing" constant="22" id="lN3-5f-bcQ"/>
+                                            <constraint firstItem="9z0-Ie-39E" firstAttribute="top" secondItem="gcV-9U-w33" secondAttribute="bottom" constant="24" id="lNy-9v-Fi4"/>
+                                            <constraint firstItem="9fe-NP-Wcd" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="mkf-5d-qDw"/>
+                                            <constraint firstItem="cXd-AE-FOw" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="mkv-QX-NSM"/>
+                                            <constraint firstItem="1D9-GJ-rOx" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="nyW-ka-Hib"/>
+                                            <constraint firstItem="9z0-Ie-39E" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="22" id="oYs-au-bXG"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZKs-I5-cor" secondAttribute="trailing" constant="60" id="p92-Pl-YyZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="zWF-JV-HcJ" secondAttribute="trailing" constant="60" id="rIQ-Uu-7sM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fwa-yh-6wY" secondAttribute="trailing" constant="119" id="rU9-5l-Xse"/>
+                                            <constraint firstItem="Ugu-Ez-ciZ" firstAttribute="top" secondItem="Mpw-o2-8fW" secondAttribute="bottom" constant="10" id="rZm-mX-Rd9"/>
+                                            <constraint firstAttribute="trailing" secondItem="hk1-0D-eC2" secondAttribute="trailing" constant="22" id="sXW-gC-HWm"/>
+                                            <constraint firstItem="zWF-JV-HcJ" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="24" id="t5C-3p-sf5"/>
+                                            <constraint firstAttribute="trailing" secondItem="9fe-NP-Wcd" secondAttribute="trailing" constant="148" id="tEZ-Ov-Gh0"/>
+                                            <constraint firstAttribute="trailing" secondItem="FSb-VF-dtS" secondAttribute="trailing" constant="22" id="uCb-v7-4cC"/>
+                                            <constraint firstAttribute="trailing" secondItem="p4O-5V-jft" secondAttribute="trailing" constant="150" id="vIy-BK-xJt"/>
+                                            <constraint firstItem="Fwa-yh-6wY" firstAttribute="top" secondItem="uk9-5l-Gqv" secondAttribute="bottom" constant="10" id="vu7-jN-PRX"/>
+                                            <constraint firstItem="8b1-Nt-ULy" firstAttribute="top" secondItem="IHa-bW-wGX" secondAttribute="bottom" constant="32" id="wAj-GR-yq7"/>
+                                            <constraint firstItem="8Pl-bn-JdQ" firstAttribute="top" secondItem="8b1-Nt-ULy" secondAttribute="bottom" constant="10" id="wJq-1X-S7Z"/>
+                                            <constraint firstItem="uk9-5l-Gqv" firstAttribute="leading" secondItem="1vo-ej-6NX" secondAttribute="leading" constant="22" id="wKI-Qs-F4q"/>
+                                            <constraint firstItem="Ro8-We-yUB" firstAttribute="top" secondItem="p4O-5V-jft" secondAttribute="bottom" constant="32" id="xRN-8Q-LyO"/>
+                                            <constraint firstItem="zWF-JV-HcJ" firstAttribute="top" secondItem="AEg-cE-Yyc" secondAttribute="bottom" constant="10" id="xsg-0e-LIW"/>
+                                            <constraint firstAttribute="trailing" secondItem="SpM-L1-2Xz" secondAttribute="trailing" constant="24" id="ymm-rS-3cm"/>
+                                            <constraint firstItem="jOg-Rc-WzB" firstAttribute="top" secondItem="cXd-AE-FOw" secondAttribute="bottom" constant="10" id="z0t-LG-Sae"/>
+                                            <constraint firstItem="ZKs-I5-cor" firstAttribute="top" secondItem="Cl9-0E-ead" secondAttribute="bottom" constant="10" id="zfk-TL-BF2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1vo-ej-6NX" firstAttribute="width" secondItem="E8v-4x-wqT" secondAttribute="width" id="Og4-Dc-Xtj"/>
+                                    <constraint firstAttribute="trailing" secondItem="1vo-ej-6NX" secondAttribute="trailing" id="Qyk-zs-g3d"/>
+                                    <constraint firstItem="1vo-ej-6NX" firstAttribute="top" secondItem="E8v-4x-wqT" secondAttribute="top" id="bTd-cJ-3aR"/>
+                                    <constraint firstItem="1vo-ej-6NX" firstAttribute="leading" secondItem="E8v-4x-wqT" secondAttribute="leading" id="mSe-Lv-DHh"/>
+                                    <constraint firstAttribute="bottom" secondItem="1vo-ej-6NX" secondAttribute="bottom" constant="-1.5" id="qiR-kS-QfU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RSk-EL-MAB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wUW-wX-dDI"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LLQ-ot-nye" firstAttribute="trailing" secondItem="E8v-4x-wqT" secondAttribute="trailing" id="NcZ-6B-mOU"/>
+                            <constraint firstItem="E8v-4x-wqT" firstAttribute="top" secondItem="PU8-HF-JVt" secondAttribute="top" id="iiw-v2-EwU"/>
+                            <constraint firstItem="E8v-4x-wqT" firstAttribute="leading" secondItem="LLQ-ot-nye" secondAttribute="leading" id="rLa-NN-I9w"/>
+                            <constraint firstAttribute="bottom" secondItem="E8v-4x-wqT" secondAttribute="bottom" id="tZk-nr-a8T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LLQ-ot-nye"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="5130"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgC-sX-wkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450.00000000000006" y="-356.58482142857139"/>
+        </scene>
+        <!--Magazine View Controller-->
+        <scene sceneID="1mU-C0-Mry">
+            <objects>
+                <viewController storyboardIdentifier="LondonMagazineViewController" id="Xhd-3B-Aef" customClass="MagazineViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbE-d7-lEo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="4430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znu-gb-V7G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="4430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDf-Tq-mkM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="8496"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMagazineLondon" translatesAutoresizingMaskIntoConstraints="NO" id="gb8-Sv-uqP">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLondonMagazine1" translatesAutoresizingMaskIntoConstraints="NO" id="RpE-d1-XcO">
+                                                <rect key="frame" x="22" y="522" width="331" height="2850"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 퐁피두 센터 skip the line 티켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyF-H5-43Q">
+                                                <rect key="frame" x="24" y="3382" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="RjS-v9-VAg"/>
+                                                    <constraint firstAttribute="width" constant="268" id="i41-vq-jUT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLondonMagazine2" translatesAutoresizingMaskIntoConstraints="NO" id="2Lt-iM-hxO">
+                                                <rect key="frame" x="24" y="3430" width="327" height="724"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 퐁피두 센터 skip the line 티켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-CU-990">
+                                                <rect key="frame" x="24" y="4164" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="cuV-5e-rk6"/>
+                                                    <constraint firstAttribute="height" constant="16" id="qTq-as-ghk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLondonMagazine3" translatesAutoresizingMaskIntoConstraints="NO" id="033-4a-s6K">
+                                                <rect key="frame" x="22" y="4204" width="331" height="923"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 퐁피두 센터 skip the line 티켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXH-lE-K6a">
+                                                <rect key="frame" x="24" y="5137" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="OhF-ht-UDr"/>
+                                                    <constraint firstAttribute="height" constant="16" id="dtk-ZV-OoE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLondonMagazine4" translatesAutoresizingMaskIntoConstraints="NO" id="OSM-4M-GCw">
+                                                <rect key="frame" x="22" y="5185" width="331" height="2466"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 런던패스+시티투어패스 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q03-oC-Mqq">
+                                                <rect key="frame" x="24" y="7661" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="68k-XS-o74"/>
+                                                    <constraint firstAttribute="width" constant="268" id="wfh-me-8q0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLondonMagazine5" translatesAutoresizingMaskIntoConstraints="NO" id="wv8-Tr-Hip">
+                                                <rect key="frame" x="24" y="7709" width="327" height="670"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이리얼트립 – 런던패스+시티투어패스 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGS-iQ-bjg">
+                                                <rect key="frame" x="24" y="8389" width="268" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="9qI-cq-CBA"/>
+                                                    <constraint firstAttribute="height" constant="16" id="jWc-ax-xac"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Q03-oC-Mqq" secondAttribute="trailing" constant="83" id="0UO-00-SIl"/>
+                                            <constraint firstItem="033-4a-s6K" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="22" id="10d-nl-MrA"/>
+                                            <constraint firstAttribute="bottom" secondItem="FGS-iQ-bjg" secondAttribute="bottom" constant="91" id="1VO-Hn-ohg"/>
+                                            <constraint firstItem="aXH-lE-K6a" firstAttribute="top" secondItem="033-4a-s6K" secondAttribute="bottom" constant="10" id="1Xg-1A-gb3"/>
+                                            <constraint firstItem="RpE-d1-XcO" firstAttribute="top" secondItem="gb8-Sv-uqP" secondAttribute="bottom" constant="24" id="1mv-t3-0W5"/>
+                                            <constraint firstItem="gb8-Sv-uqP" firstAttribute="top" secondItem="eDf-Tq-mkM" secondAttribute="top" id="5NR-wq-VRB"/>
+                                            <constraint firstItem="Q03-oC-Mqq" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="5lE-UF-JDn"/>
+                                            <constraint firstAttribute="trailing" secondItem="lbh-CU-990" secondAttribute="trailing" constant="83" id="9Ny-b8-eSk"/>
+                                            <constraint firstItem="Q03-oC-Mqq" firstAttribute="top" secondItem="OSM-4M-GCw" secondAttribute="bottom" constant="10" id="9Qs-MY-w7F"/>
+                                            <constraint firstItem="wv8-Tr-Hip" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="Bnb-gS-00s"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Lt-iM-hxO" secondAttribute="trailing" constant="24" id="CkV-GM-OYM"/>
+                                            <constraint firstAttribute="trailing" secondItem="gb8-Sv-uqP" secondAttribute="trailing" id="Djf-YL-3cx"/>
+                                            <constraint firstItem="2Lt-iM-hxO" firstAttribute="top" secondItem="OyF-H5-43Q" secondAttribute="bottom" constant="32" id="JsB-2Y-jCA"/>
+                                            <constraint firstItem="lbh-CU-990" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="K3r-8O-meg"/>
+                                            <constraint firstAttribute="trailing" secondItem="OSM-4M-GCw" secondAttribute="trailing" constant="22" id="NiJ-1k-O8J"/>
+                                            <constraint firstItem="OSM-4M-GCw" firstAttribute="top" secondItem="aXH-lE-K6a" secondAttribute="bottom" constant="32" id="NtP-fw-xqI"/>
+                                            <constraint firstAttribute="trailing" secondItem="OyF-H5-43Q" secondAttribute="trailing" constant="83" id="Qzj-S0-3AA"/>
+                                            <constraint firstItem="FGS-iQ-bjg" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="VGE-TM-0yf"/>
+                                            <constraint firstAttribute="trailing" secondItem="FGS-iQ-bjg" secondAttribute="trailing" constant="83" id="WF3-D2-aBE"/>
+                                            <constraint firstItem="RpE-d1-XcO" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="22" id="cOL-OX-dPY"/>
+                                            <constraint firstItem="OyF-H5-43Q" firstAttribute="top" secondItem="RpE-d1-XcO" secondAttribute="bottom" constant="10" id="eX0-Jn-JgS"/>
+                                            <constraint firstItem="OyF-H5-43Q" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="epQ-M7-rGM"/>
+                                            <constraint firstItem="gb8-Sv-uqP" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" id="evU-dV-I5v"/>
+                                            <constraint firstAttribute="trailing" secondItem="RpE-d1-XcO" secondAttribute="trailing" constant="22" id="lI1-2b-p3f"/>
+                                            <constraint firstItem="2Lt-iM-hxO" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="lj3-n3-Epn"/>
+                                            <constraint firstItem="FGS-iQ-bjg" firstAttribute="top" secondItem="wv8-Tr-Hip" secondAttribute="bottom" constant="10" id="ovi-l0-ZZ7"/>
+                                            <constraint firstItem="wv8-Tr-Hip" firstAttribute="top" secondItem="Q03-oC-Mqq" secondAttribute="bottom" constant="32" id="qMj-kC-Qkp"/>
+                                            <constraint firstItem="lbh-CU-990" firstAttribute="top" secondItem="2Lt-iM-hxO" secondAttribute="bottom" constant="10" id="sLo-uV-Gf0"/>
+                                            <constraint firstItem="033-4a-s6K" firstAttribute="top" secondItem="lbh-CU-990" secondAttribute="bottom" constant="24" id="sbY-xh-WOg"/>
+                                            <constraint firstAttribute="trailing" secondItem="wv8-Tr-Hip" secondAttribute="trailing" constant="24" id="uOb-Dv-IP3"/>
+                                            <constraint firstAttribute="trailing" secondItem="aXH-lE-K6a" secondAttribute="trailing" constant="83" id="uWp-WP-UbF"/>
+                                            <constraint firstAttribute="trailing" secondItem="033-4a-s6K" secondAttribute="trailing" constant="22" id="uxJ-hJ-2NT"/>
+                                            <constraint firstItem="OSM-4M-GCw" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="22" id="wKf-Ti-DHy"/>
+                                            <constraint firstItem="aXH-lE-K6a" firstAttribute="leading" secondItem="eDf-Tq-mkM" secondAttribute="leading" constant="24" id="yHH-b0-2ah"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eDf-Tq-mkM" secondAttribute="trailing" id="7rs-qd-EZc"/>
+                                    <constraint firstItem="eDf-Tq-mkM" firstAttribute="leading" secondItem="znu-gb-V7G" secondAttribute="leading" id="IVY-Wx-z6X"/>
+                                    <constraint firstItem="eDf-Tq-mkM" firstAttribute="width" secondItem="znu-gb-V7G" secondAttribute="width" id="WYX-LG-Rzk"/>
+                                    <constraint firstItem="eDf-Tq-mkM" firstAttribute="top" secondItem="znu-gb-V7G" secondAttribute="top" id="ljh-Vc-a5I"/>
+                                    <constraint firstAttribute="bottom" secondItem="eDf-Tq-mkM" secondAttribute="bottom" constant="-1.5" id="peu-rL-mqD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="qmz-PE-NR7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vrR-K7-O6e"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="znu-gb-V7G" firstAttribute="leading" secondItem="dAM-33-S7M" secondAttribute="leading" id="1h5-G9-pr1"/>
+                            <constraint firstAttribute="bottom" secondItem="znu-gb-V7G" secondAttribute="bottom" id="Cqm-zE-feP"/>
+                            <constraint firstItem="znu-gb-V7G" firstAttribute="top" secondItem="qbE-d7-lEo" secondAttribute="top" id="Y59-9L-rl8"/>
+                            <constraint firstItem="dAM-33-S7M" firstAttribute="trailing" secondItem="znu-gb-V7G" secondAttribute="trailing" id="uGb-8g-ney"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dAM-33-S7M"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="4430"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bls-Al-629" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.66666666666669" y="-357.58928571428572"/>
+        </scene>
+        <!--Magazine View Controller-->
+        <scene sceneID="zY1-56-yUn">
+            <objects>
+                <viewController storyboardIdentifier="BangkokMagazineViewController" id="0NR-Jp-dKA" customClass="MagazineViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJG-l9-bpE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="4200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Laq-qO-zt3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="4200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVo-Hv-bPT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="4200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBangkokMagazine0" translatesAutoresizingMaskIntoConstraints="NO" id="ndQ-k5-HpK">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="4122"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4122" id="8ks-sQ-0aW"/>
+                                                    <constraint firstAttribute="width" constant="375" id="Pd7-bw-U4p"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ndQ-k5-HpK" firstAttribute="leading" secondItem="lVo-Hv-bPT" secondAttribute="leading" id="VjK-zP-Sdy"/>
+                                            <constraint firstAttribute="trailing" secondItem="ndQ-k5-HpK" secondAttribute="trailing" id="Xfv-pO-dL2"/>
+                                            <constraint firstAttribute="bottom" secondItem="ndQ-k5-HpK" secondAttribute="bottom" constant="78" id="hid-4n-x0U"/>
+                                            <constraint firstItem="ndQ-k5-HpK" firstAttribute="top" secondItem="lVo-Hv-bPT" secondAttribute="top" id="wWj-eO-Z8L"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lVo-Hv-bPT" firstAttribute="leading" secondItem="Laq-qO-zt3" secondAttribute="leading" id="1g6-9h-xCH"/>
+                                    <constraint firstAttribute="bottom" secondItem="lVo-Hv-bPT" secondAttribute="bottom" constant="-1.5" id="4et-kV-Hjg"/>
+                                    <constraint firstItem="lVo-Hv-bPT" firstAttribute="top" secondItem="Laq-qO-zt3" secondAttribute="top" id="PQp-3L-LeI"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVo-Hv-bPT" secondAttribute="trailing" id="YeV-IZ-88t"/>
+                                    <constraint firstItem="lVo-Hv-bPT" firstAttribute="width" secondItem="Laq-qO-zt3" secondAttribute="width" id="gUU-Rq-lCG"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="5dx-FG-rPM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="W35-yP-K1J"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Laq-qO-zt3" firstAttribute="leading" secondItem="GdS-D5-Bqf" secondAttribute="leading" id="1ZD-gu-dad"/>
+                            <constraint firstAttribute="bottom" secondItem="Laq-qO-zt3" secondAttribute="bottom" id="6q0-3p-mEH"/>
+                            <constraint firstItem="Laq-qO-zt3" firstAttribute="top" secondItem="LJG-l9-bpE" secondAttribute="top" id="RUj-CN-w3D"/>
+                            <constraint firstItem="GdS-D5-Bqf" firstAttribute="trailing" secondItem="Laq-qO-zt3" secondAttribute="trailing" id="a8X-9j-g7G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GdS-D5-Bqf"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="4200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ITh-J3-z8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.4782608695652" y="-356.25"/>
         </scene>
     </scenes>
     <resources>
-        <image name="btnFinish" width="375" height="92"/>
+        <image name="imgBangkokMagazine0" width="375" height="4122"/>
+        <image name="imgHonkongMagazine1" width="331" height="927"/>
+        <image name="imgHonkongMagazine10" width="331" height="451.5"/>
+        <image name="imgHonkongMagazine11" width="327" height="332"/>
+        <image name="imgHonkongMagazine2" width="327" height="307"/>
+        <image name="imgHonkongMagazine3" width="331" height="476.5"/>
+        <image name="imgHonkongMagazine4" width="327" height="359"/>
+        <image name="imgHonkongMagazine5" width="331" height="528.5"/>
+        <image name="imgHonkongMagazine6" width="327" height="333"/>
+        <image name="imgHonkongMagazine7" width="327" height="282"/>
+        <image name="imgHonkongMagazine8" width="327" height="144"/>
+        <image name="imgHonkongMagazine9" width="327" height="354"/>
+        <image name="imgLondonMagazine1" width="331" height="1425"/>
+        <image name="imgLondonMagazine2" width="327" height="362"/>
+        <image name="imgLondonMagazine3" width="331" height="461.5"/>
+        <image name="imgLondonMagazine4" width="331" height="1233"/>
+        <image name="imgLondonMagazine5" width="327" height="335"/>
+        <image name="imgMagazineLondon" width="375" height="249"/>
+        <image name="imgMagazineMacao" width="375" height="249"/>
+        <image name="imgMagazineParis" width="375" height="249"/>
+        <image name="imgParisMagazine1" width="331" height="684"/>
+        <image name="imgParisMagazine10" width="327" height="363"/>
+        <image name="imgParisMagazine2" width="331" height="358.5"/>
+        <image name="imgParisMagazine3" width="327" height="331"/>
+        <image name="imgParisMagazine4" width="327" height="360"/>
+        <image name="imgParisMagazine5" width="327" height="336"/>
+        <image name="imgParisMagazine6" width="327" height="336"/>
+        <image name="imgParisMagazine7" width="331" height="477.5"/>
+        <image name="imgParisMagazine8" width="331" height="507.5"/>
+        <image name="imgParisMagazine9" width="331" height="456.5"/>
     </resources>
 </document>
