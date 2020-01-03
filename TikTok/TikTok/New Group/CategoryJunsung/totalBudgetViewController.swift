@@ -94,8 +94,11 @@ class totalBudgetViewController: UIViewController {
     }
 
     @IBAction func goToNext(_ sender: Any) {
-        
-    }
-    
-    
+   
+            //print(menuCnt)
+//            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+//            let popupVC = storyBoard.instantiateViewController(withIdentifier: "EndBudgetViewController")
+//            popupVC.modalPresentationStyle = .overCurrentContext
+//            present(popupVC, animated: true, completion: nil)
+}
 }

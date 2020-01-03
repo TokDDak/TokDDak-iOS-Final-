@@ -11,6 +11,7 @@
 		0D0C0C7323BE0F9500FDC036 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7223BE0F9500FDC036 /* APIService.swift */; };
 		0D0C0C7623BE107200FDC036 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */; };
 		0D0C0C7823BE10B700FDC036 /* MedianHotelResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */; };
+		0D21ACC623BFE2CC00A49B67 /* EndBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D21ACC523BFE2CC00A49B67 /* EndBudgetViewController.swift */; };
 		0D2D3BF923BE4DB700B95A78 /* TripCreateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */; };
 		0D2D3BFB23BE915D00B95A78 /* totalBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */; };
 		0D2D3BFD23BF053300B95A78 /* FoodResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */; };
@@ -98,6 +99,7 @@
 		0D0C0C7223BE0F9500FDC036 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianHotelResponseModel.swift; sourceTree = "<group>"; };
+		0D21ACC523BFE2CC00A49B67 /* EndBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndBudgetViewController.swift; sourceTree = "<group>"; };
 		0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreateResponseModel.swift; sourceTree = "<group>"; };
 		0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalBudgetViewController.swift; sourceTree = "<group>"; };
 		0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponseModel.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				0D0C0C6F23BE0DE500FDC036 /* Service */,
 				55C76ECF23BD05C400D8B822 /* ActivityCellTableViewCell.swift */,
 				0D2D3C0423BF583B00B95A78 /* CalculateHistoryViewController.swift */,
+				0D21ACC523BFE2CC00A49B67 /* EndBudgetViewController.swift */,
 				55C76ECE23BD05C400D8B822 /* ActivityCellViewController.swift */,
 				55C76ECD23BD05C400D8B822 /* ActivityPopUpViewController.swift */,
 				0D2D3C0023BF50D300B95A78 /* MagazineViewController.swift */,
@@ -713,6 +716,7 @@
 				0D2D3C0123BF50D300B95A78 /* MagazineViewController.swift in Sources */,
 				55491B2723B8A79000469709 /* RegisterCalendarViewController.swift in Sources */,
 				55C76EC023BC7B5C00D8B822 /* RegisterPlanViewController.swift in Sources */,
+				0D21ACC623BFE2CC00A49B67 /* EndBudgetViewController.swift in Sources */,
 				55C76EDE23BD05C500D8B822 /* PopUpViewController.swift in Sources */,
 				55C76EE923BDF47500D8B822 /* TotalPlanData.swift in Sources */,
 				55C76EE723BDEABF00D8B822 /* PlanModel.swift in Sources */,
