@@ -35,53 +35,68 @@ Service Work Flow
 
 
 ## 개발 환경 및 사용한 라이브러리
-
-- Xcode, 제플린, 슬랙
+###개발환경
+- Xcode
+###라이브러리
 - XLpagerTapStrip
 - TinyConstraints
 
 ## 기능소개
-<div>
-<img width="380" alt="스크린샷 2019-12-30 오후 6 35 13" src="https://user-images.githubusercontent.com/55793344/71582432-945fbd80-2b4d-11ea-9a1e-5097a5e6eea8.png">
-<img width="380" alt="스크린샷 2019-12-30 오후 6 35 21" src="https://user-images.githubusercontent.com/55793344/71582444-9e81bc00-2b4d-11ea-997a-61acdf3f5168.png">
-<img width="382" alt="스크린샷 2019-12-30 오후 6 35 46" src="https://user-images.githubusercontent.com/55793344/71582452-a6416080-2b4d-11ea-9a7a-059d589524d6.png">
-</div>
-
-### 카테고리 선택 - 팝업창, 데이터 전달 구현 완료
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 35" src="https://user-images.githubusercontent.com/37113547/71584704-4354c700-2b57-11ea-8eef-acca0d9b2183.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 39" src="https://user-images.githubusercontent.com/37113547/71584705-4354c700-2b57-11ea-8bd1-22bae2725756.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 45" src="https://user-images.githubusercontent.com/37113547/71584706-43ed5d80-2b57-11ea-807a-96e269252e07.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 50" src="https://user-images.githubusercontent.com/37113547/71584708-43ed5d80-2b57-11ea-89a2-c9f448cf0a56.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 52" src="https://user-images.githubusercontent.com/37113547/71584709-43ed5d80-2b57-11ea-9221-ef5fcf51e1b0.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 54" src="https://user-images.githubusercontent.com/37113547/71584710-43ed5d80-2b57-11ea-8ae0-a9f890c06be4.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 49 57" src="https://user-images.githubusercontent.com/37113547/71584711-4485f400-2b57-11ea-992d-11914da2ede4.png">
-<img width="353" alt="스크린샷 2019-12-30 오후 10 50 03" src="https://user-images.githubusercontent.com/37113547/71584712-4485f400-2b57-11ea-8a79-662506d61a69.png">
-
-
 
 ### 메인뷰 - 풀스크롤 화면 구현 완료 - 비행기 애니메이셔 완료
-- 데이터 작업중이라 예시 이미지로 구현
-- 인기여행지 데이터 데이터 기다리는 중
-- button을 이용해 메거진 구혀 완료 , 데이터 기다리는중
-### 도시선택 - 디자인 커스텀 완료 - 대륙별 도시별 Expandeble 셀 구현 완료 도시 선택 다음 뷰로 이동
-### 일정 선택뷰 - DatePicker이용하 출발 도착 Date 구현완료 , 두 날짜 사이으 Days 계산 완료 구현 완료
+- 스크롤뷰 구현
+- 비행기 날아가는 애니메이션 구현
+- 여행전/여행중으로 현재 상태 구별
 
-<div>
-<img width="382" alt="스크린샷 2019-12-30 오후 6 35 59" src="https://user-images.githubusercontent.com/55793344/71582458-ab9eab00-2b4d-11ea-993b-aed98049c963.png">
-<img width="481" alt="스크린샷 2019-12-30 오후 6 36 50" src="https://user-images.githubusercontent.com/55793344/71582463-afcac880-2b4d-11ea-99d6-3a0662f494aa.png">
-</div>
+### 도시선택 
+- Expandable cell 구현
+- 탭 Bar 구현
+
+### 여행 시작
+- 피커를 통한 데이터 입력
+
+
+### 카테고리 (숙박, 음식, 쇼핑, 교통, 주류 및 간식, 액티비티) 선택 화면
+- 숙박 카테고리, 팝업뷰 통신 구현
+- 식사 카테고리, 통신 구현 
+- 주류 및 간식 카테고리, 통신 구현
+- 교통 카테고리(더미) 구현, 키패드 업다운
+- 쇼핑 카테고리(더미) 구현, 키패드 업다운
+- 액티비티 카테고리 , 테이블 뷰 셀, 통신 구현
+
+
+### 전체일정 예산 보기
+
+
+
+
+### 지출 입력 뷰
+- 버튼 하나만 클릭 구현
+
+
 
 ### 미구현 기능
-  - 전체일정 : Drag&Drop 기능
-  - 마이페이지 : 지출 입력/출력
-  - 여행상세페이지 : 스크롤 뷰
-  - 총 예산 : 예산에 따른 막대기 바 배정
+  - 예산 히스토리 기능 미구현 (작업중)
+  - 여해 중 페이지에서 쓴 예산 넘기는 작업 (작업중)
+  - 여행상세페이지 미구현 (작업중)
+
   
 ## 문제점과 해결 방법 report
 
 - delegate 을 이용한 data 전달 방식 종류</h3></li>
-  - segue 를 이용한 방식 </li>
-  - segue 를 안 이용한 방식 </li>
+  - segue 를 이용한 방식 </li
+  ```
+  let headerView = UIView.instantiate(CityChooseSection.self)
+  headerView.foldButton.tag = section
+
+  headerView.configure(with:  twoDimensionalArray[section].country)
+  headerView.delegate = self
+  return headerView
+  ```
+      
+
+- segue 를 안 이용한 방식 </li> 
+
   
 ### Expandeble셀 구현시 , 섹션 부분을 코드로 작성 했으나 커스텀에 문제를 겪어 xib로 해결
 
