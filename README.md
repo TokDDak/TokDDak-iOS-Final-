@@ -35,9 +35,9 @@ Service Work Flow
 
 
 ## 개발 환경 및 사용한 라이브러리
-###개발환경
+### 개발환경
 - Xcode
-###라이브러리
+### 라이브러리
 - XLpagerTapStrip
 - TinyConstraints
 
@@ -48,12 +48,27 @@ Service Work Flow
 - 비행기 날아가는 애니메이션 구현
 - 여행전/여행중으로 현재 상태 구별
 
+<div>
+<img width="515" alt="스크린샷 2020-01-03 오후 10 34 23" src="https://user-images.githubusercontent.com/37113547/71727601-246b7300-2e7e-11ea-8b7c-b50129b41c61.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 34 29" src="https://user-images.githubusercontent.com/37113547/71727612-2e8d7180-2e7e-11ea-88df-11a97d293ce8.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 15" src="https://user-images.githubusercontent.com/37113547/71727614-2fbe9e80-2e7e-11ea-88ba-f0010970436d.png">
+</div>
+
 ### 도시선택 
 - Expandable cell 구현
 - 탭 Bar 구현
+<div>
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 23" src="https://user-images.githubusercontent.com/37113547/71727665-60063d00-2e7e-11ea-9f24-159c0494e19f.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 32" src="https://user-images.githubusercontent.com/37113547/71727666-60063d00-2e7e-11ea-959f-75e2290ca231.png">
+</div>
+
 
 ### 여행 시작
 - 피커를 통한 데이터 입력
+<div>
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 44" src="https://user-images.githubusercontent.com/37113547/71727701-79a78480-2e7e-11ea-9639-efcd545a440f.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 02" src="https://user-images.githubusercontent.com/37113547/71727708-7dd3a200-2e7e-11ea-854f-26c69cfd4424.png">
+</div>
 
 
 ### 카테고리 (숙박, 음식, 쇼핑, 교통, 주류 및 간식, 액티비티) 선택 화면
@@ -63,16 +78,28 @@ Service Work Flow
 - 교통 카테고리(더미) 구현, 키패드 업다운
 - 쇼핑 카테고리(더미) 구현, 키패드 업다운
 - 액티비티 카테고리 , 테이블 뷰 셀, 통신 구현
-
+<div>
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 31" src="https://user-images.githubusercontent.com/37113547/71727733-90e67200-2e7e-11ea-8442-5fe24feaf5aa.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 40" src="https://user-images.githubusercontent.com/37113547/71727735-92179f00-2e7e-11ea-9b05-8e0d1bb858e1.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 46" src="https://user-images.githubusercontent.com/37113547/71727736-9348cc00-2e7e-11ea-84f7-db7771ee49f8.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 59" src="https://user-images.githubusercontent.com/37113547/71727737-9479f900-2e7e-11ea-997d-3c1de3402016.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 07" src="https://user-images.githubusercontent.com/37113547/71727740-95ab2600-2e7e-11ea-80ab-06cd2af3e8ae.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 17" src="https://user-images.githubusercontent.com/37113547/71727742-96dc5300-2e7e-11ea-98aa-e83d3a3f85f6.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 27" src="https://user-images.githubusercontent.com/37113547/71727743-980d8000-2e7e-11ea-8218-8734789b43b4.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 41" src="https://user-images.githubusercontent.com/37113547/71727744-98a61680-2e7e-11ea-90ba-e3defab7594e.png">
+</div>
 
 ### 전체일정 예산 보기
-
-
+<div>
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 48" src="https://user-images.githubusercontent.com/37113547/71727770-a8bdf600-2e7e-11ea-9780-b26e482f1015.png">
+</div>
 
 
 ### 지출 입력 뷰
-- 버튼 하나만 클릭 구현
-
+- 버튼 클릭 구현
+<div>
+<img width="515" alt="스크린샷 2020-01-03 오후 10 34 49" src="https://user-images.githubusercontent.com/37113547/71727796-becbb680-2e7e-11ea-82d3-507481302e32.png">
+</div>
 
 
 ### 미구현 기능
@@ -84,21 +111,24 @@ Service Work Flow
 ## 문제점과 해결 방법 report
 
 - delegate 을 이용한 data 전달 방식 종류</h3></li>
-  - segue 를 이용한 방식 </li
+  - segue 를 안 이용한 방식 </li
   ```
-  let headerView = UIView.instantiate(CityChooseSection.self)
-  headerView.foldButton.tag = section
-
-  headerView.configure(with:  twoDimensionalArray[section].country)
-  headerView.delegate = self
-  return headerView
-  ```
-      
-
-- segue 를 안 이용한 방식 </li> 
-
+  protocol PopUpViewControllerDelegate: class {
+      func popUpViewController(_ viewController: PopUpViewController, didReceiveData data: String, hotelNumber: Int, day: Int)
+  }
+  weak var delegate: PopUpViewControllerDelegate?
+  delegate?.popUpViewController(self, didReceiveData: String(totalP), hotelNumber: subCategory, day: Day)
   
-### Expandeble셀 구현시 , 섹션 부분을 코드로 작성 했으나 커스텀에 문제를 겪어 xib로 해결
+  let vc = storyboard?.instantiateViewController(withIdentifier: "CategoryFoodViewController") as! CategoryFoodViewController
+  
+  ```
+- reusable cell 사용시 버튼 tag 사용
+```
+func activityCell(_ cell: ActivityCellTableViewCell, didTapSelectButton button: UIButton) {
+let tag = button.tag
+guard let model = responseModel?[button.tag] else { return }
+if selectedIndex.contains(tag) { // 재사용된 셀이 이미 선택이되서 active된 상태이면, 선택 해제된 셀을 재사용셀로 사용한다.
+```
 
 - xib로 뷰 구성후 
 
