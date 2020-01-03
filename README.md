@@ -99,7 +99,9 @@ Service Work Flow
 <div>
 <img width="515" alt="스크린샷 2020-01-03 오후 10 37 48" src="https://user-images.githubusercontent.com/37113547/71727770-a8bdf600-2e7e-11ea-9780-b26e482f1015.png">
 </div>
-
+<div>
+<img width="482" alt="스크린샷 2020-01-03 오후 11 36 57" src="https://user-images.githubusercontent.com/55793344/71729004-056ee000-2e82-11ea-8521-2fd86a5680c0.png">
+</div>
 ### 일정 등록 뷰
 - 카테고리별 버튼 클릭시 컬렉션뷰 아이템 변경됨
 - 컬렉션뷰 클릭시 데이별로 구조체 데이터 정리화되서 데이터 기능 구현
