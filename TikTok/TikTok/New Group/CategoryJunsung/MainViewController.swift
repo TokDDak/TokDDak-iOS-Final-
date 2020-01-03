@@ -60,9 +60,9 @@ class MainViewController: UIViewController {
         //프로그래스바 전체 1.0에서 나누기로 진행
         print(progressBarOffset)
         progressBar.progress = Float(1.0 / Double(pgValue))
-        let yourBackImage = UIImage(named: "naviBtnBackB")
+        let yourBackImage = UIImage(named: "naviBtnBackBlack")
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+    self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
         /*navaigation 이름 변경*/
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         

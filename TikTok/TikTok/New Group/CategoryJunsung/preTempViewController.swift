@@ -10,6 +10,9 @@ import UIKit
 
 class preTempViewController: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        let nav = self.navigationController?.navigationBar
@@ -18,8 +21,9 @@ class preTempViewController: UIViewController {
 //                   nav?.barStyle = UIBarStyle.default
 //                   nav?.tintColor = UIColor.blue
     /*navaigation 이미지 변경*/
-      self.navigationController?.isNavigationBarHidden = false
-    let yourBackImage = UIImage(named: "naviBtnBackB")
+//      self.navigationController?.isNavigationBarHidden = false
+        
+    let yourBackImage = UIImage(named: "naviBtnBackBlack")
     self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
     self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
     /*navaigation 이름 변경*/
@@ -29,6 +33,11 @@ class preTempViewController: UIViewController {
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    self.navigationController?.isNavigationBarHidden = false
     }
     
 
