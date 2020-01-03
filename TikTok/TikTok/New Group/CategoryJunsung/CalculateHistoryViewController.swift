@@ -480,12 +480,16 @@ class CalculateHistoryViewController: UIViewController {
         }
         
         if view.frame.origin.y == 0{
+        self.navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
             print("넘어간다")
         }else{
             view.frame.origin.y = 0
             print("안넘어간다")
         }
-            
+        
+    
+        
         
         //다음 뷰로 이동
 
