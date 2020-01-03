@@ -103,6 +103,15 @@ class RegisterPlanViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    @IBAction func touchUpCompleteButton(_ sender: Any) {
+        
+        
+    }
+    
+    
+    
     func setData() {
         
         //let selectedHotels = TotalPlanData.shared.totalDayOfHotel.filter { $0.value != 0 }.map { $0.key.name }

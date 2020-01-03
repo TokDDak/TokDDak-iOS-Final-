@@ -66,6 +66,7 @@
 		55C99DF923BE320C008A5C98 /* CityActivityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C99DF823BE320C008A5C98 /* CityActivityResponseModel.swift */; };
 		55C99DFB23BE3450008A5C98 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C99DFA23BE3450008A5C98 /* ImageFetcher.swift */; };
 		55C99DFD23BE74B0008A5C98 /* DayPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C99DFC23BE74B0008A5C98 /* DayPlanModel.swift */; };
+		55CD6E4C23BFD59100D84D70 /* CompletePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD6E4B23BFD59100D84D70 /* CompletePopUpViewController.swift */; };
 		55F9CC7D23B3208A00E15332 /* InjunStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */; };
 		55F9CC7F23B3258100E15332 /* InjunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC7E23B3258100E15332 /* InjunViewController.swift */; };
 		55F9CC8323B354EC00E15332 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9CC8223B354EC00E15332 /* StartViewController.swift */; };
@@ -159,6 +160,7 @@
 		55C99DF823BE320C008A5C98 /* CityActivityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityActivityResponseModel.swift; sourceTree = "<group>"; };
 		55C99DFA23BE3450008A5C98 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		55C99DFC23BE74B0008A5C98 /* DayPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPlanModel.swift; sourceTree = "<group>"; };
+		55CD6E4B23BFD59100D84D70 /* CompletePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletePopUpViewController.swift; sourceTree = "<group>"; };
 		55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InjunStoryboard.storyboard; sourceTree = "<group>"; };
 		55F9CC7E23B3258100E15332 /* InjunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjunViewController.swift; sourceTree = "<group>"; };
 		55F9CC8223B354EC00E15332 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				5550420C23B76D4700ADCECB /* CityChooseTableViewCell.swift */,
 				5550420823B74B9500ADCECB /* CityChooseTableViewController.swift */,
 				5550420023B62AE600ADCECB /* ChooseViewController.swift */,
+				55CD6E4B23BFD59100D84D70 /* CompletePopUpViewController.swift */,
 				55836D7823B9F8D9006AC948 /* PlanViewController.swift */,
 			);
 			path = ViewController;
@@ -675,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CD6E4C23BFD59100D84D70 /* CompletePopUpViewController.swift in Sources */,
 				5550420B23B75E9E00ADCECB /* ExpandableNames.swift in Sources */,
 				55491B2223B888FC00469709 /* TravelData.swift in Sources */,
 				55C99DF923BE320C008A5C98 /* CityActivityResponseModel.swift in Sources */,
