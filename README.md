@@ -36,18 +36,22 @@ Service Work Flow
 
 ## 개발 환경 및 사용한 라이브러리
 ### 개발환경
-- Xcode
+- Xcode 11.3
+- iOS 13.3
+- cocoapod
 ### 라이브러리
 - XLpagerTapStrip
 - TinyConstraints
-
+- Moya
 ## 기능소개
 
 ### 메인뷰 - 풀스크롤 화면 구현 완료 - 비행기 애니메이셔 완료
 - 스크롤뷰 구현
 - 비행기 날아가는 애니메이션 구현
 - 여행전/여행중으로 현재 상태 구별
-
+- 컬렉션뷰로 인기여행지 도시 구현
+### 메인뷰 - 여행중 뷰 구현 
+- 커스텀바를 이용해 여행전뷰에서 여행중 뷰로 바로 넘어가게 커스텀 구현
 <div>
 <img width="515" alt="스크린샷 2020-01-03 오후 10 34 23" src="https://user-images.githubusercontent.com/37113547/71727601-246b7300-2e7e-11ea-8b7c-b50129b41c61.png">
 <img width="515" alt="스크린샷 2020-01-03 오후 10 34 29" src="https://user-images.githubusercontent.com/37113547/71727612-2e8d7180-2e7e-11ea-88df-11a97d293ce8.png">
@@ -56,7 +60,8 @@ Service Work Flow
 
 ### 도시선택 
 - Expandable cell 구현
-- 탭 Bar 구현
+- Page좌우로 넘어가는 PageTapBarController 완성 (XLTapBar이용)
+- 셀 선택시 해당도시로 여행 출발
 <div>
 <img width="515" alt="스크린샷 2020-01-03 오후 10 35 23" src="https://user-images.githubusercontent.com/37113547/71727665-60063d00-2e7e-11ea-9f24-159c0494e19f.png">
 <img width="515" alt="스크린샷 2020-01-03 오후 10 35 32" src="https://user-images.githubusercontent.com/37113547/71727666-60063d00-2e7e-11ea-959f-75e2290ca231.png">
@@ -64,7 +69,8 @@ Service Work Flow
 
 
 ### 여행 시작
-- 피커를 통한 데이터 입력
+- 데이트 피커를 통한 데이터 입력
+- 출발 날짜와 도작 날짜를 이용해서 , dateFormatter를 이용해서 날짜 사이의 days 기간을 구함.
 <div>
 <img width="515" alt="스크린샷 2020-01-03 오후 10 35 44" src="https://user-images.githubusercontent.com/37113547/71727701-79a78480-2e7e-11ea-9639-efcd545a440f.png">
 <img width="515" alt="스크린샷 2020-01-03 오후 10 36 02" src="https://user-images.githubusercontent.com/37113547/71727708-7dd3a200-2e7e-11ea-854f-26c69cfd4424.png">
@@ -94,6 +100,10 @@ Service Work Flow
 <img width="515" alt="스크린샷 2020-01-03 오후 10 37 48" src="https://user-images.githubusercontent.com/37113547/71727770-a8bdf600-2e7e-11ea-9780-b26e482f1015.png">
 </div>
 
+### 일정 등록 뷰
+- 카테고리별 버튼 클릭시 컬렉션뷰 아이템 변경됨
+- 컬렉션뷰 클릭시 데이별로 구조체 데이터 정리화되서 데이터 기능 구현
+- 데이 좌우 버튼 터치시 데이별로 데이터 변경 및 정렬
 
 ### 지출 입력 뷰
 - 버튼 클릭 구현
@@ -183,3 +193,31 @@ underline.bottomToSuperview()
 
 return headerView 
 ```
+
+```
+
+struct DayPlanData {
+    
+    var day: Int = 0
+    var array2: [(Int, Int)]
+    var dayCost: Int = 0
+   
+}
+데이별로 구조체 배열을 이용해 일별 데이터 관리
+
+```
+class TotalPlanData: CustomStringConvertible {
+
+static let shared = TotalPlanData()
+private init() {}
+
+var startDate: String = ""
+var endDate: String = ""
+var travelDays: Int = 0
+var cityName: String = ""
+}
+```
+singleton patter을 이용한 전체 데이터 효율적 관리
+private init(){} 을 통해 외부 참조 생성 방지
+
+
