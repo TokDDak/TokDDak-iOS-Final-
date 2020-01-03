@@ -519,7 +519,7 @@
                                 <rect key="frame" x="0.0" y="297" width="375" height="461"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPlanSpecificTripFinishStart" translatesAutoresizingMaskIntoConstraints="NO" id="WTw-DB-IH0">
-                                        <rect key="frame" x="21" y="6" width="334" height="365"/>
+                                        <rect key="frame" x="21" y="6" width="334" height="340"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzD-X9-Hg9">
                                         <rect key="frame" x="0.0" y="369" width="375" height="92"/>
@@ -534,7 +534,7 @@
                                     <constraint firstItem="WTw-DB-IH0" firstAttribute="leading" secondItem="wYD-l1-eEE" secondAttribute="leading" constant="21" id="4hc-cV-ZRK"/>
                                     <constraint firstAttribute="trailing" secondItem="WTw-DB-IH0" secondAttribute="trailing" constant="20" id="5oD-78-RDu"/>
                                     <constraint firstAttribute="width" constant="375" id="CKG-0W-IqM"/>
-                                    <constraint firstAttribute="bottom" secondItem="WTw-DB-IH0" secondAttribute="bottom" constant="90" id="Wdc-IT-8Pw"/>
+                                    <constraint firstAttribute="bottom" secondItem="WTw-DB-IH0" secondAttribute="bottom" constant="115" id="Wdc-IT-8Pw"/>
                                     <constraint firstAttribute="height" constant="461" id="ngi-N8-o5v"/>
                                     <constraint firstItem="WTw-DB-IH0" firstAttribute="top" secondItem="wYD-l1-eEE" secondAttribute="top" constant="6" id="xk0-U5-g8q"/>
                                 </constraints>
