@@ -52,7 +52,7 @@ class TotalPlanData: CustomStringConvertible {
     var totalCostOfActivity : Int = 0
     //액티비티 총 갯수
     var totalCountOfActivity : Int = 0
-    var name : [String : Int] = [:]
+    var activityNamePrice : [String : Int] = [:]
     
     
     var travelName: String = ""
