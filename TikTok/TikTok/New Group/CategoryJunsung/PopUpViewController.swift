@@ -146,7 +146,7 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func clickComplete(_ sender: Any) {
-        delegate?.popUpViewController(self, didReceiveData: String(totalP), hotelNumber: subCategory, day: Day)
+        delegate?.popUpViewController(self, didReceiveData: String(model!.cost), hotelNumber: subCategory, day: Day)
         dismiss(animated: true, completion: nil)
         //
         // 계산한 전체 총값을 그 전 뷰에서 받는 것
