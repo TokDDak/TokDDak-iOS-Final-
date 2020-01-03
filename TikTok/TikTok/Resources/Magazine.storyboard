@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ae-R4-rKQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Magazine View Controller-->
+        <scene sceneID="TAC-1F-dSg">
+            <objects>
+                <viewController storyboardIdentifier="MagazineViewController" id="9ae-R4-rKQ" customClass="MagazineViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Io-Md-sTz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5H-b3-n3d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-lq-qnK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnFinish" translatesAutoresizingMaskIntoConstraints="NO" id="IAj-jX-euU">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1300" id="VXZ-7J-Uwn"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="IAj-jX-euU" firstAttribute="top" secondItem="6Wk-lq-qnK" secondAttribute="top" id="8Bx-1L-EL8"/>
+                                            <constraint firstItem="IAj-jX-euU" firstAttribute="leading" secondItem="6Wk-lq-qnK" secondAttribute="leading" id="8fr-Nu-Wks"/>
+                                            <constraint firstAttribute="trailing" secondItem="IAj-jX-euU" secondAttribute="trailing" id="K1p-F9-Q5K"/>
+                                            <constraint firstAttribute="bottom" secondItem="IAj-jX-euU" secondAttribute="bottom" id="b9o-Pp-J5Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Wk-lq-qnK" firstAttribute="leading" secondItem="X5H-b3-n3d" secondAttribute="leading" id="3Qe-1c-mbB"/>
+                                    <constraint firstItem="6Wk-lq-qnK" firstAttribute="width" secondItem="X5H-b3-n3d" secondAttribute="width" id="Dvm-Kh-GB3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Wk-lq-qnK" secondAttribute="trailing" id="NBE-2Z-LQE"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Wk-lq-qnK" secondAttribute="bottom" id="hTA-Ir-t8t"/>
+                                    <constraint firstItem="6Wk-lq-qnK" firstAttribute="top" secondItem="X5H-b3-n3d" secondAttribute="top" id="pXs-Kn-vQv"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="UZT-ZR-NOP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="drf-5h-kaj"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X5H-b3-n3d" firstAttribute="leading" secondItem="Mcn-G6-fDi" secondAttribute="leading" id="3g6-So-2hP"/>
+                            <constraint firstItem="Mcn-G6-fDi" firstAttribute="trailing" secondItem="X5H-b3-n3d" secondAttribute="trailing" id="60P-xq-z5C"/>
+                            <constraint firstAttribute="bottom" secondItem="X5H-b3-n3d" secondAttribute="bottom" id="IsQ-ck-1FZ"/>
+                            <constraint firstItem="X5H-b3-n3d" firstAttribute="top" secondItem="4Io-Md-sTz" secondAttribute="top" id="dyd-AP-y3a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mcn-G6-fDi"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nte-v6-iEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1281.8840579710145" y="-355.58035714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnFinish" width="375" height="92"/>
+    </resources>
+</document>

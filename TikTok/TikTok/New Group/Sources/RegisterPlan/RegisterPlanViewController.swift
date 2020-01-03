@@ -113,17 +113,13 @@ class RegisterPlanViewController: UIViewController {
                //간편(0) 일발(1) 고급(2)
             var totalCostValue : [Int] = []
        
-            for i in 0...3{
-                totalCntValue[i] = TotalPlanData.shared.totalCountOfFood[i]!
-                totalCostValue[i] =
-                    TotalPlanData.shared.totalCostOfFood[i]!
-            }
             // 간편, 일반, 고급에 대한 갯수 배열 순서대로
             
             for (i, v) in totalCntValue.enumerated(){
                 if v == 0{
                     foodArray.remove(at: i)
                 }
+                
             }
             
             
