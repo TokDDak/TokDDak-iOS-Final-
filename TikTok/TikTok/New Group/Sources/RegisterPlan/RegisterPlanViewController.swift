@@ -126,15 +126,24 @@ class RegisterPlanViewController: UIViewController {
         
         if TotalPlanData.shared.selectedCategory["restaurant"] == true{
             
+
             for (key, value) in TotalPlanData.shared.totalCountOfFood{
                 foodCntValue[key] = value
             }
+
+            //var totalCntIdx : [Int] = []
+            var totalCntValue : [Int] = []
+               //간편(0) 일발(1) 고급(2)
+            var totalCostValue : [Int] = []
+       
+
             // 간편, 일반, 고급에 대한 갯수 배열 순서대로
             
             for (i, v) in foodCntValue.enumerated(){
                 if v == 0 {
                     foodArray.remove(at: i)
                 }
+                
             }
             
         } else {

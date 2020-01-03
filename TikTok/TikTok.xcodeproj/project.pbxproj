@@ -14,6 +14,10 @@
 		0D2D3BF923BE4DB700B95A78 /* TripCreateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */; };
 		0D2D3BFB23BE915D00B95A78 /* totalBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */; };
 		0D2D3BFD23BF053300B95A78 /* FoodResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */; };
+		0D2D3BFF23BF46C400B95A78 /* Magazine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFE23BF46C400B95A78 /* Magazine.storyboard */; };
+		0D2D3C0123BF50D300B95A78 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3C0023BF50D300B95A78 /* MagazineViewController.swift */; };
+		0D2D3C0323BF57AC00B95A78 /* CalculateHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2D3C0223BF57AC00B95A78 /* CalculateHistory.storyboard */; };
+		0D2D3C0523BF583B00B95A78 /* CalculateHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3C0423BF583B00B95A78 /* CalculateHistoryViewController.swift */; };
 		0D6D70C923B317F100923D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D70C823B317F100923D4E /* AppDelegate.swift */; };
 		0D6D70CB23B317F100923D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D70CA23B317F100923D4E /* SceneDelegate.swift */; };
 		0D6D70D023B317F100923D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6D70CE23B317F100923D4E /* Main.storyboard */; };
@@ -96,6 +100,10 @@
 		0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreateResponseModel.swift; sourceTree = "<group>"; };
 		0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalBudgetViewController.swift; sourceTree = "<group>"; };
 		0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponseModel.swift; sourceTree = "<group>"; };
+		0D2D3BFE23BF46C400B95A78 /* Magazine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magazine.storyboard; sourceTree = "<group>"; };
+		0D2D3C0023BF50D300B95A78 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineViewController.swift; sourceTree = "<group>"; };
+		0D2D3C0223BF57AC00B95A78 /* CalculateHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculateHistory.storyboard; sourceTree = "<group>"; };
+		0D2D3C0423BF583B00B95A78 /* CalculateHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateHistoryViewController.swift; sourceTree = "<group>"; };
 		0D6D70C523B317F100923D4E /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6D70C823B317F100923D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D6D70CA23B317F100923D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 				0D0C0C7023BE0E3800FDC036 /* APITarget.swift */,
 				0D0C0C7223BE0F9500FDC036 /* APIService.swift */,
 				55C99DFA23BE3450008A5C98 /* ImageFetcher.swift */,
+				0D2D3C0423BF583B00B95A78 /* CalculateHistoryViewController.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -353,6 +362,7 @@
 				55C76ECF23BD05C400D8B822 /* ActivityCellTableViewCell.swift */,
 				55C76ECE23BD05C400D8B822 /* ActivityCellViewController.swift */,
 				55C76ECD23BD05C400D8B822 /* ActivityPopUpViewController.swift */,
+				0D2D3C0023BF50D300B95A78 /* MagazineViewController.swift */,
 				55C76ED523BD05C500D8B822 /* CategoiryShoppingViewController.swift */,
 				0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */,
 				55C76ECB23BD05C400D8B822 /* CategoryDrinkViewController.swift */,
@@ -386,6 +396,8 @@
 				0D6D70D323B317F300923D4E /* LaunchScreen.storyboard */,
 				55F9CC7C23B3208A00E15332 /* InjunStoryboard.storyboard */,
 				55836D6E23B9ED9E006AC948 /* Plan.storyboard */,
+				0D2D3BFE23BF46C400B95A78 /* Magazine.storyboard */,
+				0D2D3C0223BF57AC00B95A78 /* CalculateHistory.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -528,11 +540,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D6D70D523B317F300923D4E /* LaunchScreen.storyboard in Resources */,
+				0D2D3C0323BF57AC00B95A78 /* CalculateHistory.storyboard in Resources */,
 				55836D7423B9F58B006AC948 /* PlanItemCell.xib in Resources */,
 				55836D6F23B9ED9E006AC948 /* Plan.storyboard in Resources */,
 				55836D4623B9D0EF006AC948 /* CityChooseSection.xib in Resources */,
 				0D6D70D223B317F300923D4E /* Assets.xcassets in Resources */,
 				55F9CC7D23B3208A00E15332 /* InjunStoryboard.storyboard in Resources */,
+				0D2D3BFF23BF46C400B95A78 /* Magazine.storyboard in Resources */,
 				0D6D70D023B317F100923D4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +684,7 @@
 				0D0C0C7623BE107200FDC036 /* BaseResponseModel.swift in Sources */,
 				5550420723B73EF200ADCECB /* ChildViewController.swift in Sources */,
 				55491B2423B89B0100469709 /* GoToCityViewController.swift in Sources */,
+				0D2D3C0523BF583B00B95A78 /* CalculateHistoryViewController.swift in Sources */,
 				55836D7B23BB2CA2006AC948 /* PopularCityTableViewCell.swift in Sources */,
 				0D0C0C7823BE10B700FDC036 /* MedianHotelResponseModel.swift in Sources */,
 				55836D7923B9F8D9006AC948 /* PlanViewController.swift in Sources */,
@@ -691,6 +706,7 @@
 				55836D4D23B9D3D3006AC948 /* NSObject+.swift in Sources */,
 				55C76EC423BC89AC00D8B822 /* PlanDataModel.swift in Sources */,
 				5550420D23B76D4700ADCECB /* CityChooseTableViewCell.swift in Sources */,
+				0D2D3C0123BF50D300B95A78 /* MagazineViewController.swift in Sources */,
 				55491B2723B8A79000469709 /* RegisterCalendarViewController.swift in Sources */,
 				55C76EC023BC7B5C00D8B822 /* RegisterPlanViewController.swift in Sources */,
 				55C76EDE23BD05C500D8B822 /* PopUpViewController.swift in Sources */,

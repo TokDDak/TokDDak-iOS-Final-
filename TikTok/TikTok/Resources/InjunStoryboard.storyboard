@@ -309,6 +309,16 @@
             </objects>
             <point key="canvasLocation" x="-199" y="-580"/>
         </scene>
+        <!--CalculateHistoryViewController-->
+        <scene sceneID="UFl-K2-x3g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CalculateHistory" referencedIdentifier="CalculateHistoryViewController" id="LcS-hz-TnS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gPg-Ro-n6C"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rga-lF-HHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="385"/>
+        </scene>
         <!--Start View Controller-->
         <scene sceneID="N9t-cl-T3A">
             <objects>
@@ -405,6 +415,9 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="btnRecoParis"/>
+                                                        <connections>
+                                                            <segue destination="LcS-hz-TnS" kind="show" id="QzE-9y-Uw8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpV-ED-X47">
                                                         <rect key="frame" x="28" y="252" width="160" height="227"/>
