@@ -35,6 +35,7 @@ class TotalPlanData: CustomStringConvertible {
     var totalDayOfHotel: [Hotel: Int] = [.high: 0, .middle: 0, .low: 0, .apartment: 0]
     
     
+    
     //각 식사별 축적된 가격
     var totalCostOfFood : [Int : Int] = [0 : 0, 1 : 0, 2: 0]
     //각 식사별 축적된 갯수
@@ -54,6 +55,10 @@ class TotalPlanData: CustomStringConvertible {
     var totalCountOfActivity : Int = 0
     var activityNamePrice : [String : Int] = [:]
     
+    var invidCostOfHotel: [String : Int ] = ["최고급호텔" : 0, "고급호텔" : 0, "일반호텔" : 0, "저가호텔" : 0]
+    var invidCostOfFood: [Int : Int ] = [0 : 0, 1 : 0, 2 : 0]
+    var invidCostOfDrink: [Int : Int ] = [0 : 0, 1 : 0, 2 : 0]
+    // 0: 카페 1:디저트 2: 펍
     
     var travelName: String = ""
     

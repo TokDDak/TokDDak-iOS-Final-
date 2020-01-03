@@ -56,6 +56,7 @@ class CategoryDrinkViewController: UIViewController {
     let desert = Int.random(in: 8000...15000)
     let pub = Int.random(in: 8000...20000)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,7 +84,9 @@ class CategoryDrinkViewController: UIViewController {
         eachPriceDrink[0] = cafe
         eachPriceDrink[1] = desert
         eachPriceDrink[2] = pub
-        
+        TotalPlanData.shared.invidCostOfDrink[0] = cafe
+        TotalPlanData.shared.invidCostOfDrink[1] = desert
+        TotalPlanData.shared.invidCostOfDrink[2] = pub
         avgPriceOfCafe.text = String(eachPriceDrink[0]!.commaRepresentation) + "원"
         avgPriceOfDesert.text = String(eachPriceDrink[1]!.commaRepresentation) + "원"
         avgPriceOfPub.text = String(eachPriceDrink[2]!.commaRepresentation) + "원"
