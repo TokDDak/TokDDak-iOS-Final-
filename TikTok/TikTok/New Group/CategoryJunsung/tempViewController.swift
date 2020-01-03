@@ -66,9 +66,10 @@ class tempViewController: UIViewController {
 //        makeShadow(outerView: shoppingView)
 //        makeShadow(outerView: activityView)
             /*navaigation 이미지 변경*/
-            let yourBackImage = UIImage(named: "naviBtnBackB")
+//            let yourBackImage = UIImage(named: "naviBtnBackBlack")
+        let yourBackImage = UIImage(named: "naviBtnBackBlack")
             self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
-            self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
         
            // navaigation 이름변경
 //            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
