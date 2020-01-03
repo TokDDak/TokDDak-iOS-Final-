@@ -12,6 +12,7 @@
 		0D0C0C7623BE107200FDC036 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */; };
 		0D0C0C7823BE10B700FDC036 /* MedianHotelResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */; };
 		0D21ACC623BFE2CC00A49B67 /* EndBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D21ACC523BFE2CC00A49B67 /* EndBudgetViewController.swift */; };
+		0D21ACC823BFF3AA00A49B67 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D21ACC723BFF3AA00A49B67 /* HistoryViewController.swift */; };
 		0D2D3BF923BE4DB700B95A78 /* TripCreateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */; };
 		0D2D3BFB23BE915D00B95A78 /* totalBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */; };
 		0D2D3BFD23BF053300B95A78 /* FoodResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */; };
@@ -100,6 +101,7 @@
 		0D0C0C7523BE107200FDC036 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianHotelResponseModel.swift; sourceTree = "<group>"; };
 		0D21ACC523BFE2CC00A49B67 /* EndBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndBudgetViewController.swift; sourceTree = "<group>"; };
+		0D21ACC723BFF3AA00A49B67 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreateResponseModel.swift; sourceTree = "<group>"; };
 		0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalBudgetViewController.swift; sourceTree = "<group>"; };
 		0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponseModel.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				0D0C0C6F23BE0DE500FDC036 /* Service */,
 				55C76ECF23BD05C400D8B822 /* ActivityCellTableViewCell.swift */,
 				0D2D3C0423BF583B00B95A78 /* CalculateHistoryViewController.swift */,
+				0D21ACC723BFF3AA00A49B67 /* HistoryViewController.swift */,
 				0D21ACC523BFE2CC00A49B67 /* EndBudgetViewController.swift */,
 				55C76ECE23BD05C400D8B822 /* ActivityCellViewController.swift */,
 				55C76ECD23BD05C400D8B822 /* ActivityPopUpViewController.swift */,
@@ -728,6 +731,7 @@
 				55C76EE223BD05C500D8B822 /* CategoiryShoppingViewController.swift in Sources */,
 				55836D4823B9D137006AC948 /* CityChooseSection.swift in Sources */,
 				55C76EE423BD05C500D8B822 /* MainViewController.swift in Sources */,
+				0D21ACC823BFF3AA00A49B67 /* HistoryViewController.swift in Sources */,
 				55836D7223B9F57F006AC948 /* PlanItemCell.swift in Sources */,
 				55C99DFB23BE3450008A5C98 /* ImageFetcher.swift in Sources */,
 				55C76EDD23BD05C500D8B822 /* CategoryFoodViewController.swift in Sources */,

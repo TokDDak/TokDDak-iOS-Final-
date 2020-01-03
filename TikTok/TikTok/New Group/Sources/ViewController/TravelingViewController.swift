@@ -23,9 +23,10 @@ class TravelingViewController: UIViewController {
     
     @IBAction func touchUpTravelBefore(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: false)
+//        self.navigationController?.popViewController(animated: false)
         
-        
+    performSegue(withIdentifier: "unwindToMainVC", sender: self)
+
         
         
     }
