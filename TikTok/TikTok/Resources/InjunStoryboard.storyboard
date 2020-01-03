@@ -334,8 +334,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-HY-VHc">
-                                                <rect key="frame" x="56.333333333333343" y="228" width="312" height="49"/>
-                                                <state key="normal" title="Button" image="btnLetsgo"/>
+                                                <rect key="frame" x="56.333333333333343" y="228" width="129" height="49"/>
+                                                <state key="normal" image="btnLetsgo"/>
                                                 <connections>
                                                     <action selector="touchUpLetsGo:" destination="4Y5-FP-pdp" eventType="touchUpInside" id="hJI-fh-f1h"/>
                                                 </connections>
@@ -453,7 +453,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgHomeBeforeTextMent" translatesAutoresizingMaskIntoConstraints="NO" id="uOs-k9-sBb">
-                                                <rect key="frame" x="32" y="94" width="498" height="136"/>
+                                                <rect key="frame" x="32" y="94" width="249.00000000000006" height="68"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImgAirplane" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-s0-VJe">
                                                 <rect key="frame" x="43" y="210" width="350" height="272"/>
@@ -503,7 +503,7 @@
                                         <state key="normal" image="tabBtnBeforeActive"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-nl-kbG">
-                                        <rect key="frame" x="196" y="9" width="77" height="31"/>
+                                        <rect key="frame" x="200" y="9" width="77" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="tabBtnIng"/>
                                         <connections>
@@ -591,16 +591,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19u-8i-J7M">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeo-HN-Jsp">
-                                        <rect key="frame" x="215" y="158" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-SJ-Zwu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-SJ-Zwu">
                                         <rect key="frame" x="98" y="53" width="77" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="tabBtnBefore">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -608,22 +600,82 @@
                                             <action selector="touchUpTravelBefore:" destination="fBA-wC-o3n" eventType="touchUpInside" id="NEB-fc-jfM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-Xl-qKO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-Xl-qKO">
                                         <rect key="frame" x="200" y="53" width="77" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="F6R-nW-UEs"/>
+                                            <constraint firstAttribute="height" constant="31" id="Kfi-2h-aV7"/>
+                                        </constraints>
                                         <state key="normal" image="tabBtnIngActive">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGx-hC-Dix">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGx-hC-Dix">
                                         <rect key="frame" x="335" y="59" width="22" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="Oki-IA-pit"/>
+                                            <constraint firstAttribute="width" constant="22" id="jA5-hT-O0Q"/>
+                                        </constraints>
                                         <state key="normal" image="tabBtnMenu">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAllMoney" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-qq-xeg">
+                                        <rect key="frame" x="32" y="131" width="58" height="17"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4D-Dd-PWL">
+                                        <rect key="frame" x="34" y="231" width="110" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="NjH-D6-JoH"/>
+                                            <constraint firstAttribute="width" constant="110" id="wgq-MC-L8O"/>
+                                        </constraints>
+                                        <state key="normal" image="btnMoreMoneyHistory"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCloud" translatesAutoresizingMaskIntoConstraints="NO" id="E1U-sB-BbQ">
+                                        <rect key="frame" x="0.0" y="186" width="375" height="230"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345678" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Wz-uJQ">
+                                        <rect key="frame" x="101" y="131" width="100" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-nn-ZhL">
+                                        <rect key="frame" x="12" y="290" width="351" height="490"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-T0-2Qx">
+                                                <rect key="frame" x="243" y="386" width="68" height="68"/>
+                                                <state key="normal" image="floatingBtnInputMoney"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="490" id="2mJ-Fi-8tB"/>
+                                            <constraint firstAttribute="width" constant="351" id="GE2-1S-48z"/>
+                                            <constraint firstAttribute="bottom" secondItem="kyq-T0-2Qx" secondAttribute="bottom" constant="36" id="drg-ps-xan"/>
+                                            <constraint firstAttribute="trailing" secondItem="kyq-T0-2Qx" secondAttribute="trailing" constant="40" id="l6u-Wr-EoT"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.54509803921568623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DXx-nn-ZhL" secondAttribute="trailing" constant="12" id="2xK-e4-pVL"/>
+                                    <constraint firstItem="aNg-qq-xeg" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="131" id="4Cp-Zt-RZ5"/>
+                                    <constraint firstItem="9sw-Xl-qKO" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="53" id="4gf-CM-Wm9"/>
+                                    <constraint firstItem="Uuw-SJ-Zwu" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="53" id="6qb-Dm-eUQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1U-sB-BbQ" secondAttribute="trailing" id="8G3-Jd-aMq"/>
+                                    <constraint firstAttribute="trailing" secondItem="m4D-Dd-PWL" secondAttribute="trailing" constant="231" id="AeW-6n-qi7"/>
+                                    <constraint firstItem="E1U-sB-BbQ" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="186" id="Edd-Ur-8YU"/>
+                                    <constraint firstItem="aNg-qq-xeg" firstAttribute="leading" secondItem="19u-8i-J7M" secondAttribute="leading" constant="32" id="Tf9-Io-LHR"/>
+                                    <constraint firstItem="DXx-nn-ZhL" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="290" id="cEc-D5-5PB"/>
+                                    <constraint firstItem="m4D-Dd-PWL" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="231" id="ey3-hr-t89"/>
+                                    <constraint firstAttribute="trailing" secondItem="TGx-hC-Dix" secondAttribute="trailing" constant="18" id="gO6-gy-zru"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uuw-SJ-Zwu" secondAttribute="trailing" constant="200" id="mW0-Ua-qqd"/>
+                                    <constraint firstItem="TGx-hC-Dix" firstAttribute="top" secondItem="19u-8i-J7M" secondAttribute="top" constant="59" id="qgh-do-t8u"/>
+                                    <constraint firstAttribute="trailing" secondItem="9sw-Xl-qKO" secondAttribute="trailing" constant="98" id="uGe-dP-aNV"/>
+                                    <constraint firstAttribute="bottom" secondItem="DXx-nn-ZhL" secondAttribute="bottom" constant="32" id="vzz-Pu-y2z"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -643,6 +695,10 @@
                             <state key="normal" image="tabBtnBefore"/>
                         </button>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backGroundCloudImageView" destination="E1U-sB-BbQ" id="s3O-70-L99"/>
+                        <outlet property="gurumiView" destination="DXx-nn-ZhL" id="a1Z-fS-Lbs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0t-3X-FGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1267,10 +1323,14 @@
     <resources>
         <image name="bgImgAirplane" width="418" height="323"/>
         <image name="btnLetsgo" width="129" height="48"/>
+        <image name="btnMoreMoneyHistory" width="109.5" height="18"/>
         <image name="btnRecoBangkok" width="160" height="227"/>
         <image name="btnRecoHonkongMacao" width="160" height="227"/>
         <image name="btnRecoLondon" width="160" height="227"/>
         <image name="btnRecoParis" width="160" height="227"/>
+        <image name="floatingBtnInputMoney" width="68" height="68"/>
+        <image name="imgAllMoney" width="58" height="17"/>
+        <image name="imgCloud" width="375" height="230"/>
         <image name="imgHomeBeforeTextMent" width="249" height="68"/>
         <image name="makeBgImgAirplane" width="375" height="310"/>
         <image name="makeEtCalendar" width="327" height="62"/>

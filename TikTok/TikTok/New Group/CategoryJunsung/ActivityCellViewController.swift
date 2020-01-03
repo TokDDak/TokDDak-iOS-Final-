@@ -106,8 +106,8 @@ extension ActivityCellViewController: ActivityCellTableViewCellDelegate {
             TotalPlanData.shared.totalCostOfActivity -= model.cost
             basePriceOfActivity -= model.cost
             TotalPlanData.shared.totalCountOfActivity -= 1
-            TotalPlanData.shared.name[model.name] = model.cost
-            TotalPlanData.shared.name.removeValue(forKey: model.name)
+            TotalPlanData.shared.activityNamePrice[model.name] = model.cost
+            TotalPlanData.shared.activityNamePrice.removeValue(forKey: model.name)
 //            for (i, v) in selectedIndex.enumerated() {
 //                if v == tag {
 //                    selectedIndex.remove(at: i)
@@ -119,7 +119,7 @@ extension ActivityCellViewController: ActivityCellTableViewCellDelegate {
             TotalPlanData.shared.totalCostOfActivity += model.cost
             basePriceOfActivity += model.cost //선택했을 때 가격 더해주는거
             TotalPlanData.shared.totalCountOfActivity += 1 //갯수더해주는거
-            TotalPlanData.shared.name[model.name] = model.cost
+            TotalPlanData.shared.activityNamePrice[model.name] = model.cost
             
         }
         totalPriceOfActivity.text = String(basePriceOfActivity.commaRepresentation)

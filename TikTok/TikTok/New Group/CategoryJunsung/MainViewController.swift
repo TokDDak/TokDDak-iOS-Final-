@@ -8,11 +8,28 @@
 
 import UIKit
 
-enum Hotel: Int {
+enum Hotel: Int, Comparable {
     case high = 5
     case middle = 4
     case low = 3
     case apartment = 2
+    
+    var name: String {
+        switch self {
+        case .high:
+            return "최고급호텔"
+        case .middle:
+            return "고급호텔"
+        case .low:
+            return "일반호텔"
+        case .apartment:
+            return "저가호텔"
+        }
+    }
+    
+    static func < (lhs: Self, rhs: Self) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
 }
 
 class MainViewController: UIViewController {

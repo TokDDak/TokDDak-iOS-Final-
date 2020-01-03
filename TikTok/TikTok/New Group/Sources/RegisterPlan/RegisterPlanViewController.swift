@@ -48,10 +48,10 @@ class RegisterPlanViewController: UIViewController {
     var imageDataArray: [UIImage] = [UIImage(named: "icStay")!, UIImage(named: "icFood")!, UIImage(named: "icSnacks")!, UIImage(named: "icActivity")!]
     
     var planArray: [String]?
-    var stayArray = ["최고급호텔", "고급호텔", "일반호텔","아파트"]
+    var stayArray = ["최고급호텔", "고급호텔", "일반호텔", "아파트"]
     var foodArray = ["고급음식점", "일반음식점", "간편식"]
     var snacksArray = ["카페", "디저트", "펍바"]
-    var activityArray = ["서핑","배타기","퐁피두센터","개선문","비비빔"]
+    var activityArray = ["서핑","배타기"]
     
     var checkCategory: Int = 0
     
@@ -64,9 +64,7 @@ class RegisterPlanViewController: UIViewController {
     
     var dayData: [DayPlanModel] = []
     
-    
-    
-    
+       
     
     
     
@@ -91,11 +89,91 @@ class RegisterPlanViewController: UIViewController {
         categoryItemCollectionView.collectionViewLayout = layout
         
         
-    
+        
         dayData.append(DayPlanModel(day: 1, cost: 123, category: "asdf", content: "asdf", TripId: 1))
-        print(dayData[0])
+        
+        setData()
+        
+        print(TotalPlanData.shared.totalCountOfFood)
         // Do any additional setup after loading the view.
     }
+    
+    func setData() {
+        
+        //let selectedHotels = TotalPlanData.shared.totalDayOfHotel.filter { $0.value != 0 }.map { $0.key.name }
+        if TotalPlanData.shared.selectedCategory["hotel"] == true{
+            for (key, value) in TotalPlanData.shared.totalDayOfHotel.sorted(by: { $0.key < $1.key }) {
+                
+                if value == 0  {
+                    switch key {
+                    case .high: if stayArray.contains("최고급호텔") { stayArray.remove(at: 0) }
+                    case .middle: if stayArray.contains("고급호텔") { stayArray.remove(at: 1) }
+                    case .low: if stayArray.contains("일반호텔") { stayArray.remove(at: 2) }
+                    case .apartment: if stayArray.contains("아파트") { stayArray.remove(at: 3) }
+                    default:
+                        stayArray.append("")
+                    }
+                }
+                
+            }
+        } else {
+            stayArray = [""]
+        }
+        
+        if TotalPlanData.shared.selectedCategory["restaurant"] == true{
+            for (key, value) in TotalPlanData.shared.totalCountOfFood /*.sorted(by: { $0.key < $1.key }) */{
+                if value == 0  {
+                    switch key { // index 에러 있음
+                    case 0: if foodArray.contains("고급음식점"){ foodArray.remove(at: 0) }
+                    case 1: if foodArray.contains("일반음식점"){ foodArray.remove(at: 1) }
+                    case 2: if foodArray.contains("간편식"){ foodArray.remove(at: 2) }
+                    default:
+                        foodArray.append("")
+                    }
+                }
+                
+            }
+        } else {
+            foodArray = [""]
+        }
+        
+        if TotalPlanData.shared.selectedCategory["drink"] == true {
+            for (key, value) in TotalPlanData.shared.totalCountOfDrink.sorted(by: { $0.key < $1.key }) {
+                if value == 0  {
+                    switch key {
+                    case 0: if snacksArray.contains("카페"){ snacksArray.remove(at: 0) }
+                    case 1: if snacksArray.contains("디저트"){ snacksArray.remove(at: 1) }
+                    case 2: if snacksArray.contains("펍바"){ snacksArray.remove(at: 2) }
+                    default:
+                        snacksArray.append("")
+                    }
+                }
+                
+            }
+            
+        }else {
+            snacksArray = [""]
+        }
+        
+        
+        for (key, value) in TotalPlanData.shared.activityNamePrice {
+            activityArray.append(key)
+            // price는 array키로
+        }
+        
+        print("setData 끝부분 호출")
+        
+    }
+    
+//
+//    func findValue(itemName : String) -> Int{
+//        for (i, v) in foodArray.enumerated(){
+//            if(v == itemName){
+//                return i
+//            }
+//        }
+//    }
+    
     
     @IBAction func touchUpStay(_ sender: Any) {
         checkCategory = 0
@@ -242,6 +320,12 @@ extension RegisterPlanViewController: UICollectionViewDataSource {
         if(checkCategory == 3){
             cell.itemLabel.text = activityArray[indexPath.row]
         }
+        
+        //        if DayPlanModel.day == 1 {
+        //            cell.itemLabel.text = DayPlanModel[0].content
+        //        }
+        
+        
         return cell
     }
     
