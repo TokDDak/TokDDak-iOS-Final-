@@ -107,6 +107,8 @@ class PopUpViewController: UIViewController {
     }
     
     func reloadView(by model: PopUpModel) {
+        
+        
         firstInfoNameLabel.text = model.info[0].name
         firstInfoPriceLabel.text = "\(model.info[0].cost.commaRepresentation) 원"
         secondInfoNameLabel.text = model.info[1].name
