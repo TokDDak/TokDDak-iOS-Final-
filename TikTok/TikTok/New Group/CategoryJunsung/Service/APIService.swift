@@ -64,4 +64,26 @@ final class APIService {
             }
         }
     }
+    
+    func requestMedianFood(cityID: Int, completion: @escaping (Result<FoodResponseModel, Error>) -> Void){
+        provider.request(.medianFoodRead(cityID: cityID)){
+            result in
+            switch result{
+            case let .success(success):
+                let responseData = success.data
+                do{
+                    let decoded = try JSONDecoder().decode(FoodResponseModel.self, from: responseData)
+                    completion(.success(decoded))
+                }catch{
+                    completion(.failure(error))
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+    
+    
 }

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+typealias FoodModel = _FoodResponseModel.Result
 class CategoryFoodViewController: UIViewController {
     
     var selectedCategoryData : [Int] = []
@@ -28,6 +29,7 @@ class CategoryFoodViewController: UIViewController {
     @IBOutlet weak var priceOfHigh: UILabel!
     @IBOutlet weak var priceOfMiddle: UILabel!
     @IBOutlet weak var priceOfLow: UILabel!
+    
     @IBOutlet weak var avgPriceOfHigh: UILabel!
     @IBOutlet weak var avgPriceOfMiddle: UILabel!
     @IBOutlet weak var avgPriceOfLow: UILabel!
@@ -36,9 +38,16 @@ class CategoryFoodViewController: UIViewController {
     @IBOutlet weak var totalCountOfFood: UILabel!
     @IBOutlet weak var totalPriceOfFood: UILabel!
     
-
+    @IBOutlet weak var highFoodImage: UIImageView!
+    @IBOutlet weak var middleFoodImage: UIImageView!
+    @IBOutlet weak var lowFoodImage: UIImageView!
+    
+    
+    
+    
     var eachPriceFood : [Int : Int] = [0:21000, 1:21000, 2:21000]
     var masterTotalPrice : Int = 0
+    var model: FoodModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +65,48 @@ class CategoryFoodViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let cityID = 1
+        APIService.shared.requestMedianFood(cityID: cityID){
+            [weak self] result in
+            guard let self = self else {return}
+            switch result{
+            case let .success(success):
+                guard let data = success.data else {return}
+                for i in 0...2{
+                    let result = data.result[i]
+                    self.model = result
+                    self.reloadView(by: result, index: i)
+                }
+            case let .failure(error):
+                print("실페")
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func reloadView(by model: FoodModel, index: Int){
+        if index == 2{
+            avgPriceOfHigh.text = "\(model.cost.commaRepresentation)원"//String(model.cost.commaRepresentation) + "원"
+            eachPriceFood[0] = model.cost
+            //avgPriceOfHigh.sizeToFit()
+        }
+        if index == 1{
+            avgPriceOfMiddle.text = String(model.cost.commaRepresentation) + "원"
+            eachPriceFood[1] = model.cost
+            //avgPriceOfHigh.sizeToFit()
+        }
+        if index == 0{
+            avgPriceOfLow.text = String(model.cost.commaRepresentation) + "원"
+            eachPriceFood[2] = model.cost
+            //avgPriceOfHigh.sizeToFit()
+        }
+     
+    }
+    
+    
     
     @IBAction func nextCategory(_ sender: Any) {
         if selectedCategoryData.count == 0{
