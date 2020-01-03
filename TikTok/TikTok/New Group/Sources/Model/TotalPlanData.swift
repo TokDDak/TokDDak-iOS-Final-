@@ -37,6 +37,7 @@ class TotalPlanData: CustomStringConvertible {
     
     //각 식사별 축적된 가격
     var totalCostOfFood : [Int : Int] = [0 : 0, 1 : 0, 2: 0]
+    
     //각 식사별 축적된 갯수
     var totalCountOfFood : [Int : Int] = [0:0, 1:0, 2:0]
     
