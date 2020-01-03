@@ -95,6 +95,9 @@ class CategoryDrinkViewController: UIViewController {
     @IBAction func nextCategory(_ sender: Any) {
         if selectedCategoryData.count == 0{
             //go to next category flow
+            let vc = storyboard?.instantiateViewController(withIdentifier: "totalBudgetViewController") as! totalBudgetViewController
+             
+             self.navigationController?.pushViewController(vc, animated: true)
         }
         if selectedCategoryData.count > 0 {
             if let nextCategory = selectedCategoryData.first{
