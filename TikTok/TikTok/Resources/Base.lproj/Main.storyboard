@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-8b-Po4">
-                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <state key="normal" image="btnSelectFinish"/>
                                 <connections>
                                     <segue destination="mOn-w6-6dZ" kind="show" id="9TE-ca-nTZ"/>
@@ -61,52 +61,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeImgCountry3" translatesAutoresizingMaskIntoConstraints="NO" id="tQY-CC-rT5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="makeImgCountry3" translatesAutoresizingMaskIntoConstraints="NO" id="tQY-CC-rT5">
                                 <rect key="frame" x="23" y="110" width="267" height="68"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-2d-4VZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-2d-4VZ">
                                 <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <state key="normal" image="btnSelectFinish"/>
                                 <connections>
                                     <action selector="showNextCategory:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="GP3-7o-fxb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-47-zUj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-47-zUj">
                                 <rect key="frame" x="16" y="198" width="345" height="80"/>
                                 <state key="normal" image="btnMakeStayMinus"/>
                                 <connections>
                                     <action selector="pressHotelViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="uRg-1K-7FT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgH-5A-gtV">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgH-5A-gtV">
                                 <rect key="frame" x="16" y="285" width="345" height="80"/>
                                 <state key="normal" image="btnMakeFoodMinus"/>
                                 <connections>
                                     <action selector="pressRestaurantViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="zio-Id-iKU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-dh-qgM">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-dh-qgM">
                                 <rect key="frame" x="16" y="372" width="345" height="80"/>
                                 <state key="normal" image="btnMakeSnacksMinus"/>
                                 <connections>
                                     <action selector="pressDrinkViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="QXd-g3-NDK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reg-Hq-d8K">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reg-Hq-d8K">
                                 <rect key="frame" x="16" y="450" width="345" height="80"/>
                                 <state key="normal" image="btnMakeTrafficMinus"/>
                                 <connections>
                                     <action selector="pressTransportViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="4pR-yg-EP4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-wg-Chu">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-wg-Chu">
                                 <rect key="frame" x="16" y="538" width="345" height="80"/>
                                 <state key="normal" image="btnMakeShoppingMinus"/>
                                 <connections>
                                     <action selector="pressShoppingViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="QYf-Il-Wiu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-sT-Lei">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-sT-Lei">
                                 <rect key="frame" x="16" y="627" width="345" height="80"/>
                                 <state key="normal" image="btnMakeActivityMinus"/>
                                 <connections>
@@ -200,7 +200,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE6-kS-nq7">
-                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -305,7 +305,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7A3-ws-rIj">
-                                <rect key="frame" x="0.0" y="156" width="375" height="566"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="474"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="mycell" rowHeight="62" id="fAf-2h-l8L" customClass="ActivityCellTableViewCell" customModule="TikTok" customModuleProvider="target">
@@ -340,7 +340,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DX-OT-KUY">
-                                                    <rect key="frame" x="279" y="12.666666666666664" width="70" height="37"/>
+                                                    <rect key="frame" x="209" y="-6" width="140" height="74"/>
                                                     <state key="normal" image="btnSelect"/>
                                                 </button>
                                             </subviews>
@@ -371,7 +371,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-Ov-wM6">
-                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <state key="normal" image="btnSelectFinish"/>
                                 <connections>
                                     <action selector="endCategory:" destination="q0x-0N-hyg" eventType="touchUpInside" id="Zxa-KU-2CG"/>
@@ -604,27 +604,27 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₩" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0K-WF-R3l">
-                                        <rect key="frame" x="47" y="421" width="250" height="43"/>
+                                        <rect key="frame" x="47" y="411" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYa-sd-m1c">
-                                        <rect key="frame" x="106" y="495" width="98" height="88"/>
+                                        <rect key="frame" x="106" y="485" width="49" height="44"/>
                                         <state key="normal" image="btnLabelMinus"/>
                                         <connections>
                                             <action selector="minusDay:" destination="udp-OH-k7B" eventType="touchUpInside" id="DgF-C5-aaR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP0-DF-Szs">
-                                        <rect key="frame" x="172" y="495" width="98" height="88"/>
+                                        <rect key="frame" x="221" y="485" width="49" height="44"/>
                                         <state key="normal" image="btnLabelPlus"/>
                                         <connections>
                                             <action selector="plusDay:" destination="udp-OH-k7B" eventType="touchUpInside" id="kXM-q6-adu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-cA-VYb">
-                                        <rect key="frame" x="0.0" y="483" width="375" height="184"/>
+                                        <rect key="frame" x="0.0" y="575" width="375" height="92"/>
                                         <state key="normal" image="btnOk">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
@@ -633,10 +633,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-Bj-9ed">
-                                        <rect key="frame" x="26" y="147" width="323" height="227"/>
+                                        <rect key="frame" x="26" y="147" width="323" height="217"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-Zt-HfV">
-                                                <rect key="frame" x="154" y="172" width="148.33333333333337" height="32"/>
+                                                <rect key="frame" x="154" y="172" width="148.33333333333337" height="22"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <state key="normal" image="btnMoreView">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -711,7 +711,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-DA-Qe6">
-                                        <rect key="frame" x="154.66666666666666" y="495" width="66" height="88"/>
+                                        <rect key="frame" x="154.66666666666666" y="485" width="66" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="8V5-AY-HaB"/>
                                         </constraints>
@@ -805,7 +805,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-Vc-SVs">
-                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -922,15 +922,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdW-yd-sCe">
-                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
                                 <state key="normal" image="btnFinish"/>
                                 <connections>
                                     <action selector="goToNext:" destination="Uiu-Hm-dJ7" eventType="touchUpInside" id="f5r-xm-TAt"/>
-                                    <segue destination="DDz-kv-z1p" kind="show" id="JPc-fq-rYA"/>
+                                    <segue destination="DDz-kv-z1p" kind="show" id="vjd-Es-Ris"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5L-va-7ht">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                                <rect key="frame" x="0.0" y="-92" width="375" height="307"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 예산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-m7-nCH">
                                         <rect key="frame" x="30" y="98" width="60" height="22"/>
@@ -973,7 +973,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-L4-lUo">
-                                <rect key="frame" x="18" y="198" width="351" height="522"/>
+                                <rect key="frame" x="18" y="106" width="351" height="522"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-ja-eYr">
                                         <rect key="frame" x="18" y="183" width="315" height="1"/>
@@ -1100,7 +1100,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaZ-lX-pmQ">
-                                        <rect key="frame" x="307" y="141.66666666666669" width="16" height="19.333333333333343"/>
+                                        <rect key="frame" x="307" y="141.66666666666666" width="16" height="19.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1300,44 +1300,47 @@
             </objects>
             <point key="canvasLocation" x="5324" y="238.66995073891627"/>
         </scene>
-        <!--View Controller-->
+        <!--End Budget View Controller-->
         <scene sceneID="m8o-Hc-I3h">
             <objects>
-                <viewController id="DDz-kv-z1p" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndBudgetViewController" id="DDz-kv-z1p" customClass="EndBudgetViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Twu-hY-nbs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-04-bZo">
-                                <rect key="frame" x="0.0" y="297" width="375" height="461"/>
+                                <rect key="frame" x="0.0" y="57" width="375" height="701"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMakeMentComplete" translatesAutoresizingMaskIntoConstraints="NO" id="t8I-nj-DV1">
-                                        <rect key="frame" x="21" y="6" width="334" height="386"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="173-WJ-ssa">
-                                        <rect key="frame" x="0.0" y="369" width="375" height="92"/>
+                                        <rect key="frame" x="0.0" y="609" width="375" height="92"/>
                                         <state key="normal" image="btnOk"/>
                                         <connections>
+                                            <action selector="endBudget:" destination="SOn-WU-qwd" eventType="touchUpInside" id="OTk-5I-1QJ"/>
+                                            <action selector="endBudget:" destination="DDz-kv-z1p" eventType="touchUpInside" id="hdv-ZZ-kbV"/>
                                             <segue destination="Psy-Oh-DbR" kind="show" id="ZhY-W3-bH9"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMakeMentComplete" translatesAutoresizingMaskIntoConstraints="NO" id="t8I-nj-DV1">
+                                        <rect key="frame" x="20" y="8" width="334" height="593"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="173-WJ-ssa" secondAttribute="bottom" id="Bsc-jL-2OE"/>
-                                    <constraint firstItem="t8I-nj-DV1" firstAttribute="top" secondItem="Tt7-04-bZo" secondAttribute="top" constant="6" id="DdQ-44-WZb"/>
-                                    <constraint firstAttribute="bottom" secondItem="t8I-nj-DV1" secondAttribute="bottom" constant="69" id="Lz2-LY-Qni"/>
+                                    <constraint firstItem="t8I-nj-DV1" firstAttribute="top" secondItem="Tt7-04-bZo" secondAttribute="top" constant="8" id="DdQ-44-WZb"/>
+                                    <constraint firstAttribute="bottom" secondItem="t8I-nj-DV1" secondAttribute="bottom" constant="100" id="Lz2-LY-Qni"/>
                                     <constraint firstAttribute="trailing" secondItem="173-WJ-ssa" secondAttribute="trailing" id="Qmz-gE-SlS"/>
                                     <constraint firstItem="173-WJ-ssa" firstAttribute="leading" secondItem="Tt7-04-bZo" secondAttribute="leading" id="oV3-bE-9Ax"/>
-                                    <constraint firstAttribute="trailing" secondItem="t8I-nj-DV1" secondAttribute="trailing" constant="20" id="pgt-32-gE7"/>
-                                    <constraint firstItem="t8I-nj-DV1" firstAttribute="leading" secondItem="Tt7-04-bZo" secondAttribute="leading" constant="21" id="pi0-1v-IB8"/>
+                                    <constraint firstAttribute="trailing" secondItem="t8I-nj-DV1" secondAttribute="trailing" constant="21" id="pgt-32-gE7"/>
+                                    <constraint firstItem="t8I-nj-DV1" firstAttribute="leading" secondItem="Tt7-04-bZo" secondAttribute="leading" constant="20" id="pi0-1v-IB8"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Tt7-04-bZo" secondAttribute="bottom" id="BFf-Se-LgH"/>
                             <constraint firstItem="Tt7-04-bZo" firstAttribute="leading" secondItem="Twu-hY-nbs" secondAttribute="leading" id="PFs-JT-gN9"/>
-                            <constraint firstItem="Tt7-04-bZo" firstAttribute="top" secondItem="aCd-3m-Pd1" secondAttribute="top" constant="297" id="gGp-PW-j12"/>
+                            <constraint firstItem="Tt7-04-bZo" firstAttribute="top" secondItem="aCd-3m-Pd1" secondAttribute="top" constant="57" id="gGp-PW-j12"/>
                             <constraint firstItem="Tt7-04-bZo" firstAttribute="trailing" secondItem="Twu-hY-nbs" secondAttribute="trailing" id="sua-AW-pNF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aCd-3m-Pd1"/>
@@ -1345,6 +1348,7 @@
                     <navigationItem key="navigationItem" id="FRl-yt-Ote"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyF-4h-eR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SOn-WU-qwd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6192.8000000000002" y="272.66009852216752"/>
         </scene>
@@ -1486,7 +1490,7 @@
                                 <rect key="frame" x="0.0" y="145.66666666666666" width="375" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-d4-qlZ">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="719.66666666666663" width="375" height="92.333333333333371"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1508,7 +1512,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-G4-jfo">
-                                <rect key="frame" x="16" y="132" width="343" height="146"/>
+                                <rect key="frame" x="16" y="223.66666666666663" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgSnacksCafe" translatesAutoresizingMaskIntoConstraints="NO" id="KeT-Fb-OyD">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1577,7 +1581,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X04-DP-8BO">
-                                        <rect key="frame" x="307" y="114" width="15" height="21"/>
+                                        <rect key="frame" x="307" y="114.00000000000003" width="15" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1593,7 +1597,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r7-49-3Qo">
-                                <rect key="frame" x="16" y="293" width="343" height="146"/>
+                                <rect key="frame" x="16" y="384.66666666666669" width="343" height="146.00000000000006"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgSnacksBakery" translatesAutoresizingMaskIntoConstraints="NO" id="fO1-ll-9dV">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1678,7 +1682,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z2-Ep-Nbf">
-                                <rect key="frame" x="16" y="454" width="343" height="146"/>
+                                <rect key="frame" x="16" y="545.66666666666663" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgSnacksPubnbar" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-Bd-ctP">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1863,7 +1867,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-wg-Dev">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1877,7 +1881,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dor-Oc-eq0">
-                                <rect key="frame" x="16" y="132" width="343" height="146"/>
+                                <rect key="frame" x="16" y="224" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFoodTop" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-Xr-IpR">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -1974,7 +1978,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjp-OZ-F3X">
-                                <rect key="frame" x="16" y="293" width="343" height="146"/>
+                                <rect key="frame" x="16" y="385" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgFoodGeneral" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-nT-XxK">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -2059,7 +2063,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-sB-dba">
-                                <rect key="frame" x="16" y="454" width="343" height="146"/>
+                                <rect key="frame" x="16" y="546" width="343" height="146"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgFoodSimple" translatesAutoresizingMaskIntoConstraints="NO" id="dd0-lz-01Z">
                                         <rect key="frame" x="16" y="16" width="114" height="114"/>
@@ -2235,7 +2239,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yv3-qI-0s9">
-                                        <rect key="frame" x="26" y="102" width="323" height="347"/>
+                                        <rect key="frame" x="26" y="102" width="323" height="255"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb2-Uu-3uJ">
                                                 <rect key="frame" x="218" y="260" width="103" height="16"/>
@@ -2280,14 +2284,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdR-sX-9au">
-                                        <rect key="frame" x="0.0" y="575" width="375" height="92"/>
+                                        <rect key="frame" x="0.0" y="483" width="375" height="184"/>
                                         <state key="normal" image="btnOk"/>
                                         <connections>
                                             <action selector="returnBack:" destination="mqK-9B-me0" eventType="touchUpInside" id="QIT-JC-srT"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,234,567" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-8Z-5Yk">
-                                        <rect key="frame" x="106" y="479" width="163" height="43"/>
+                                        <rect key="frame" x="106" y="387" width="163" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
