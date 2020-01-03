@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+typealias FoodModel = _FoodResponseModel.Result
 class CategoryFoodViewController: UIViewController {
     
     var selectedCategoryData : [Int] = []
@@ -28,20 +29,29 @@ class CategoryFoodViewController: UIViewController {
     @IBOutlet weak var priceOfHigh: UILabel!
     @IBOutlet weak var priceOfMiddle: UILabel!
     @IBOutlet weak var priceOfLow: UILabel!
+    
     @IBOutlet weak var avgPriceOfHigh: UILabel!
     @IBOutlet weak var avgPriceOfMiddle: UILabel!
     @IBOutlet weak var avgPriceOfLow: UILabel!
+    @IBOutlet weak var completeBttn: UIButton!
     
     @IBOutlet weak var totalCountOfFood: UILabel!
     @IBOutlet weak var totalPriceOfFood: UILabel!
     
+    @IBOutlet weak var highFoodImage: UIImageView!
+    @IBOutlet weak var middleFoodImage: UIImageView!
+    @IBOutlet weak var lowFoodImage: UIImageView!
     
-    var totalPriceFood : [Int : Int] = [0:0, 1:0, 2:0]
+    
+    
+    
     var eachPriceFood : [Int : Int] = [0:21000, 1:21000, 2:21000]
-    var totalCountFood : [Int : Int] = [0:0, 1:0, 2:0]
-
+    var masterTotalPrice : Int = 0
+    var model: FoodModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         print(progressBarOffset)
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
         let yourBackImage = UIImage(named: "naviBtnBackB")
@@ -56,6 +66,48 @@ class CategoryFoodViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let cityID = 1
+        APIService.shared.requestMedianFood(cityID: cityID){
+            [weak self] result in
+            guard let self = self else {return}
+            switch result{
+            case let .success(success):
+                guard let data = success.data else {return}
+                for i in 0...2{
+                    let result = data.result[i]
+                    self.model = result
+                    self.reloadView(by: result, index: i)
+                }
+            case let .failure(error):
+                print("실페")
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func reloadView(by model: FoodModel, index: Int){
+        if index == 2{
+            avgPriceOfHigh.text = "\(model.cost.commaRepresentation)원"//String(model.cost.commaRepresentation) + "원"
+            eachPriceFood[0] = model.cost
+            //avgPriceOfHigh.sizeToFit()
+        }
+        if index == 1{
+            avgPriceOfMiddle.text = String(model.cost.commaRepresentation) + "원"
+            eachPriceFood[1] = model.cost
+            //avgPriceOfHigh.sizeToFit()
+        }
+        if index == 0{
+            avgPriceOfLow.text = String(model.cost.commaRepresentation) + "원"
+            eachPriceFood[2] = model.cost
+            //avgPriceOfHigh.sizeToFit()
+        }
+     
+    }
+    
+    
+    
     @IBAction func nextCategory(_ sender: Any) {
         if selectedCategoryData.count == 0{
             //go to next category flow
@@ -69,6 +121,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -79,6 +132,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -89,6 +143,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.masterTotalPrice = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -99,6 +154,7 @@ class CategoryFoodViewController: UIViewController {
                     vc.selectedCategoryData = tmpSelectedCategory
                     vc.progressBarOffset = progressBarOffset + 1
                     vc.pgValue = pgValue
+                    vc.basePriceOfActivity = masterTotalPrice
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -115,124 +171,141 @@ class CategoryFoodViewController: UIViewController {
     
     @IBAction func cafeMinus(_ sender: Any) {
         
-        if totalCountFood[0]! > 0{
-            totalCountFood[0]! -= 1
+        if TotalPlanData.shared.totalCountOfFood[0]! > 0{
+            TotalPlanData.shared.totalCountOfFood[0]! -= 1
             guard let ep = eachPriceFood[0] else{return}
-            guard let tc = totalCountFood[0] else{return}
-            totalPriceFood[0] = ep * tc
-            guard let tp = totalPriceFood[0] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfFood[0] else{return}
+            TotalPlanData.shared.totalCostOfFood[0] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfFood[0] else{return}
             
             priceOfHigh.text = String(tp.commaRepresentation) //+ "원"
             numOfHigh.text = String(tc)
             priceOfHigh.sizeToFit()
-            totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+            //
+            masterTotalPrice -= eachPriceFood[0]!
+            totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfFood.text = String(returnCount())
             totalPriceOfFood.sizeToFit()
             totalCountOfFood.sizeToFit()
+            btthEnable()
         }
     }
     
     @IBAction func cafePlus(_ sender: Any) {
-        totalCountFood[0]! += 1
-        totalPriceFood[0]! = (totalCountFood[0]! * eachPriceFood[0]!)
-        guard let tp = totalPriceFood[0] else{return}
-        guard let tc = totalCountFood[0] else{return}
+        TotalPlanData.shared.totalCountOfFood[0]! += 1
+        TotalPlanData.shared.totalCostOfFood[0]! = (TotalPlanData.shared.totalCountOfFood[0]! * eachPriceFood[0]!)
+        guard let tp = TotalPlanData.shared.totalCostOfFood[0] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[0] else{return}
         priceOfHigh.text = String(tp.commaRepresentation) //+ "원"
         numOfHigh.text = String(tc)
         priceOfHigh.sizeToFit()
-        totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+        //
+        masterTotalPrice += eachPriceFood[0]!
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfFood.text = String(returnCount())
         totalPriceOfFood.sizeToFit()
         totalCountOfFood.sizeToFit()
+        btthEnable()
     }
     
     @IBAction func desertMinus(_ sender: Any) {
-        if totalCountFood[1]! > 0{
-            totalCountFood[1]! -= 1
+        if TotalPlanData.shared.totalCountOfFood[1]! > 0{
+            TotalPlanData.shared.totalCountOfFood[1]! -= 1
             guard let ep = eachPriceFood[1] else{return}
-            guard let tc = totalCountFood[1] else{return}
-            totalPriceFood[1] = ep * tc
-            guard let tp = totalPriceFood[1] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfFood[1] else{return}
+            TotalPlanData.shared.totalCostOfFood[1] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfFood[1] else{return}
             
             priceOfMiddle.text = String(tp.commaRepresentation) //+ "원"
             numOfMiddle.text = String(tc)
             priceOfMiddle.sizeToFit()
-            totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+            //
+            masterTotalPrice -= eachPriceFood[1]!
+            totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfFood.text = String(returnCount())
             totalPriceOfFood.sizeToFit()
             totalCountOfFood.sizeToFit()
+            btthEnable()
         }
     }
     
     @IBAction func desertPlus(_ sender: Any) {
-        totalCountFood[1]! += 1
-        totalPriceFood[1]! = (totalCountFood[1]! * eachPriceFood[1]!)
-        guard let tp = totalPriceFood[1] else{return}
-        guard let tc = totalCountFood[1] else{return}
+        TotalPlanData.shared.totalCountOfFood[1]! += 1
+        TotalPlanData.shared.totalCostOfFood[1]! = (TotalPlanData.shared.totalCountOfFood[1]! * eachPriceFood[1]!)
+        guard let tp = TotalPlanData.shared.totalCostOfFood[1] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[1] else{return}
         priceOfMiddle.text = String(tp.commaRepresentation) //+ "원"
         numOfMiddle.text = String(tc)
         priceOfMiddle.sizeToFit()
-        totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+        //
+        masterTotalPrice += eachPriceFood[1]!
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfFood.text = String(returnCount())
         totalPriceOfFood.sizeToFit()
         totalCountOfFood.sizeToFit()
+        btthEnable()
     }
     
     @IBAction func pubMinus(_ sender: Any) {
-        if totalCountFood[2]! > 0{
-            totalCountFood[2]! -= 1
+        if TotalPlanData.shared.totalCountOfFood[2]! > 0{
+            TotalPlanData.shared.totalCountOfFood[2]! -= 1
             guard let ep = eachPriceFood[2] else{return}
-            guard let tc = totalCountFood[2] else{return}
-            totalPriceFood[2] = ep * tc
-            guard let tp = totalPriceFood[2] else{return}
+            guard let tc = TotalPlanData.shared.totalCountOfFood[2] else{return}
+            TotalPlanData.shared.totalCostOfFood[2] = ep * tc
+            guard let tp = TotalPlanData.shared.totalCostOfFood[2] else{return}
             
             priceOfLow.text = String(tp.commaRepresentation) //+ "원"
             numOfLow.text = String(tc)
             priceOfLow.sizeToFit()
-            totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+            //
+            masterTotalPrice -= eachPriceFood[2]!
+            totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
             totalCountOfFood.text = String(returnCount())
             totalPriceOfFood.sizeToFit()
             totalCountOfFood.sizeToFit()
+            btthEnable()
         }
     }
     
     @IBAction func pubPlus(_ sender: Any) {
-        totalCountFood[2]! += 1
-        totalPriceFood[2]! = (totalCountFood[2]! * eachPriceFood[2]!)
-        guard let tp = totalPriceFood[2] else{return}
-        guard let tc = totalCountFood[2] else{return}
+        TotalPlanData.shared.totalCountOfFood[2]! += 1
+        TotalPlanData.shared.totalCostOfFood[2]! = (TotalPlanData.shared.totalCountOfFood[2]! * eachPriceFood[2]!)
+        guard let tp = TotalPlanData.shared.totalCostOfFood[2] else{return}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[2] else{return}
         priceOfLow.text = String(tp.commaRepresentation) //+ "원"
         numOfLow.text = String(tc)
         priceOfLow.sizeToFit()
-        totalPriceOfFood.text = String(returnPrice().commaRepresentation)
+        //
+        masterTotalPrice += eachPriceFood[2]!
+        totalPriceOfFood.text = String(masterTotalPrice.commaRepresentation)
         totalCountOfFood.text = String(returnCount())
         totalPriceOfFood.sizeToFit()
         totalCountOfFood.sizeToFit()
+        btthEnable()
     }
     
     
     
     func returnCount() -> Int{
-        guard let tc = totalCountFood[0] else{return -1}
-        guard let tc1 = totalCountFood[1] else{return -1}
-        guard let tc2 = totalCountFood[2] else{return -1}
+        guard let tc = TotalPlanData.shared.totalCountOfFood[0] else{return -1}
+        guard let tc1 = TotalPlanData.shared.totalCountOfFood[1] else{return -1}
+        guard let tc2 = TotalPlanData.shared.totalCountOfFood[2] else{return -1}
         print(tc)
         print(tc1)
         print(tc2)
         return tc + tc1 + tc2
         
     }
+
     
-    func returnPrice() -> Int{
-        guard let tp = totalPriceFood[0] else{return -1}
-        guard let tp1 = totalPriceFood[1] else{return -1}
-        guard let tp2 = totalPriceFood[2] else{return -1}
-        print(tp)
-        print(tp1)
-        print(tp2)
-        return tp + tp1 + tp2
+    func btthEnable(){
+        if returnCount() > 0{
+            completeBttn.isEnabled = true
+        }
+        else{
+            completeBttn.isEnabled = false
+        }
     }
-    
     
     
 }

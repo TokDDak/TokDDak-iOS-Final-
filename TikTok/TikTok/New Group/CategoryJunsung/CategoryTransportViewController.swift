@@ -8,20 +8,42 @@
 
 import UIKit
 
+
+
+//교통 가격
+var totalCostOfTransport : Int = 0
+//쇼핑 가격
+var totalCostOfShopping : Int = 0
+
 class CategoryTransportViewController: UIViewController {
     
     var selectedCategoryData : [Int] = []
     var progressBarOffset : Int = 1
     var pgValue : Int = 0
+    var priceOfTransport : Int = 0
+    var masterTotalPrice : Int = 0
+    //주석
     
-
+    var checkUpDown = 0
+    
+    
     @IBOutlet weak var progressBar: UIProgressView!
-
+    @IBOutlet weak var completeBttn: UIButton!
+    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var totalPrice: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        masterTotalPrice -= totalCostOfTransport
+        totalPrice.text = String(masterTotalPrice.commaRepresentation)
+        totalCostOfTransport = 0
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalPrice.text = String(masterTotalPrice.commaRepresentation)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -63,48 +85,75 @@ class CategoryTransportViewController: UIViewController {
         return true
     }
     
+    @IBAction func checkInt(_ sender: Any) {
+        if textField.text == nil{
+            completeBttn.isEnabled = false
+        }
+        else{
+            completeBttn.isEnabled = true
+        }
+        checkUpDown = 1
+    }
     
     
     
     @IBAction func nextCategory(_ sender: Any) {
         hideKeyboard()
-        let tmp = Int(textField.text!)
-        totalPrice.text = String(tmp!.commaRepresentation)
+
         
-        
-        
-        if selectedCategoryData.count == 0{
-            //go to next category flow
+        guard let priceOfTransport = Int(textField.text!) else{
+            view.frame.origin.y = 0
+            return
         }
-        if selectedCategoryData.count > 0 {
-            if let nextCategory = selectedCategoryData.first{
-                if nextCategory == 4{
-                    let vc = storyboard?.instantiateViewController(withIdentifier: "CategoiryShoppingViewController") as! CategoiryShoppingViewController
-                    var tmpSelectedCategory = selectedCategoryData
-                    tmpSelectedCategory.remove(at: 0)
-                    vc.selectedCategoryData = tmpSelectedCategory
-                    vc.progressBarOffset = progressBarOffset + 1
-                    vc.pgValue = pgValue
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
-                
-                if nextCategory == 5{
-                    let vc = storyboard?.instantiateViewController(withIdentifier: "ActivityCellViewController") as! ActivityCellViewController
-                    var tmpSelectedCategory = selectedCategoryData
-                    tmpSelectedCategory.remove(at: 0)
-                    vc.selectedCategoryData = tmpSelectedCategory
-                    vc.progressBarOffset = progressBarOffset + 1
-                    vc.pgValue = pgValue
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
-                
-                
-                
+        
+        totalCostOfTransport = priceOfTransport
+        
+        if checkUpDown == 1{
+            let tmp = masterTotalPrice + priceOfTransport
+            view.frame.origin.y = 0
+            totalPrice.text = String(tmp.commaRepresentation)
+          }
+        
+        if checkUpDown == 0{
+            masterTotalPrice += priceOfTransport
+            totalPrice.text = String(masterTotalPrice.commaRepresentation)
+            if selectedCategoryData.count == 0{
+                //go to next category flow
             }
+            if selectedCategoryData.count > 0 {
+                if let nextCategory = selectedCategoryData.first{
+                    if nextCategory == 4{
+                        let vc = storyboard?.instantiateViewController(withIdentifier: "CategoiryShoppingViewController") as! CategoiryShoppingViewController
+                        var tmpSelectedCategory = selectedCategoryData
+                        tmpSelectedCategory.remove(at: 0)
+                        vc.selectedCategoryData = tmpSelectedCategory
+                        vc.progressBarOffset = progressBarOffset + 1
+                        vc.pgValue = pgValue
+                        vc.masterTotalPrice = masterTotalPrice
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+                    }
+                    
+                    if nextCategory == 5{
+                        let vc = storyboard?.instantiateViewController(withIdentifier: "ActivityCellViewController") as! ActivityCellViewController
+                        var tmpSelectedCategory = selectedCategoryData
+                        tmpSelectedCategory.remove(at: 0)
+                        vc.selectedCategoryData = tmpSelectedCategory
+                        vc.progressBarOffset = progressBarOffset + 1
+                        vc.pgValue = pgValue
+                        vc.basePriceOfActivity = masterTotalPrice
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                    
+                    
+                    
+                }
+            }
+            textField.text = ""
         }
-        
+        checkUpDown = 0
     }
-   
     
     
 }
+

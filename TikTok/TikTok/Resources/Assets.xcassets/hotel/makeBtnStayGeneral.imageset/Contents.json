@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "makeBtnStayGeneral.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "makeBtnStayGeneral.jpg"
     },
     {
       "idiom" : "universal",
@@ -11,8 +11,8 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "idiom" : "universal"
     }
   ],
   "info" : {

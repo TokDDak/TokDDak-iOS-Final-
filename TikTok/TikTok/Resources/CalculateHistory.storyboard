@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculate History View Controller-->
+        <scene sceneID="uDf-6y-cro">
+            <objects>
+                <viewController storyboardIdentifier="CalculateHistoryViewController" id="ZHv-ib-jSy" customClass="CalculateHistoryViewController" customModule="TikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tG1-W1-PH2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pec-u7-gky">
+                                <rect key="frame" x="27" y="296" width="100" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="inputBtnTraffic"/>
+                                <connections>
+                                    <action selector="clickTransportButton:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="8Kk-lf-C1N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGw-Eo-Hkd">
+                                <rect key="frame" x="137" y="296" width="100" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="inputBtnShopping"/>
+                                <connections>
+                                    <action selector="clickShoppingButton:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="vgy-aD-hyz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX5-zN-uaX">
+                                <rect key="frame" x="247" y="240" width="100" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="inputBtnSnacks"/>
+                                <connections>
+                                    <action selector="clickDrinkButton:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="Whu-fP-NcX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RA-6R-2wp">
+                                <rect key="frame" x="247" y="296" width="100" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="inputBtnActivity"/>
+                                <connections>
+                                    <action selector="clickActivityButton:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="aBQ-sM-N2h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-fc-lmp">
+                                <rect key="frame" x="27" y="240" width="100" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="inputBtnStay"/>
+                                <connections>
+                                    <action selector="clickStayButton:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="8yd-lb-z2l"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgMentMoneyOutput" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-Ej-tCq">
+                                <rect key="frame" x="24" y="110" width="158" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1p-Im-M78">
+                                <rect key="frame" x="27" y="396" width="33" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액을 입력하세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHG-tI-8nv">
+                                <rect key="frame" x="28" y="439" width="250" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efg-vJ-Vl3">
+                                <rect key="frame" x="137" y="240" width="100" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="inputBtnFood"/>
+                                <connections>
+                                    <action selector="clickFoodButton:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="U0U-KV-z7T"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLJ-3d-smZ">
+                                <rect key="frame" x="30" y="473" width="315" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.54509803921568623" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngy-Ft-M0v">
+                                <rect key="frame" x="30" y="630" width="315" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용을 입력하세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uE5-Ob-3zt">
+                                <rect key="frame" x="28" y="596" width="250" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상세내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-0t-jii">
+                                <rect key="frame" x="27" y="553" width="66" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyV-QH-3Ib">
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
+                                <state key="normal" image="btnOk"/>
+                                <connections>
+                                    <action selector="goToNext:" destination="ZHv-ib-jSy" eventType="touchUpInside" id="BBT-Ic-4di"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DyV-QH-3Ib" firstAttribute="bottom" secondItem="tG1-W1-PH2" secondAttribute="bottom" id="PEg-wk-roZ"/>
+                            <constraint firstAttribute="trailing" secondItem="DyV-QH-3Ib" secondAttribute="trailing" id="W5p-RW-vDA"/>
+                            <constraint firstItem="DyV-QH-3Ib" firstAttribute="leading" secondItem="tG1-W1-PH2" secondAttribute="leading" id="lb4-fR-oo4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="16n-Rn-siH"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityButton" destination="7RA-6R-2wp" id="xWC-4m-mrr"/>
+                        <outlet property="detailTextField" destination="uE5-Ob-3zt" id="alc-Tj-A38"/>
+                        <outlet property="drinkButton" destination="WX5-zN-uaX" id="OUG-0V-37s"/>
+                        <outlet property="foodButton" destination="Efg-vJ-Vl3" id="frU-HQ-HRs"/>
+                        <outlet property="priceTextField" destination="KHG-tI-8nv" id="f3z-qM-iXA"/>
+                        <outlet property="shoppingButton" destination="HGw-Eo-Hkd" id="7gh-Cz-05P"/>
+                        <outlet property="stayButton" destination="vvK-fc-lmp" id="lJ9-q0-u0F"/>
+                        <outlet property="titleLabel" destination="dX3-Ej-tCq" id="C2l-ZO-Jdq"/>
+                        <outlet property="transportButton" destination="pec-u7-gky" id="XQX-sh-0DI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Dj-1G-KrF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnOk" width="375" height="92"/>
+        <image name="imgMentMoneyOutput" width="159" height="68"/>
+        <image name="inputBtnActivity" width="100" height="48"/>
+        <image name="inputBtnFood" width="100" height="48"/>
+        <image name="inputBtnShopping" width="100" height="48"/>
+        <image name="inputBtnSnacks" width="100" height="48"/>
+        <image name="inputBtnStay" width="100" height="48"/>
+        <image name="inputBtnTraffic" width="100" height="48"/>
+    </resources>
+</document>

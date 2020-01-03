@@ -21,10 +21,12 @@ class CityChooseTableViewController: UITableViewController, IndicatorInfoProvide
     var childNumber: String = ""
     
     var twoDimensionalArray = [
-        ExpandableNames(isExpanded: false, country: "프랑스" , cities:  [ "Amy", "Jimmy", "John", "aasdf" , "bbb", "aa"]),
-        ExpandableNames(isExpanded: false, country: "독일" , cities:  ["busan", "hongdae" , "ys" , "Ij"]),
-        ExpandableNames(isExpanded: false, country: "스페인" , cities:  [ "Amy", "Jimmy", "John", "aasdf" , "bbb", "aa"]),
-        ExpandableNames(isExpanded: false, country: "스위스" , cities:  ["12412an", "ho253ngdae" , "yyyyy" , "pppp"])
+        ExpandableNames(isExpanded: false, country: "프랑스" , cities:  [ "파리", "니스"]),
+        ExpandableNames(isExpanded: false, country: "이탈리아" , cities:  ["로마", "피렌체", "베네치아", "밀라노"]),
+        ExpandableNames(isExpanded: false, country: "스페인" , cities:  [ "마드리드", "바르셀로나"]),
+        ExpandableNames(isExpanded: false, country: "체코" , cities:  ["프라하"]),
+        ExpandableNames(isExpanded: false, country: "독일" , cities:  ["베를린", "프랑크푸르트", "뮌헨"]),
+        ExpandableNames(isExpanded: false, country: "러시아" , cities:  ["모스크바", "블라디보스톡"])
         
     ]
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

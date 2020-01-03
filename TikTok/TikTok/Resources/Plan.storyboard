@@ -280,16 +280,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="완료"/>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="makeImgCountry" translatesAutoresizingMaskIntoConstraints="NO" id="BAU-en-NNe">
-                                        <rect key="frame" x="75" y="110" width="134" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="makeImgCountry2" translatesAutoresizingMaskIntoConstraints="NO" id="zg6-bp-bq3">
-                                        <rect key="frame" x="24" y="110" width="51" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="makeImgCountry15" translatesAutoresizingMaskIntoConstraints="NO" id="nk5-3f-8mn">
-                                        <rect key="frame" x="24" y="147" width="216" height="31"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlanTextMent" translatesAutoresizingMaskIntoConstraints="NO" id="zg6-bp-bq3">
+                                        <rect key="frame" x="24" y="110" width="216" height="68"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Nh-HK-Pff">
@@ -301,7 +293,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="btnArrowLeft"/>
                                                 <connections>
-                                                    <action selector="dummyDataAction:" destination="rHY-e8-YX8" eventType="touchUpInside" id="Ik0-pd-cTR"/>
+                                                    <action selector="touchMinusDay:" destination="rHY-e8-YX8" eventType="touchUpInside" id="us3-c0-OGL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -353,8 +345,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-82-XLJ">
-                                <rect key="frame" x="167" y="245" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-82-XLJ">
+                                <rect key="frame" x="167" y="245" width="60" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -364,104 +356,144 @@
                                 <rect key="frame" x="328" y="244" width="16" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btnArrowRight"/>
+                                <connections>
+                                    <action selector="touchUpPlusDay:" destination="rHY-e8-YX8" eventType="touchUpInside" id="2xy-WB-ONc"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-9H-Jqn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-9H-Jqn">
                                 <rect key="frame" x="-9" y="567" width="393" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-1z-5Ff">
-                                        <rect key="frame" x="19" y="125" width="71" height="75"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="planBtnStay">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="touchUpStay:" destination="rHY-e8-YX8" eventType="touchUpInside" id="KZQ-Dc-hML"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMg-Yy-L50">
-                                        <rect key="frame" x="200" y="124" width="71" height="75"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="planBtnSnacks">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="touchUpSnacks:" destination="rHY-e8-YX8" eventType="touchUpInside" id="j4x-Rp-xsR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZM-Fm-JU6">
-                                        <rect key="frame" x="281" y="123" width="71" height="75"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="planBtnActivity">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="touchUpActivity:" destination="rHY-e8-YX8" eventType="touchUpInside" id="iff-NW-TFs"/>
-                                        </connections>
-                                    </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-uA-Os6">
-                                        <rect key="frame" x="43" y="50" width="300" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qzy-AU-D1T">
-                                            <size key="itemSize" width="97" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryItemCell" id="p21-Wm-8nn" customClass="categoryItemCollectionViewCell" customModule="TikTok" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="-7" width="97" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OvE-sk-67b">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOG-dN-44Q">
-                                                            <rect key="frame" x="8" y="15" width="68" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="1My-AU-QFx"/>
-                                                                <constraint firstAttribute="width" constant="68" id="QBE-Bu-MnU"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="JOG-dN-44Q" firstAttribute="leading" secondItem="OvE-sk-67b" secondAttribute="leading" constant="8" id="Kx8-sh-yQF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="JOG-dN-44Q" secondAttribute="bottom" constant="14" id="bn0-kL-D2A"/>
-                                                        <constraint firstItem="JOG-dN-44Q" firstAttribute="top" secondItem="OvE-sk-67b" secondAttribute="top" constant="15" id="rit-0g-nAO"/>
-                                                        <constraint firstAttribute="trailing" secondItem="JOG-dN-44Q" secondAttribute="trailing" constant="21" id="tmN-kA-Vm8"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="97" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AUF-00-aL6">
+                                        <rect key="frame" x="8" y="128" width="377" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-1z-5Ff">
+                                                <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="75"/>
+                                                <state key="normal" image="planBtnStay">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="itemLabel" destination="JOG-dN-44Q" id="wnl-kz-nD2"/>
+                                                    <action selector="touchUpStay:" destination="rHY-e8-YX8" eventType="touchUpInside" id="KZQ-Dc-hML"/>
                                                 </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-hP-BxU">
-                                        <rect key="frame" x="98" y="123" width="71" height="75"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="planBtnFood">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-hP-BxU">
+                                                <rect key="frame" x="94.333333333333343" y="0.0" width="94.333333333333343" height="75"/>
+                                                <state key="normal" image="planBtnFood">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchUpFood:" destination="rHY-e8-YX8" eventType="touchUpInside" id="wEg-sm-DoG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMg-Yy-L50">
+                                                <rect key="frame" x="188.66666666666666" y="0.0" width="93.999999999999972" height="75"/>
+                                                <state key="normal" image="planBtnSnacks">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchUpSnacks:" destination="rHY-e8-YX8" eventType="touchUpInside" id="j4x-Rp-xsR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZM-Fm-JU6">
+                                                <rect key="frame" x="282.66666666666669" y="0.0" width="94.333333333333314" height="75"/>
+                                                <state key="normal" image="planBtnActivity">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchUpActivity:" destination="rHY-e8-YX8" eventType="touchUpInside" id="iff-NW-TFs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-Nn-8XW">
+                                        <rect key="frame" x="20" y="45" width="353" height="83"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-uA-Os6">
+                                                <rect key="frame" x="20" y="23.666666666666629" width="313" height="36"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="AJz-gC-X4g"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qzy-AU-D1T">
+                                                    <size key="itemSize" width="97" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryItemCell" id="p21-Wm-8nn" customClass="categoryItemCollectionViewCell" customModule="TikTok" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-7" width="97" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OvE-sk-67b">
+                                                            <rect key="frame" x="0.0" y="0.0" width="97" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOG-dN-44Q">
+                                                                    <rect key="frame" x="8" y="15" width="81" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="JOG-dN-44Q" firstAttribute="leading" secondItem="OvE-sk-67b" secondAttribute="leading" constant="8" id="93E-Kg-NZ2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="JOG-dN-44Q" secondAttribute="trailing" constant="8" id="bPn-Fo-U6w"/>
+                                                                <constraint firstItem="JOG-dN-44Q" firstAttribute="centerY" secondItem="OvE-sk-67b" secondAttribute="centerY" id="te7-do-BFn"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="customSize" width="97" height="50"/>
+                                                        <connections>
+                                                            <outlet property="itemLabel" destination="JOG-dN-44Q" id="wnl-kz-nD2"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="KNJ-uA-Os6" firstAttribute="centerY" secondItem="Fq8-Nn-8XW" secondAttribute="centerY" id="Hux-UQ-Yts"/>
+                                            <constraint firstAttribute="trailing" secondItem="KNJ-uA-Os6" secondAttribute="trailing" constant="20" symbolic="YES" id="V92-Tg-G6b"/>
+                                            <constraint firstItem="KNJ-uA-Os6" firstAttribute="leading" secondItem="Fq8-Nn-8XW" secondAttribute="leading" constant="20" symbolic="YES" id="e79-Kb-gW5"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW7-jL-V4W">
+                                        <rect key="frame" x="172" y="15" width="48" height="22"/>
+                                        <state key="normal" image="btnCircle"/>
                                         <connections>
-                                            <action selector="touchUpFood:" destination="rHY-e8-YX8" eventType="touchUpInside" id="wEg-sm-DoG"/>
+                                            <action selector="touchUpDownButton:" destination="rHY-e8-YX8" eventType="touchUpInside" id="cCE-Cv-Sgn"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.5450980392" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KW7-jL-V4W" firstAttribute="top" secondItem="6a8-9H-Jqn" secondAttribute="top" constant="15" id="2de-29-xxO"/>
+                                    <constraint firstAttribute="trailing" secondItem="AUF-00-aL6" secondAttribute="trailing" constant="8" id="A7h-qU-ZKX"/>
+                                    <constraint firstItem="AUF-00-aL6" firstAttribute="leading" secondItem="6a8-9H-Jqn" secondAttribute="leading" constant="8" id="HnL-5Q-YNp"/>
+                                    <constraint firstItem="KW7-jL-V4W" firstAttribute="leading" secondItem="6a8-9H-Jqn" secondAttribute="leading" constant="172" id="KJ0-8e-OFL"/>
+                                    <constraint firstAttribute="bottom" secondItem="AUF-00-aL6" secondAttribute="bottom" constant="42" id="V8L-u0-yP0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fq8-Nn-8XW" secondAttribute="trailing" constant="20" symbolic="YES" id="Yoi-4f-uRH"/>
+                                    <constraint firstAttribute="height" constant="245" id="dLn-Eq-nmH"/>
+                                    <constraint firstAttribute="trailing" secondItem="KW7-jL-V4W" secondAttribute="trailing" constant="173" id="fVi-9J-WcM"/>
+                                    <constraint firstItem="AUF-00-aL6" firstAttribute="top" secondItem="Fq8-Nn-8XW" secondAttribute="bottom" id="oDu-Hf-FcH"/>
+                                    <constraint firstItem="Fq8-Nn-8XW" firstAttribute="leading" secondItem="6a8-9H-Jqn" secondAttribute="leading" constant="20" symbolic="YES" id="wLo-uo-JNv"/>
+                                    <constraint firstItem="Fq8-Nn-8XW" firstAttribute="top" secondItem="6a8-9H-Jqn" secondAttribute="top" constant="45" id="xFh-M4-pG9"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6a8-9H-Jqn" firstAttribute="bottom" secondItem="Ln9-zy-tQN" secondAttribute="bottom" id="M5K-uY-4J8"/>
+                            <constraint firstItem="d9J-Ip-nTY" firstAttribute="leading" secondItem="6a8-9H-Jqn" secondAttribute="leading" constant="9" id="WtU-6c-gyZ"/>
+                            <constraint firstItem="6a8-9H-Jqn" firstAttribute="trailing" secondItem="d9J-Ip-nTY" secondAttribute="trailing" constant="9" id="crF-Hp-BiA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d9J-Ip-nTY"/>
                     </view>
                     <connections>
                         <outlet property="buttonBarView" destination="6a8-9H-Jqn" id="P9I-wi-ji5"/>
+                        <outlet property="buttonBarViewBottomConstraint" destination="M5K-uY-4J8" id="Y0E-N5-vYG"/>
                         <outlet property="categoryItemCollectionView" destination="KNJ-uA-Os6" id="ggN-WS-Urg"/>
+                        <outlet property="dayViewLabel" destination="rxb-82-XLJ" id="zpS-kY-lFd"/>
                         <outlet property="registerPlanTableView" destination="9ie-TN-tD6" id="gNU-6k-lwQ"/>
                         <outlet property="topView" destination="DeS-JW-Aid" id="1Dj-l4-J5g"/>
                     </connections>
@@ -474,10 +506,9 @@
     <resources>
         <image name="btnArrowLeft" width="16" height="16"/>
         <image name="btnArrowRight" width="16" height="16"/>
+        <image name="btnCircle" width="10" height="10"/>
         <image name="imgMoneyKoreaBlack23X20" width="23" height="20"/>
-        <image name="makeImgCountry" width="135" height="31"/>
-        <image name="makeImgCountry15" width="217" height="31"/>
-        <image name="makeImgCountry2" width="51" height="31"/>
+        <image name="imgPlanTextMent" width="217" height="68"/>
         <image name="naviBtnBackB" width="16" height="16"/>
         <image name="planBtnActivity" width="71" height="75"/>
         <image name="planBtnFood" width="71" height="75"/>

@@ -13,18 +13,18 @@ class PopularCityTableViewController: UITableViewController , IndicatorInfoProvi
     
     var childNumber: String = ""
     var twoDimensionalArray = [
-        ([ "seoul" , "makeBtnPopularSeoul"]),
-        (["Newyork", "makeBtnPopularNewyork"]),
-        (["HongKong", "makeBtnPopularHongkong"]),
-        (["Macao", "makeBtnPopularMacao"]),
-        (["Vladivostok", "makeBtnPopularVladivostok"]),
-        (["London", "makeBtnPopularLondon"]),
-        (["Paris", "makeBtnPopularParis"]),
-        (["Cebu", "makeBtnPopularCebu"]),
-        (["Taipei", "makeBtnPopularTaipei"]),
-        (["Zurich", "makeBtnPopularZurich"]),
-        (["Boracay", "makeBtnPopularBoracay"]),
-        (["Danang", "makeBtnPopularDanang"])
+        ([ "서울" , "makeBtnPopularSeoul"]),
+        (["뉴욕", "makeBtnPopularNewyork"]),
+        (["홍콩", "makeBtnPopularHongkong"]),
+        (["마카오", "makeBtnPopularMacao"]),
+        (["블라디보스톡", "makeBtnPopularVladivostok"]),
+        (["런던", "makeBtnPopularLondon"]),
+        (["파리", "makeBtnPopularParis"]),
+        (["세부", "makeBtnPopularCebu"]),
+        (["대만", "makeBtnPopularTaipei"]),
+        (["취리히", "makeBtnPopularZurich"]),
+        (["보라카이", "makeBtnPopularBoracay"]),
+        (["다낭", "makeBtnPopularDanang"])
         
     ]
     
@@ -53,15 +53,29 @@ class PopularCityTableViewController: UITableViewController , IndicatorInfoProvi
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
 //    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return twoDimensionalArray.count
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+        
+    
+        TotalPlanData.shared.cityName = twoDimensionalArray[indexPath.row][0]
+        
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GoToVC") as? GoToCityViewController
+            else {
+                return
+        }
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-           guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityCell", for: indexPath) as? PopularCityTableViewCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityCell", for: indexPath) as? PopularCityTableViewCell else{
                return UITableViewCell()
            }
 

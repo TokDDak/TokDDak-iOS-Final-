@@ -8,42 +8,61 @@
 
 import UIKit
 
+protocol ActivityCellTableViewCellDelegate: class {
+    func activityCell(_ cell: ActivityCellTableViewCell, didTapNameButton button: UIButton)
+    func activityCell(_ cell: ActivityCellTableViewCell, didTapSelectButton button: UIButton)
+}
+
 class ActivityCellTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var aImage: UIImageView!
-    @IBOutlet weak var aName: UIButton!
-    @IBOutlet weak var aPrice: UILabel!
-    @IBOutlet weak var aSelect: UIButton!
-    var cellConfig : [Int:Bool] = [0:false,1:false,2:false,3:false,4:false,5:false,6:false,7:false,8:false,9:false ]
-    
-    
-    
-    override func prepareForReuse()
-    {
+    weak var delegate: ActivityCellTableViewCellDelegate?
+    @IBOutlet weak var activityImageView: UIImageView!
+    @IBOutlet weak var nameButton: UIButton!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var selectButton: UIButton!
+      
+    override func prepareForReuse() {
         super.prepareForReuse()
-        // Reset the cell for new row's data
-//        self.aSelect.setImage(UIImage(named: "btnSelect"), for: .normal)
-      //  self.aSelect.setImage(UIImage(named: "btnSelect"), for: .normal)
-
+        activityImageView.image = nil
+        nameButton.setTitle(nil, for: .normal)
+        priceLabel.text = nil
+        selectButton.setTitle(nil, for: .normal)
+        selectButton.setImage(nil, for: .normal)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        clipsToBounds = true
+        layer.borderWidth = 2
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.borderColor = CGColor.init(srgbRed: 255, green: 255, blue: 255, alpha: 100)
+        nameButton.addTarget(self, action: #selector(nameButtonDidTap(_:)), for: .touchUpInside)
+        selectButton.addTarget(self, action: #selector(selectButtonDidTap(_:)), for: .touchUpInside)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-//    @IBAction func selectActivity(_ sender: Any) {
-//        if aSelect.image(for: .normal) == UIImage(named: "btnSelectActive"){
-//            aSelect.setImage(UIImage(named: "btnSelect"), for: .normal)
-//        }
-//        else{
-//            aSelect.setImage(UIImage(named: "btnSelectActive"), for: .normal)
-//        }
-//    }
     
+    func configure(with model: ActivityCellModel, tag: Int, isSelected: Bool) {
+        let selectButtonImage = isSelected ? UIImage(named: "btnSelectActive") : UIImage(named: "btnSelect")
+        selectButton.setImage(selectButtonImage, for: .normal)
+        nameButton.setTitle(model.name, for: .normal)
+        priceLabel.text = "\(model.cost.commaRepresentation) 원"
+        ImageFetcher.image(for: URL(string: model.image)!) { result in
+            switch result {
+            case let .success(image):
+                DispatchQueue.main.async {
+                    self.activityImageView.image = image
+                }
+            case let .failure(error):
+                print(error.localizedDescription)
+            }
+        }
+        nameButton.tag = tag
+        selectButton.tag = tag
+    }
+    
+    @objc private func nameButtonDidTap(_ sender: UIButton) {
+        delegate?.activityCell(self, didTapNameButton: sender)
+    }
+    
+    @objc private func selectButtonDidTap(_ sender: UIButton) {
+        delegate?.activityCell(self, didTapSelectButton: sender)
+    }
 }
