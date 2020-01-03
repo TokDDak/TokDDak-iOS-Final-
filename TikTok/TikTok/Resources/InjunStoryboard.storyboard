@@ -421,17 +421,6 @@
                                                     <outlet property="dataSource" destination="4Y5-FP-pdp" id="Upt-HK-OxG"/>
                                                 </connections>
                                             </collectionView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2a-XV-oDm">
-                                                <rect key="frame" x="235" y="420" width="46" height="84"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="testButton:" destination="4Y5-FP-pdp" eventType="touchUpInside" id="u0q-EP-uBv"/>
-                                                    <segue destination="jI6-eO-AM9" kind="show" id="fGW-tL-4Kv"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1m-kH-wGp">
                                                 <rect key="frame" x="0.0" y="678" width="375" height="510"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -640,7 +629,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-SJ-Zwu">
-                                        <rect key="frame" x="21" y="53" width="154" height="62"/>
+                                        <rect key="frame" x="98" y="53" width="77" height="31"/>
                                         <state key="normal" image="tabBtnBefore">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -669,7 +658,7 @@
                                         </state>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAllMoney" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-qq-xeg">
-                                        <rect key="frame" x="32" y="131" width="116" height="34"/>
+                                        <rect key="frame" x="32" y="131" width="58" height="17"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4D-Dd-PWL">
                                         <rect key="frame" x="34" y="231" width="110" height="22"/>
@@ -680,7 +669,7 @@
                                         <state key="normal" image="btnMoreMoneyHistory"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCloud" translatesAutoresizingMaskIntoConstraints="NO" id="E1U-sB-BbQ">
-                                        <rect key="frame" x="-375" y="186" width="750" height="460"/>
+                                        <rect key="frame" x="0.0" y="186" width="375" height="230"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345678" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Wz-uJQ">
                                         <rect key="frame" x="101" y="131" width="100" height="17"/>
@@ -693,7 +682,7 @@
                                         <rect key="frame" x="12" y="290" width="351" height="490"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-T0-2Qx">
-                                                <rect key="frame" x="175" y="318" width="136" height="136"/>
+                                                <rect key="frame" x="243" y="386" width="68" height="68"/>
                                                 <state key="normal" image="floatingBtnInputMoney"/>
                                             </button>
                                         </subviews>
@@ -751,16 +740,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0t-3X-FGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1445.5999999999999" y="80.541871921182263"/>
-        </scene>
-        <!--RegisterPlanVC-->
-        <scene sceneID="wsF-k2-BoG">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Plan" referencedIdentifier="RegisterPlanVC" id="jI6-eO-AM9" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="FXJ-0P-e77"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7B-xR-9dL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1181" y="682"/>
         </scene>
         <!--Choose View Controller-->
         <scene sceneID="7ho-el-tj3">
@@ -984,16 +963,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여행을 떠나볼까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guV-SN-A7h">
-                                <rect key="frame" x="25" y="139" width="131" height="21"/>
+                                <rect key="frame" x="25" y="139" width="214" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f50-yw-UJe">
-                                <rect key="frame" x="25" y="110" width="131" height="21"/>
+                                <rect key="frame" x="25" y="87" width="214" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1088,14 +1067,14 @@
                                     <action selector="changedStartDatePicker:" destination="h6K-uS-oCF" eventType="valueChanged" id="67k-SJ-w7Z"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NB-GQ-yXk">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NB-GQ-yXk">
                                 <rect key="frame" x="21" y="658" width="138" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB6-hM-9li">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB6-hM-9li">
                                 <rect key="frame" x="183" y="657" width="176" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1406,7 +1385,7 @@
         <image name="makeBgImgAirplane" width="375" height="310"/>
         <image name="makeEtCalendar" width="327" height="62"/>
         <image name="makeImgCountry3" width="242" height="68"/>
-        <image name="naviBtnBackB" width="36" height="36"/>
+        <image name="naviBtnBackB" width="16" height="16"/>
         <image name="naviBtnClose" width="14" height="14"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="tabBtnBefore" width="77" height="31"/>
