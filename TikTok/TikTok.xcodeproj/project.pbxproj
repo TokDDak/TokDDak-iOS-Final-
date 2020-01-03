@@ -13,6 +13,7 @@
 		0D0C0C7823BE10B700FDC036 /* MedianHotelResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */; };
 		0D2D3BF923BE4DB700B95A78 /* TripCreateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */; };
 		0D2D3BFB23BE915D00B95A78 /* totalBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */; };
+		0D2D3BFD23BF053300B95A78 /* FoodResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */; };
 		0D6D70C923B317F100923D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D70C823B317F100923D4E /* AppDelegate.swift */; };
 		0D6D70CB23B317F100923D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D70CA23B317F100923D4E /* SceneDelegate.swift */; };
 		0D6D70D023B317F100923D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6D70CE23B317F100923D4E /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianHotelResponseModel.swift; sourceTree = "<group>"; };
 		0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreateResponseModel.swift; sourceTree = "<group>"; };
 		0D2D3BFA23BE915D00B95A78 /* totalBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalBudgetViewController.swift; sourceTree = "<group>"; };
+		0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponseModel.swift; sourceTree = "<group>"; };
 		0D6D70C523B317F100923D4E /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6D70C823B317F100923D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D6D70CA23B317F100923D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				0D0C0C7723BE10B700FDC036 /* MedianHotelResponseModel.swift */,
 				55C99DF823BE320C008A5C98 /* CityActivityResponseModel.swift */,
 				0D2D3BF823BE4DB700B95A78 /* TripCreateResponseModel.swift */,
+				0D2D3BFC23BF053300B95A78 /* FoodResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				55C76EE723BDEABF00D8B822 /* PlanModel.swift in Sources */,
 				55C76EC223BC82F100D8B822 /* registerPlanTableViewCell.swift in Sources */,
 				5550420123B62AE600ADCECB /* ChooseViewController.swift in Sources */,
+				0D2D3BFD23BF053300B95A78 /* FoodResponseModel.swift in Sources */,
 				55C76EE023BD05C500D8B822 /* CollectionViewController.swift in Sources */,
 				55F9CC8323B354EC00E15332 /* StartViewController.swift in Sources */,
 				55C76EE223BD05C500D8B822 /* CategoiryShoppingViewController.swift in Sources */,

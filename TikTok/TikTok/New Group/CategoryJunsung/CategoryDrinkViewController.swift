@@ -52,15 +52,18 @@ class CategoryDrinkViewController: UIViewController {
 //    var totalCountOfDrink : [Int : Int] = [0:0, 1:0, 2:0]
     var masterTotalPrice : Int = 0
     
+    let cafe = Int.random(in: 4000...10000)
+    let desert = Int.random(in: 8000...15000)
+    let pub = Int.random(in: 8000...20000)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         totalPriceOfDrink.text = String(masterTotalPrice.commaRepresentation)
         //totalPrice.text = String(totalBase.commaRepresentation2) + " ₩"
-        avgPriceOfCafe.text = String(eachPriceDrink[0]!.commaRepresentation) + "원"
-        avgPriceOfDesert.text = String(eachPriceDrink[1]!.commaRepresentation) + "원"
-        avgPriceOfPub.text = String(eachPriceDrink[2]!.commaRepresentation) + "원"
-        
-        
+//        avgPriceOfCafe.text = String(eachPriceDrink[0]!.commaRepresentation) + "원"
+//        avgPriceOfDesert.text = String(eachPriceDrink[1]!.commaRepresentation) + "원"
+//        avgPriceOfPub.text = String(eachPriceDrink[2]!.commaRepresentation) + "원"
         
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
         let yourBackImage = UIImage(named: "naviBtnBackB")
@@ -73,6 +76,17 @@ class CategoryDrinkViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        eachPriceDrink[0] = cafe
+        eachPriceDrink[1] = desert
+        eachPriceDrink[2] = pub
+        
+        avgPriceOfCafe.text = String(eachPriceDrink[0]!.commaRepresentation) + "원"
+        avgPriceOfDesert.text = String(eachPriceDrink[1]!.commaRepresentation) + "원"
+        avgPriceOfPub.text = String(eachPriceDrink[2]!.commaRepresentation) + "원"
     }
     
     @IBAction func nextCategory(_ sender: Any) {

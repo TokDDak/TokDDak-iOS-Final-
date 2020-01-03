@@ -43,6 +43,8 @@ class PopUpViewController: UIViewController {
     var nameOfHotel : String = ""
 
     var model: PopUpModel?
+
+    
     
     @IBOutlet weak var entireView: UIView!
     @IBOutlet weak var middleView: UIView!
@@ -63,11 +65,11 @@ class PopUpViewController: UIViewController {
         
         
         //위에서 만든 attributedStr에 addAttribute메소드를 통해 Attribute를 적용. kCTFontAttributeName은 value로 폰트크기와 폰트를 받을 수 있음.
-        
-        let attributedString = NSMutableAttributedString(string: averagePriceLabel.text!)
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: (averagePriceLabel.text! as NSString).range(of:"Zedd"))
-        
-        averagePriceLabel.attributedText = attributedString
+//
+//        let attributedString = NSMutableAttributedString(string: averagePriceLabel.text!)
+//        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: (averagePriceLabel.text! as NSString).range(of:"Zedd"))
+//
+//        averagePriceLabel.attributedText = attributedString
         
         //view part view radius
         //self.completeView.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 15)
@@ -88,7 +90,7 @@ class PopUpViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let cityID = 1
-       
+
         APIService.shared.requestMedianHotel(cityID: cityID, subCategory: subCategory) { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -106,12 +108,17 @@ class PopUpViewController: UIViewController {
     
     func reloadView(by model: PopUpModel) {
         firstInfoNameLabel.text = model.info[0].name
-        firstInfoPriceLabel.text = "\(model.info[0].cost) 원"
+        firstInfoPriceLabel.text = "\(model.info[0].cost.commaRepresentation) 원"
         secondInfoNameLabel.text = model.info[1].name
-        secondInfoPriceLabel.text = "\(model.info[1].cost) 원"
+        secondInfoPriceLabel.text = "\(model.info[1].cost.commaRepresentation) 원"
         thirdInfoNameLabel.text = model.info[2].name
-        thirdInfoPriceLabel.text = "\(model.info[2].cost) 원"
-        averagePriceLabel.text = "1박 평균 가격은 \(model.cost)원입니다."
+        thirdInfoPriceLabel.text = "\(model.info[2].cost.commaRepresentation ) 원"
+        
+        averagePriceLabel.text = "1박 평균 가격은 \(model.cost.commaRepresentation)원 입니다."
+        let attributedStr = NSMutableAttributedString(string: averagePriceLabel.text!)
+        attributedStr.addAttribute(.foregroundColor, value: UIColor.blue, range: (averagePriceLabel.text! as NSString).range(of: "\(model.cost.commaRepresentation)원"))
+        averagePriceLabel.attributedText = attributedStr
+        
         hotelNameLabel.text = model.category
     }
     

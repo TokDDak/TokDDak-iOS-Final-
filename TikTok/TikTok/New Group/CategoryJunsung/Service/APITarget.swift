@@ -12,6 +12,7 @@ enum APITarget: TargetType {
     case medianHotelRead(cityID: Int, subCategory: Int)
     case cityActivity(cityID: Int)
     case tripCreate(cityID: Int, body: TripCreateRequestModel)
+    case medianFoodRead(cityID : Int)
     
     var baseURL: URL {
         return URL(string: "http://13.125.42.117:3000")!
@@ -25,6 +26,8 @@ enum APITarget: TargetType {
             return "/citys/\(cityID)/Activity"
         case let .tripCreate(cityID, _):
             return "/trips/\(cityID)"
+        case let .medianFoodRead(cityID):
+            return "/median/\(cityID)/food"
         }
     }
     
@@ -36,6 +39,8 @@ enum APITarget: TargetType {
             return .get
         case .tripCreate:
             return .post
+        case .medianFoodRead:
+            return .get
         }
         // case. sendA:
         // return .post
@@ -54,6 +59,8 @@ enum APITarget: TargetType {
         case let .tripCreate(cityID, body):
             let encoded = try! JSONEncoder().encode(body)
             return .requestCompositeData(bodyData: encoded, urlParameters: ["CityId": cityID])
+        case let .medianFoodRead(cityID):
+            return .requestPlain
         }
     }
     

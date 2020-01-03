@@ -42,6 +42,16 @@ class ActivityCellViewController: UIViewController, UITableViewDataSource, UITab
         myTableview.delegate = self
         totalPriceOfActivity.text = basePriceOfActivity.commaRepresentation
         progressBar.progress = Float(progressBarOffset) * (Float(1.0 / Double(pgValue)))
+        
+        let yourBackImage = UIImage(named: "naviBtnBackB")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        /*navaigation 이름 변경*/
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        /*navaigation border 삭제*/
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
     }
     
