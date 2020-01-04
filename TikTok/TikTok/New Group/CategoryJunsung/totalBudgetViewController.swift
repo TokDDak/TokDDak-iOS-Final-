@@ -52,6 +52,14 @@ class totalBudgetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //totalprice 저장
+        TotalPlanData.shared.lastTotalPrice = hotelCost + foodCost + drinkCost + activityCost
+
+        
+        
+        
         let yourBackImage = UIImage(named: "naviBtnBackBlack")
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage

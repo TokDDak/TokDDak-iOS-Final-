@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-8b-Po4">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <state key="normal" image="btnSelectFinish"/>
                                 <connections>
                                     <segue destination="mOn-w6-6dZ" kind="show" id="9TE-ca-nTZ"/>
@@ -61,52 +61,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="makeImgCountry3" translatesAutoresizingMaskIntoConstraints="NO" id="tQY-CC-rT5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeImgCountry3" translatesAutoresizingMaskIntoConstraints="NO" id="tQY-CC-rT5">
                                 <rect key="frame" x="23" y="110" width="267" height="68"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-2d-4VZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-2d-4VZ">
                                 <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <state key="normal" image="btnSelectFinish"/>
                                 <connections>
                                     <action selector="showNextCategory:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="GP3-7o-fxb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-47-zUj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-47-zUj">
                                 <rect key="frame" x="16" y="198" width="345" height="80"/>
                                 <state key="normal" image="btnMakeStayMinus"/>
                                 <connections>
                                     <action selector="pressHotelViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="uRg-1K-7FT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgH-5A-gtV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgH-5A-gtV">
                                 <rect key="frame" x="16" y="285" width="345" height="80"/>
                                 <state key="normal" image="btnMakeFoodMinus"/>
                                 <connections>
                                     <action selector="pressRestaurantViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="zio-Id-iKU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-dh-qgM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-dh-qgM">
                                 <rect key="frame" x="16" y="372" width="345" height="80"/>
                                 <state key="normal" image="btnMakeSnacksMinus"/>
                                 <connections>
                                     <action selector="pressDrinkViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="QXd-g3-NDK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reg-Hq-d8K">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reg-Hq-d8K">
                                 <rect key="frame" x="16" y="450" width="345" height="80"/>
                                 <state key="normal" image="btnMakeTrafficMinus"/>
                                 <connections>
                                     <action selector="pressTransportViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="4pR-yg-EP4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-wg-Chu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-wg-Chu">
                                 <rect key="frame" x="16" y="538" width="345" height="80"/>
                                 <state key="normal" image="btnMakeShoppingMinus"/>
                                 <connections>
                                     <action selector="pressShoppingViewBttn:" destination="mOn-w6-6dZ" eventType="touchUpInside" id="QYf-Il-Wiu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-sT-Lei">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-sT-Lei">
                                 <rect key="frame" x="16" y="627" width="345" height="80"/>
                                 <state key="normal" image="btnMakeActivityMinus"/>
                                 <connections>
@@ -200,7 +200,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE6-kS-nq7">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -305,7 +305,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7A3-ws-rIj">
-                                <rect key="frame" x="0.0" y="156" width="375" height="474"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="mycell" rowHeight="62" id="fAf-2h-l8L" customClass="ActivityCellTableViewCell" customModule="TikTok" customModuleProvider="target">
@@ -340,7 +340,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DX-OT-KUY">
-                                                    <rect key="frame" x="209" y="-6" width="140" height="74"/>
+                                                    <rect key="frame" x="279" y="12.666666666666664" width="70" height="37"/>
                                                     <state key="normal" image="btnSelect"/>
                                                 </button>
                                             </subviews>
@@ -371,7 +371,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-Ov-wM6">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <state key="normal" image="btnSelectFinish"/>
                                 <connections>
                                     <action selector="endCategory:" destination="q0x-0N-hyg" eventType="touchUpInside" id="Zxa-KU-2CG"/>
@@ -805,7 +805,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-Vc-SVs">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="btnSelectFinish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -922,7 +922,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdW-yd-sCe">
-                                <rect key="frame" x="0.0" y="628" width="375" height="184"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="92"/>
                                 <state key="normal" image="btnFinish"/>
                                 <connections>
                                     <action selector="goToNext:" destination="Uiu-Hm-dJ7" eventType="touchUpInside" id="f5r-xm-TAt"/>
@@ -930,7 +930,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5L-va-7ht">
-                                <rect key="frame" x="0.0" y="-92" width="375" height="307"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 예산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-m7-nCH">
                                         <rect key="frame" x="30" y="98" width="60" height="22"/>
@@ -973,7 +973,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-L4-lUo">
-                                <rect key="frame" x="18" y="106" width="351" height="522"/>
+                                <rect key="frame" x="18" y="198" width="351" height="522"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-ja-eYr">
                                         <rect key="frame" x="18" y="183" width="315" height="1"/>
@@ -1100,7 +1100,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaZ-lX-pmQ">
-                                        <rect key="frame" x="307" y="141.66666666666666" width="16" height="19.333333333333343"/>
+                                        <rect key="frame" x="307" y="141.66666666666669" width="16" height="19.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2241,7 +2241,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yv3-qI-0s9">
-                                        <rect key="frame" x="26" y="102" width="323" height="255"/>
+                                        <rect key="frame" x="26" y="102" width="323" height="347"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb2-Uu-3uJ">
                                                 <rect key="frame" x="218" y="260" width="103" height="16"/>
@@ -2286,14 +2286,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdR-sX-9au">
-                                        <rect key="frame" x="0.0" y="483" width="375" height="184"/>
+                                        <rect key="frame" x="0.0" y="575" width="375" height="92"/>
                                         <state key="normal" image="btnOk"/>
                                         <connections>
                                             <action selector="returnBack:" destination="mqK-9B-me0" eventType="touchUpInside" id="QIT-JC-srT"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,234,567" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-8Z-5Yk">
-                                        <rect key="frame" x="106" y="387" width="163" height="43"/>
+                                        <rect key="frame" x="106" y="479" width="163" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
