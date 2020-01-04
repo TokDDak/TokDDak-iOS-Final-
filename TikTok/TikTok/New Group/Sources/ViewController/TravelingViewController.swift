@@ -12,11 +12,19 @@ class TravelingViewController: UIViewController {
     
     @IBOutlet weak var gurumiView: UIView!
     @IBOutlet weak var backGroundCloudImageView: UIImageView!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.sendSubviewToBack(self.backGroundCloudImageView)
         self.gurumiView.backgroundColor = UIColor(patternImage: UIImage(named: "imgHomeIngCard")!)
+        
+        
+       
+     
+        totalPriceLabel.text = "\(TotalPlanData.shared.lastTotalPrice.commaRepresentation)"
+         totalPriceLabel.sizeToFit()
+        
         //뷰 맨뒤로
         // Do any additional setup after loading the view.
     }
