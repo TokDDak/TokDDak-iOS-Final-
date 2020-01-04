@@ -62,6 +62,8 @@ class TotalPlanData: CustomStringConvertible {
     
     var travelName: String = ""
     
+    var lastTotalPrice: Int = 0
+    
     
     var description: String {
         return """
