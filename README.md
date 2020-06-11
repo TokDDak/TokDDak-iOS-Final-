@@ -53,9 +53,9 @@ Service Work Flow
 ### 메인뷰 - 여행중 뷰 구현 
 - 커스텀바를 이용해 여행전뷰에서 여행중 뷰로 바로 넘어가게 커스텀 구현
 <div>
-<img width="515" alt="스크린샷 2020-01-03 오후 10 34 23" src="https://user-images.githubusercontent.com/37113547/71727601-246b7300-2e7e-11ea-8b7c-b50129b41c61.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 34 29" src="https://user-images.githubusercontent.com/37113547/71727612-2e8d7180-2e7e-11ea-88df-11a97d293ce8.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 35 15" src="https://user-images.githubusercontent.com/37113547/71727614-2fbe9e80-2e7e-11ea-88ba-f0010970436d.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 34 23" src="https://user-images.githubusercontent.com/37113547/71727601-246b7300-2e7e-11ea-8b7c-b50129b41c61.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 34 29" src="https://user-images.githubusercontent.com/37113547/71727612-2e8d7180-2e7e-11ea-88df-11a97d293ce8.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 15" src="https://user-images.githubusercontent.com/37113547/71727614-2fbe9e80-2e7e-11ea-88ba-f0010970436d.png">
 </div>
 
 ### 도시선택 
@@ -63,8 +63,8 @@ Service Work Flow
 - Page좌우로 넘어가는 PageTapBarController 완성 (XLTapBar이용)
 - 셀 선택시 해당도시로 여행 출발
 <div>
-<img width="515" alt="스크린샷 2020-01-03 오후 10 35 23" src="https://user-images.githubusercontent.com/37113547/71727665-60063d00-2e7e-11ea-9f24-159c0494e19f.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 35 32" src="https://user-images.githubusercontent.com/37113547/71727666-60063d00-2e7e-11ea-959f-75e2290ca231.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 23" src="https://user-images.githubusercontent.com/37113547/71727665-60063d00-2e7e-11ea-9f24-159c0494e19f.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 32" src="https://user-images.githubusercontent.com/37113547/71727666-60063d00-2e7e-11ea-959f-75e2290ca231.png">
 </div>
 
 
@@ -72,8 +72,8 @@ Service Work Flow
 - 데이트 피커를 통한 데이터 입력
 - 출발 날짜와 도작 날짜를 이용해서 , dateFormatter를 이용해서 날짜 사이의 days 기간을 구함.
 <div>
-<img width="515" alt="스크린샷 2020-01-03 오후 10 35 44" src="https://user-images.githubusercontent.com/37113547/71727701-79a78480-2e7e-11ea-9639-efcd545a440f.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 36 02" src="https://user-images.githubusercontent.com/37113547/71727708-7dd3a200-2e7e-11ea-854f-26c69cfd4424.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 35 44" src="https://user-images.githubusercontent.com/37113547/71727701-79a78480-2e7e-11ea-9639-efcd545a440f.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 02" src="https://user-images.githubusercontent.com/37113547/71727708-7dd3a200-2e7e-11ea-854f-26c69cfd4424.png">
 </div>
 
 
@@ -85,22 +85,22 @@ Service Work Flow
 - 쇼핑 카테고리(더미) 구현, 키패드 업다운
 - 액티비티 카테고리 , 테이블 뷰 셀, 통신 구현
 <div>
-<img width="515" alt="스크린샷 2020-01-03 오후 10 36 31" src="https://user-images.githubusercontent.com/37113547/71727733-90e67200-2e7e-11ea-8442-5fe24feaf5aa.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 36 40" src="https://user-images.githubusercontent.com/37113547/71727735-92179f00-2e7e-11ea-9b05-8e0d1bb858e1.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 36 46" src="https://user-images.githubusercontent.com/37113547/71727736-9348cc00-2e7e-11ea-84f7-db7771ee49f8.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 36 59" src="https://user-images.githubusercontent.com/37113547/71727737-9479f900-2e7e-11ea-997d-3c1de3402016.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 37 07" src="https://user-images.githubusercontent.com/37113547/71727740-95ab2600-2e7e-11ea-80ab-06cd2af3e8ae.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 37 17" src="https://user-images.githubusercontent.com/37113547/71727742-96dc5300-2e7e-11ea-98aa-e83d3a3f85f6.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 37 27" src="https://user-images.githubusercontent.com/37113547/71727743-980d8000-2e7e-11ea-8218-8734789b43b4.png">
-<img width="515" alt="스크린샷 2020-01-03 오후 10 37 41" src="https://user-images.githubusercontent.com/37113547/71727744-98a61680-2e7e-11ea-90ba-e3defab7594e.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 31" src="https://user-images.githubusercontent.com/37113547/71727733-90e67200-2e7e-11ea-8442-5fe24feaf5aa.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 40" src="https://user-images.githubusercontent.com/37113547/71727735-92179f00-2e7e-11ea-9b05-8e0d1bb858e1.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 46" src="https://user-images.githubusercontent.com/37113547/71727736-9348cc00-2e7e-11ea-84f7-db7771ee49f8.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 36 59" src="https://user-images.githubusercontent.com/37113547/71727737-9479f900-2e7e-11ea-997d-3c1de3402016.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 07" src="https://user-images.githubusercontent.com/37113547/71727740-95ab2600-2e7e-11ea-80ab-06cd2af3e8ae.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 17" src="https://user-images.githubusercontent.com/37113547/71727742-96dc5300-2e7e-11ea-98aa-e83d3a3f85f6.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 27" src="https://user-images.githubusercontent.com/37113547/71727743-980d8000-2e7e-11ea-8218-8734789b43b4.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 41" src="https://user-images.githubusercontent.com/37113547/71727744-98a61680-2e7e-11ea-90ba-e3defab7594e.png">
 </div>
 
 ### 전체일정 예산 보기
 <div>
-<img width="515" alt="스크린샷 2020-01-03 오후 10 37 48" src="https://user-images.githubusercontent.com/37113547/71727770-a8bdf600-2e7e-11ea-9780-b26e482f1015.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 37 48" src="https://user-images.githubusercontent.com/37113547/71727770-a8bdf600-2e7e-11ea-9780-b26e482f1015.png">
 </div>
 <div>
-<img width="482" alt="스크린샷 2020-01-03 오후 11 36 57" src="https://user-images.githubusercontent.com/55793344/71729004-056ee000-2e82-11ea-8521-2fd86a5680c0.png">
+<img width="482" alt="스크린샷 2020-01-03 오후 11 36 57" src="https://user-images.githubusercontent.com/55793344/71729004-056ee000-2e82-11ea-8521-2fd86a5680c0.png">
 </div>
 ### 일정 등록 뷰
 - 카테고리별 버튼 클릭시 컬렉션뷰 아이템 변경됨
@@ -110,7 +110,7 @@ Service Work Flow
 ### 지출 입력 뷰
 - 버튼 클릭 구현
 <div>
-<img width="515" alt="스크린샷 2020-01-03 오후 10 34 49" src="https://user-images.githubusercontent.com/37113547/71727796-becbb680-2e7e-11ea-82d3-507481302e32.png">
+<img width="515" alt="스크린샷 2020-01-03 오후 10 34 49" src="https://user-images.githubusercontent.com/37113547/71727796-becbb680-2e7e-11ea-82d3-507481302e32.png">
 </div>
 
 
@@ -207,7 +207,7 @@ struct DayPlanData {
 }
 데이별로 구조체 배열을 이용해 일별 데이터 관리
 
-```
+```swift
 class TotalPlanData: CustomStringConvertible {
 
 static let shared = TotalPlanData()
